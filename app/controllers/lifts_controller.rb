@@ -1,10 +1,10 @@
 class LiftsController < ApplicationController
-  before_filter :authenticate
-  
+    before_filter :authenticate
   # GET /lifts
   # GET /lifts.xml
   def index
     @lifts = Lift.all
+    @exercises = Exercise.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,6 +27,7 @@ class LiftsController < ApplicationController
   # GET /lifts/new.xml
   def new
     @lift = Lift.new
+    @exercises = Exercise.all
 
     respond_to do |format|
       format.html # new.html.erb

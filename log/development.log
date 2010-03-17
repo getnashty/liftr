@@ -607,3 +607,170 @@ Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:42:
   Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
 Rendering sessions/new
 Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 22:31:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-16 22:31:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (2.8ms)
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/sign_up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#create (for 127.0.0.1 at 2010-03-16 22:31:27) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'nasherasher@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+Rendering users/new
+Rendered users/_form (6.9ms)
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-16 22:31:37) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Sent mail to nasherasher@gmail.com
+
+Date: Tue, 16 Mar 2010 22:31:37 -0400
+From: new@liftrr.com
+To: nasherasher@gmail.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=53fdf5f68d27d1f8950e641e8522cebb59d5df56
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 20ms (DB: 3) | 302 Found [http://0.0.0.0/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 22:31:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-16 22:31:48) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "session"=>{"password"=>"[FILTERED]", "email"=>"elliot.nash@currensee.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'elliot.nash@currensee.com') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 15ms (View: 4, DB: 2) | 401 Unauthorized [http://0.0.0.0/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::ConfirmationsController#new (for 127.0.0.1 at 2010-03-16 22:32:21) [GET]
+  Parameters: {"token"=>"[FILTERED]", "action"=>"new", "controller"=>"clearance/confirmations", "user_id"=>"1"}
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`confirmation_token` = '53fdf5f68d27d1f8950e641e8522cebb59d5df56' AND `users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`confirmation_token` = '53fdf5f68d27d1f8950e641e8522cebb59d5df56' AND `users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `email_confirmed` = 1, `updated_at` = '2010-03-17 02:32:21', `confirmation_token` = NULL WHERE `id` = 1[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 136ms (DB: 8) | 302 Found [http://localhost/users/1/confirmation/new?token=53fdf5f68d27d1f8950e641e8522cebb59d5df56]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 22:32:21) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::ConfirmationsController#new (for 127.0.0.1 at 2010-03-16 22:32:26) [GET]
+  Parameters: {"token"=>"[FILTERED]", "action"=>"new", "controller"=>"clearance/confirmations", "user_id"=>"1"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'd02d36bd6aedeab3b2054f2375643208f4c6a450') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:redirect_signed_in_confirmed_user] rendered_or_redirected.
+Completed in 11ms (DB: 3) | 302 Found [http://localhost/users/1/confirmation/new?token=53fdf5f68d27d1f8950e641e8522cebb59d5df56]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 22:32:26) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-16 22:32:31) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "session"=>{"password"=>"[FILTERED]", "email"=>"elliot.nash@currensee.com"}, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'elliot.nash@currensee.com') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 20ms (View: 6, DB: 3) | 401 Unauthorized [http://0.0.0.0/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-16 22:32:35) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "session"=>{"password"=>"[FILTERED]", "email"=>"elliot.nash@currensee.com"}, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'elliot.nash@currensee.com') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 14ms (View: 5, DB: 2) | 401 Unauthorized [http://0.0.0.0/session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#index (for 127.0.0.1 at 2010-03-16 22:32:40) [GET]
+  [4;36;1mMuscle Load (0.3ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/muscles
+Rendering muscles/index
+Completed in 41ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 22:32:47) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 6ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 22:32:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]

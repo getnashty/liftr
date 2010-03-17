@@ -1,9 +1,11 @@
 class ExercisesController < ApplicationController
+  
   # GET /exercises
   # GET /exercises.xml
   def index
     @exercises = Exercise.all
-
+    @muscles = Muscle.all
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @exercises }
@@ -25,6 +27,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/new.xml
   def new
     @exercise = Exercise.new
+    @muscles = Muscle.all
 
     respond_to do |format|
       format.html # new.html.erb
