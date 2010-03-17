@@ -29,3 +29,11 @@ config.action_mailer.default_url_options = { :host => 'http://gentle-planet-26.h
 
 # Enable threaded mode
 # config.threadsafe!
+
+ActionMailer::Base.smtp_settings = {
+  :address  => "smtp.venturemedias.com",
+  :port  => 25,
+  :user_name  => "elliot+venturemedias.com",
+  :password  => "magnum",
+  :authentication  => :login
+}
