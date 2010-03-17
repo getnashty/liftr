@@ -1,0 +1,482 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.5ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (210.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ClearanceCreateUsers (20100317000713)
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `encrypted_password` varchar(128), `salt` varchar(128), `confirmation_token` varchar(128), `remember_token` varchar(128), `email_confirmed` tinyint(1) DEFAULT 0 NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (176.9ms)[0m   [0mCREATE INDEX `index_users_on_id_and_confirmation_token` ON `users` (`id`, `confirmation_token`)[0m
+  [4;36;1mSQL (110.3ms)[0m   [0;1mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [4;35;1mSQL (111.1ms)[0m   [0mCREATE INDEX `index_users_on_remember_token` ON `users` (`remember_token`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100317000713')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ClearanceCreateUsers (20100317000713)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ClearanceCreateUsers (20100317000713)
+Migrating to CreateMuscles (20100317001110)
+  [4;36;1mSQL (74.7ms)[0m   [0;1mCREATE TABLE `muscles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100317001110')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `muscles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `muscles`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ClearanceCreateUsers (20100317000713)
+Migrating to CreateMuscles (20100317001110)
+Migrating to CreateExercises (20100317001144)
+  [4;36;1mSQL (82.3ms)[0m   [0;1mCREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `muscle_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (15.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100317001144')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `muscles`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `muscles`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ClearanceCreateUsers (20100317000713)
+Migrating to CreateMuscles (20100317001110)
+Migrating to CreateExercises (20100317001144)
+Migrating to CreateLifts (20100317001236)
+  [4;36;1mSQL (46.7ms)[0m   [0;1mCREATE TABLE `lifts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `exercise_id` int(11), `weight` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100317001236')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `lifts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `lifts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mdescribe `muscles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `muscles`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:12:54) [GET]
+  [4;36;1mLift Load (0.4ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 67ms (View: 61, DB: 1) | 200 OK [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:13:40) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 45ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:13:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x2303e30>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    clearance (0.8.8) [v] app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:14:27) [GET]
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 7ms (DB: 3) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:14:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x2374cc0>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (38.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:14:28) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 8ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:14:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x256dcac>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:51) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 7ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:18:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x2362bd8>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:52) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 5ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:18:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x251f1b0>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 7ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x232aad0>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (96.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 6ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x24d004c>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 5ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 6ms (DB: 3) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x22cc624>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (100.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 5ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:18:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x2439c64>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to ClearanceCreateUsers (20100317000713)
+Migrating to CreateMuscles (20100317001110)
+Migrating to CreateExercises (20100317001144)
+Migrating to CreateLifts (20100317001236)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mdescribe `lifts`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `lifts`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `muscles`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `muscles`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-16 20:19:30) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 7ms (DB: 2) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:19:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x22affb0>) on line #3 of app/views/sessions/new.html.erb:
+1: <h2>Sign in</h2>
+2: 
+3: <% semantic_form_for :session, :url => session_path do |form| %>
+4:   <% form.inputs do %>
+5:     <%= form.input :email %>
+6:     <%= form.input :password, :as => :password %>
+
+    app/views/sessions/new.html.erb:3
+    app/controllers/clearance/sessions_controller.rb:9:in `new'
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:20:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#index (for 127.0.0.1 at 2010-03-16 20:20:34) [GET]
+  [4;35;1mMuscle Load (1.0ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/muscles
+Rendering muscles/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/muscles]
