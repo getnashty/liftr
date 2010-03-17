@@ -563,3 +563,47 @@ Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-16 20:40:23)
 Rendering users/new
 Rendered users/_form (4.2ms)
 Completed in 34ms (View: 22, DB: 2) | 200 OK [http://0.0.0.0/sign_up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-16 20:42:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Rendering users/new
+Rendered users/_form (2.3ms)
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/sign_up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#create (for 127.0.0.1 at 2010-03-16 20:42:42) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'nasherasher@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`encrypted_password`, `salt`, `updated_at`, `remember_token`, `confirmation_token`, `email`, `email_confirmed`, `created_at`) VALUES('b77955243e7ce0e1339c6e23ea9c5103c0ec0441', '232f98ea7c660da9f739b6e62c575be16ce1223f', '2010-03-17 00:42:42', 'd02d36bd6aedeab3b2054f2375643208f4c6a450', '53fdf5f68d27d1f8950e641e8522cebb59d5df56', 'nasherasher@gmail.com', 0, '2010-03-17 00:42:42')[0m
+Sent mail to nasherasher@gmail.com
+
+Date: Tue, 16 Mar 2010 20:42:42 -0400
+From: new@liftrr.com
+To: nasherasher@gmail.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/1/confirmation/new?token=53fdf5f68d27d1f8950e641e8522cebb59d5df56
+  [4;35;1mSQL (10.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 197ms (DB: 13) | 302 Found [http://0.0.0.0/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 20:42:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
