@@ -1,0 +1,8 @@
+<%- headers = ["Date", "Exercise1", "Exercise2", "Exercise3"] -%>
+
+<%- @lifts.each do |lift| -%>
+<%- row = [ lift.id,
+            lift.weight,
+            lift.created_at ] -%>
+<%=   CSV.generate_line row %>
+<%- end -%>

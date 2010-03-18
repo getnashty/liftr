@@ -38,6 +38,7 @@ class LiftsController < ApplicationController
 
   # GET /lifts/1/edit
   def edit
+    @exercises = Exercise.all
     @lift = Lift.find(params[:id])
   end
 

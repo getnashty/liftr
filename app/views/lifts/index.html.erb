@@ -1,46 +1,199 @@
+<style type="text/css">
+<!--
+.text_field {
+	float:left;
+	text-align:left;
+	margin-bottom:20px;
+	padding:0px 10px 0 0;
+	font-weight:bold;
+}
+.text_field input{
+	background-image: url(/images/input-bg.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-style:solid;
+	border-width:1px;
+	border-color:#898989;
+	padding:8px;
+	font-size:12px;
+	font-family:arial;
+}
+.submit_field2 {
+	float:left;
+}
+.submit_field2 input{
+	margin-top:20px;
+	background-color:red;
+	border-style:solid;
+	border-color:red;
+	border-width:1px;
+	color:#fff;
+	font-weight:bold;
+	padding:6px;
+	font-size:16px;
+}
+.submit_field2 a{
+	text-decoration:none;
+	color:#fff;
+}
+.lifts-list{
+	clear:both;
+	padding:0 0 0 6px;
+}
+.headly h1{
+	clear:both;
+	border-bottom-style:solid;
+	border-bottom-color:#BFBFBF;
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
+.head-item{
+	float:left;
+	padding-right:20px;
+	font-weight:bold;
+	width:100px;
+	
+}
+.max-item{
+	float:left;
+	padding-right:20px;
+	width:100px;
+	height:26px;
+	line-height:26px;
+}
+.max-item2{
+	float:left;
+	padding-right:20px;
+	width:100px;
+	height:26px;
+	line-height:26px;
+	background-color:#eee;
+}
+.pencil{
+	margin-top:5px;
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/pencil.png);
+	background-position: bottom;
+}
+.pencil:hover{
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/pencil.png);
+	background-position: top;
+}
+.delete{
+	margin-top:5px;
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/delete.png);
+	background-position: top;
+}
+.delete:hover{
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/delete.png);
+	background-position: bottom;
+}
+-->
+</style>
+
 
 <% form_for(@lift) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+  	<div class="text_field">
     <%= f.label :exercise_id %><br />
-
     <%= f.select (:exercise_id, @exercises.collect {|exercise| [ exercise.name, exercise.id ] }) %>
-  </p>
-  <p>
-    <%= f.label :weight %><br />
-    <%= f.text_field :weight %>
-  </p>
-  <p>
-    <input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" /<br />
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+	</div>
+    <div class="text_field">
+	<%= f.label :weight %><br />
+    <%= f.text_field (:weight, :size=>5) %>
+	</div>
+	<div class="text_field">
+	Date<br />
+	<div style="font-weight:normal;margin-top:10px;">
+	<%=h Time.now.strftime("%m/%d/%Y") %>
+	</div>
+	</div>
+    <div class="submit_field2">
+    <%= f.submit 'Add Max' %>
+	</div>
+	
+	<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
+	<% end %>
+	
+	<div class="headly">
+	<h1>Your Maxes</h1>
+	</div>
 
+<div class="lifts-list">
+	
 
-<h1>Listing lifts</h1>
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+<div class="head-item" style="width:30px;">
+Edit	
+</div>
+<div class="head-item" style="width:30px;">
+Delete	
+</div>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Exercise</th>
-    <th>Weight</th>
-    <th>Date</th>
-  </tr>
-
+<% x=0 %>
 <% @lifts.each do |lift| %>
-<% if lift.user_id == current_user.id %>
-<% @exname=Exercise.find(lift.exercise_id)%>
+<% x=x+1 %>
+<% if x == 1 %>
+ <% if lift.user_id == current_user.id %>
+ 	<% @exname=Exercise.find(lift.exercise_id)%>
+ 	<div class="max-item" style="clear:both;">
+ 	<%=h @exname.name %>	
+ 	</div>
+ 	<div class="max-item">
+ 	<%=h lift.weight %> lbs	
+ 	</div>
+ 	<div class="max-item">
+ 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+ 	</div>
+ 	<div class="max-item" style="width:30px;">
+ 	<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+ 	</div>
+ 	<div class="max-item" style="width:30px;">
+ 	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+ 	</div>
+ <% end %>
+<% end %>
 
-  <tr>
-    <td><%=h lift.user_id %></td>
-    <td><%=h @exname.name %></td>
-    <td><%=h lift.weight %> lbs</td>
-    <td><%=h lift.created_at.strftime("%m/%d/%Y") %></td>
-    <td><%= link_to 'Show', lift %></td>
-    <td><%= link_to 'Edit', edit_lift_path(lift) %></td>
-    <td><%= link_to 'Destroy', lift, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% if x == 2 %>
+ <% if lift.user_id == current_user.id %>
+ 	<% @exname=Exercise.find(lift.exercise_id)%>
+ 	<div class="max-item2" style="clear:both;">
+ 	<%=h @exname.name %>	
+ 	</div>
+ 	<div class="max-item2">
+ 	<%=h lift.weight %> lbs	
+ 	</div>
+ 	<div class="max-item2">
+ 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+ 	</div>
+ 	<div class="max-item2" style="width:30px;">
+ 	<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+ 	</div>
+ 	<div class="max-item2" style="width:30px;">
+ 	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+ 	</div>
+	<% x=0 %>
+ <% else %>
+	<% x = 0 %>
+ <% end %>
+
 <% end %>
+
 <% end %>
-</table>
+</div>

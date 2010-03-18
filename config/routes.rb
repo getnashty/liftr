@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'lifts'
   
   map.resources :reports, :collection => {:progress => :get}
+  map.resources :reports, :collection => {:export => :get}
     
   # The priority is based upon order of creation: first created -> highest priority.
 

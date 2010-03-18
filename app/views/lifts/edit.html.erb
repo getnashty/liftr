@@ -1,24 +1,69 @@
-<h1>Editing lift</h1>
+<style type="text/css">
+
+.text_field {
+	float:left;
+	text-align:left;
+	margin-bottom:20px;
+	padding:0px 10px 0 0;
+	font-weight:bold;
+}
+.text_field input{
+	background-image: url(/images/input-bg.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-style:solid;
+	border-width:1px;
+	border-color:#898989;
+	padding:8px;
+	font-size:12px;
+	font-family:arial;
+}
+.submit_field2 {
+	float:left;
+}
+.submit_field2 input{
+	margin-top:20px;
+	background-color:red;
+	border-style:solid;
+	border-color:red;
+	border-width:1px;
+	color:#fff;
+	font-weight:bold;
+	padding:6px;
+	font-size:16px;
+}
+.submit_field2 a{
+	text-decoration:none;
+	color:#fff;
+}
+.headly h1{
+	clear:both;
+	border-bottom-style:solid;
+	border-bottom-color:#BFBFBF;
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
+</style>
+
+<div class="headly">
+<h1>Editing Your Max</h1>
+</div>
 
 <% form_for(@lift) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :exercise_id %><br />
-    <%= f.text_field :exercise_id %>
-  </p>
-  <p>
-    <%= f.label :weight %><br />
-    <%= f.text_field :weight %>
-  </p>
-  <p>
+	<div class="text_field">
+  <%= f.label :exercise_id %><br />
+  <%= f.select (:exercise_id, @exercises.collect {|exercise| [ exercise.name, exercise.id ] }) %>
+	</div>
+    <div class="text_field">
+	<%= f.label :weight %><br />
+    <%= f.text_field (:weight, :size=>5) %>
+	</div>
+    <div class="submit_field2">
     <%= f.submit 'Update' %>
-  </p>
+	</div>
 <% end %>
-
-<%= link_to 'Show', @lift %> |
+<br/><br/>
+<br/><br/>
 <%= link_to 'Back', lifts_path %>
