@@ -1020,3 +1020,177 @@ Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-16 22:55:
   Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
 Rendering sessions/new
 Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:43:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #97 of app/views/passwords/new.html.erb:
+94: 			<div class="divider"></div>
+95: 		
+96: 		
+97: 			<% form_for @user do |form| %>
+98: 			  		<%= form.error_messages %>
+99: 					<div class="text_field">
+100: 					  <%= form.label :email %>
+
+    app/views/passwords/new.html.erb:97
+    app/controllers/clearance/passwords_controller.rb:10:in `new'
+
+Rendered rescues/_trace (37.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:43:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:43:46) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/input-bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:43:46) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/login-bottom.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:43:46) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/login_top.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:43:46) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/liftrr-logo.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:44:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:44:03) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/login_top.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:44:04) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/login-bottom.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 08:44:04) [GET]
+
+ActionController::RoutingError (No route matches "/passwords/images/input-bg.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:44:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:44:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:45:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:45:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:46:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-18 08:46:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-18 08:46:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 85ms (View: 79, DB: 2) | 200 OK [http://0.0.0.0/sign_up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::PasswordsController#new (for 127.0.0.1 at 2010-03-18 08:46:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/passwords"}
+Rendering passwords/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/passwords/new]
