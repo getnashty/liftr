@@ -4145,3 +4145,330 @@ Rendering lifts/index
   [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
 Completed in 29ms (View: 13, DB: 6) | 200 OK [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-18 11:20:12) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+Completed in 30ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:20:13) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 20ms (View: 7, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-18 11:20:21) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+Completed in 15ms (View: 3, DB: 3) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:20:21) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-18 11:22:20) [GET]
+  [4;35;1mUser Columns (6.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (5.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '3fcae19e61b0f90e683f58710db2d7827c67ab10') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 19ms (DB: 12) | 302 Found [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-18 11:22:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-18 11:22:26) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/reports/progress
+Completed in 18ms (DB: 3) | 302 Found [http://0.0.0.0/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-18 11:22:27) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+Completed in 14ms (View: 2, DB: 3) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:22:27) [GET]
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:22:54) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 21ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:22:54) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 19ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:22:56) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:03) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 18ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:05) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 20ms (View: 4, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:06) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 18ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:08) [GET]
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:08) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:09) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 18ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:10) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 17ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:11) [GET]
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 19ms (View: 3, DB: 6) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:12) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (1.6ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 22ms (View: 3, DB: 6) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:14) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (1.9ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 21ms (View: 3, DB: 6) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:15) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 21ms (View: 3, DB: 5) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-18 11:23:48) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+Completed in 21ms (View: 7, DB: 3) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-18 11:23:48) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+Completed in 16ms (View: 3, DB: 3) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-18 11:23:49) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 20ms (View: 3, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
