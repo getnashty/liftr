@@ -36,7 +36,7 @@
     <td><%=h lift.user_id %></td>
     <td><%=h @exname.name %></td>
     <td><%=h lift.weight %> lbs</td>
-    <td><%=h lift.created_at %></td>
+    <td><%=h lift.created_at.strftime("%m/%d/%Y") %></td>
     <td><%= link_to 'Show', lift %></td>
     <td><%= link_to 'Edit', edit_lift_path(lift) %></td>
     <td><%= link_to 'Destroy', lift, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -44,7 +44,3 @@
 <% end %>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New lift', new_lift_path %>

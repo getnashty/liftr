@@ -5,11 +5,11 @@
      xml.series do    
        @lifts.each_with_index do |lift, index|
          if lift.user_id == current_user.id
-         xml.value lift.created_at,  :xid => index
+         xml.value lift.created_at.strftime("%m/%d/%Y"),  :xid => index
           end
-       end
+       end       
      end
-  
+     
        xml.graphs do
         #the gid is used in the settings file to set different settings just for this graph
          xml.graph :gid => 'progress' do
