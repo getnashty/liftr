@@ -4,8 +4,9 @@ class LiftsController < ApplicationController
   # GET /lifts.xml
   def index
     @lifts = Lift.all
+    @lift = Lift.new
     @exercises = Exercise.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @lifts }

@@ -1471,3 +1471,2677 @@ Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 09:50:46) [GET]
 Rendering template within layouts/lifts
 Rendering lifts/index
 Completed in 18ms (View: 6, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 09:53:38) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 14ms (View: 2, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#new (for 127.0.0.1 at 2010-03-18 09:54:59) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/new
+Completed in 29ms (View: 15, DB: 4) | 200 OK [http://0.0.0.0/lifts/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 09:55:10) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 13ms (View: 2, DB: 2) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:00:25) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #2 of app/views/lifts/index.html.erb:
+1: 
+2: <% form_for(@lift) do |f| %>
+3:   <%= f.error_messages %>
+4: 
+5:   <p>
+
+    app/views/lifts/index.html.erb:2
+    app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (49.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:00:47) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 20ms (View: 5, DB: 4) | 200 OK [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:02:53) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined local variable or method `user_id' for #<ActionView::Base:0x227912c>) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h user_id %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (124.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:05:00) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.id %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:05:01) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.id %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (116.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:05:01) [GET]
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (4.7ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.id %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:07:03) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (103.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:07:16) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (29.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:07:17) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:07:30) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (103.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:07:31) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:07:56) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 25ms (View: 11, DB: 4) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:03) [GET]
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 24ms (View: 10, DB: 4) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:06) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 20ms (View: 6, DB: 5) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:08) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (1.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 20ms (View: 5, DB: 5) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:08) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 20ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:19) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x23bba6c>) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.name %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (41.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:34) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined method `email' for #<Array:0x216c9b4>) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.email %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (43.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:08:35) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.4ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined method `email' for #<Array:0x23866b4>) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.email %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:10:33) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/lifts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:11:19) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/lifts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:11:20) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/lifts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:11:27) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.5ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined method `email' for #<Array:0x226d14c>) on line #23 of app/views/lifts/index.html.erb:
+20:   </p>
+21: <% end %>
+22: 
+23: <%=h @user.email %>
+24: 
+25: 
+26: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:23
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (104.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:11:37) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.7ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 27ms (View: 12, DB: 4) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:11:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 25ms (View: 10, DB: 4) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:12:17) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:13:02) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.5ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (104.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:13:03) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:14:28) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (2.1ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 27ms (View: 10, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:16:24) [GET]
+
+ActionController::RoutingError (No route matches "/exercise" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-18 10:16:25) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (18.0ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 37ms (View: 11, DB: 19) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#new (for 127.0.0.1 at 2010-03-18 10:16:27) [GET]
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/new
+Completed in 19ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/exercises/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:16:34) [GET]
+
+ActionController::RoutingError (No route matches "/muscle/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#index (for 127.0.0.1 at 2010-03-18 10:16:37) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/muscles
+Rendering muscles/index
+Completed in 13ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/muscles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#new (for 127.0.0.1 at 2010-03-18 10:16:39) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mMuscle Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+Rendering template within layouts/muscles
+Rendering muscles/new
+Completed in 18ms (View: 7, DB: 3) | 200 OK [http://0.0.0.0/muscles/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#create (for 127.0.0.1 at 2010-03-18 10:16:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "muscle"=>{"name"=>"Chest"}}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMuscle Create (28.7ms)[0m   [0mINSERT INTO `muscles` (`name`, `updated_at`, `created_at`) VALUES('Chest', '2010-03-18 14:16:41', '2010-03-18 14:16:41')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/muscles/1
+Completed in 43ms (DB: 33) | 302 Found [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#show (for 127.0.0.1 at 2010-03-18 10:16:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Rendering template within layouts/muscles
+Rendering muscles/show
+Completed in 18ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/muscles/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#create (for 127.0.0.1 at 2010-03-18 10:16:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "muscle"=>{"name"=>"Back"}}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMuscle Create (0.2ms)[0m   [0mINSERT INTO `muscles` (`name`, `updated_at`, `created_at`) VALUES('Back', '2010-03-18 14:16:45', '2010-03-18 14:16:45')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/muscles/2
+Completed in 15ms (DB: 5) | 302 Found [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#show (for 127.0.0.1 at 2010-03-18 10:16:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (1.1ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 2) [0m
+Rendering template within layouts/muscles
+Rendering muscles/show
+Completed in 15ms (View: 2, DB: 4) | 200 OK [http://0.0.0.0/muscles/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#create (for 127.0.0.1 at 2010-03-18 10:16:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "muscle"=>{"name"=>"Biceps"}}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMuscle Create (0.2ms)[0m   [0mINSERT INTO `muscles` (`name`, `updated_at`, `created_at`) VALUES('Biceps', '2010-03-18 14:16:49', '2010-03-18 14:16:49')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/muscles/3
+Completed in 15ms (DB: 5) | 302 Found [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#show (for 127.0.0.1 at 2010-03-18 10:16:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 3) [0m
+Rendering template within layouts/muscles
+Rendering muscles/show
+Completed in 87ms (View: 75, DB: 4) | 200 OK [http://0.0.0.0/muscles/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#create (for 127.0.0.1 at 2010-03-18 10:16:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "muscle"=>{"name"=>"Triceps"}}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMuscle Create (0.2ms)[0m   [0mINSERT INTO `muscles` (`name`, `updated_at`, `created_at`) VALUES('Triceps', '2010-03-18 14:16:52', '2010-03-18 14:16:52')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/muscles/4
+Completed in 16ms (DB: 4) | 302 Found [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#show (for 127.0.0.1 at 2010-03-18 10:16:52) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.3ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 4) [0m
+Rendering template within layouts/muscles
+Rendering muscles/show
+Completed in 15ms (View: 2, DB: 4) | 200 OK [http://0.0.0.0/muscles/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#create (for 127.0.0.1 at 2010-03-18 10:16:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "muscle"=>{"name"=>"Legs"}}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMuscle Create (0.2ms)[0m   [0mINSERT INTO `muscles` (`name`, `updated_at`, `created_at`) VALUES('Legs', '2010-03-18 14:16:54', '2010-03-18 14:16:54')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/muscles/5
+Completed in 15ms (DB: 5) | 302 Found [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#show (for 127.0.0.1 at 2010-03-18 10:16:54) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 5) [0m
+Rendering template within layouts/muscles
+Rendering muscles/show
+Completed in 13ms (View: 2, DB: 3) | 200 OK [http://0.0.0.0/muscles/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#index (for 127.0.0.1 at 2010-03-18 10:16:55) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/muscles
+Rendering muscles/index
+  [4;36;1mMuscle Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+Completed in 28ms (View: 17, DB: 3) | 200 OK [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:16:58) [GET]
+
+ActionController::RoutingError (No route matches "/exercise" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-18 10:17:00) [GET]
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://0.0.0.0/exercises]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#new (for 127.0.0.1 at 2010-03-18 10:17:02) [GET]
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Load (0.3ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/new
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+Completed in 14ms (View: 5, DB: 3) | 200 OK [http://0.0.0.0/exercises/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#create (for 127.0.0.1 at 2010-03-18 10:17:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "exercise"=>{"name"=>"Bench Press", "muscle_id"=>"1"}}
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mExercise Create (0.2ms)[0m   [0;1mINSERT INTO `exercises` (`name`, `updated_at`, `muscle_id`, `created_at`) VALUES('Bench Press', '2010-03-18 14:17:05', 1, '2010-03-18 14:17:05')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/exercises/1
+Completed in 9ms (DB: 2) | 302 Found [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#show (for 127.0.0.1 at 2010-03-18 10:17:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Rendering template within layouts/exercises
+Rendering exercises/show
+Completed in 13ms (View: 6, DB: 2) | 200 OK [http://0.0.0.0/exercises/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#create (for 127.0.0.1 at 2010-03-18 10:17:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "exercise"=>{"name"=>"Peck Deck", "muscle_id"=>"1"}}
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mExercise Create (0.3ms)[0m   [0;1mINSERT INTO `exercises` (`name`, `updated_at`, `muscle_id`, `created_at`) VALUES('Peck Deck', '2010-03-18 14:17:12', 1, '2010-03-18 14:17:12')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/exercises/2
+Completed in 10ms (DB: 3) | 302 Found [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#show (for 127.0.0.1 at 2010-03-18 10:17:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 2) [0m
+Rendering template within layouts/exercises
+Rendering exercises/show
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://0.0.0.0/exercises/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-18 10:17:13) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.2ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 20ms (View: 11, DB: 3) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#new (for 127.0.0.1 at 2010-03-18 10:17:17) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mMuscle Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+Rendering template within layouts/muscles
+Rendering muscles/new
+Completed in 14ms (View: 4, DB: 3) | 200 OK [http://0.0.0.0/muscles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusclesController#index (for 127.0.0.1 at 2010-03-18 10:17:17) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mMuscle Load (0.3ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/muscles
+Rendering muscles/index
+  [4;36;1mMuscle Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `muscles`[0m
+Completed in 34ms (View: 19, DB: 6) | 200 OK [http://0.0.0.0/muscles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:17:18) [GET]
+
+ActionController::RoutingError (No route matches "/muscle/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#new (for 127.0.0.1 at 2010-03-18 10:17:19) [GET]
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mMuscle Load (1.1ms)[0m   [0;1mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/new
+  [4;35;1mMuscle Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+Completed in 16ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/exercises/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ExercisesController#index (for 127.0.0.1 at 2010-03-18 10:17:19) [GET]
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mMuscle Load (0.2ms)[0m   [0mSELECT * FROM `muscles` [0m
+Rendering template within layouts/exercises
+Rendering exercises/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mMuscle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `muscles`[0m
+  [4;36;1mMuscle Load (0.3ms)[0m   [0;1mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `muscles` WHERE (`muscles`.`id` = 1) [0m
+Completed in 20ms (View: 10, DB: 3) | 200 OK [http://0.0.0.0/exercises]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:17:20) [GET]
+
+ActionController::RoutingError (No route matches "/exercise" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:17:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 22ms (View: 6, DB: 5) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:20:17) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.5ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 107ms (View: 14, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:20:45) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (73.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.5ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+ERROR: compiling _run_erb_app47views47layouts47lifts46html46erb RAISED compile error
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:81: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...tput_buffer.concat ", Sign out\", sign_out_path %><Br/>\n"
+                              ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:110: syntax error, unexpected kENSURE, expecting ')'
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47lifts46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\n"
+@output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "<title>Liftrr - Enter your maxes</title>\n"
+@output_buffer.concat(( stylesheet_link_tag 'scaffold' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<style type=\"text/css\">\n"
+@output_buffer.concat "<!--\n"
+@output_buffer.concat "body{\n"
+@output_buffer.concat "\tfont-family:arial;\n"
+@output_buffer.concat "\tfont-size:13px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#container {\n"
+@output_buffer.concat "\tmargin: auto;\n"
+@output_buffer.concat "\twidth: 900px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#header {\n"
+@output_buffer.concat "\tborder-bottom-width: 1px;\n"
+@output_buffer.concat "\tborder-bottom-style: solid;\n"
+@output_buffer.concat "\tborder-bottom-color: #BFBFBF;\n"
+@output_buffer.concat "\tmargin-bottom: 30px;\n"
+@output_buffer.concat "\tpadding-top: 30px;\n"
+@output_buffer.concat "\tpadding-bottom: 30px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#left-nav {\n"
+@output_buffer.concat "\tborder-right-width: 1px;\n"
+@output_buffer.concat "\tborder-right-style: solid;\n"
+@output_buffer.concat "\tborder-right-color: #BFBFBF;\n"
+@output_buffer.concat "\tfloat: left;\n"
+@output_buffer.concat "\theight:200px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".menu{\n"
+@output_buffer.concat "\tbackground-color: #C10000;\n"
+@output_buffer.concat "\twidth: 150px;\n"
+@output_buffer.concat "\tpadding: 4px;\n"
+@output_buffer.concat "\tcolor: #FFF;\n"
+@output_buffer.concat "\ttext-align: right;\n"
+@output_buffer.concat "\tfont-family: arial;\n"
+@output_buffer.concat "\tfont-size: 13px;\n"
+@output_buffer.concat "\tfont-weight: bold;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".item{\n"
+@output_buffer.concat "\twidth: 150px;\n"
+@output_buffer.concat "\tpadding: 4px;\n"
+@output_buffer.concat "\ttext-align: right;\n"
+@output_buffer.concat "\tfont-family: arial;\n"
+@output_buffer.concat "\tfont-size: 13px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#content{\n"
+@output_buffer.concat "\tpadding:20px 0 0 40px;\n"
+@output_buffer.concat "\tfloat:left;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".submit_field {\n"
+@output_buffer.concat "\tfloat:right;\n"
+@output_buffer.concat "\tmargin-top:40px;\n"
+@output_buffer.concat "\tbackground-color:red;\n"
+@output_buffer.concat "\tborder-style:solid;\n"
+@output_buffer.concat "\tborder-color:red;\n"
+@output_buffer.concat "\tborder-width:1px;\n"
+@output_buffer.concat "\tcolor:#fff;\n"
+@output_buffer.concat "\tfont-weight:bold;\n"
+@output_buffer.concat "\tpadding:8px;\n"
+@output_buffer.concat "\tfont-size:16px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".submit_field a{\n"
+@output_buffer.concat "\ttext-decoration:none;\n"
+@output_buffer.concat "\tcolor:#fff;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "-->\n"
+@output_buffer.concat "</style>\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div id=\"container\">\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    \t<div id=\"header\"><img src=\"/images/liftrr-logo.png\" width=\"192\" height=\"72\" alt=\"logo\" />\n"
+@output_buffer.concat "\t\t  \t\n"
+@output_buffer.concat "\t\t\t<div class=\"submit_field\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to "welcome <%=h @user.email ).to_s); @output_buffer.concat ", Sign out\", sign_out_path %><Br/>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "<div id=\"main\">\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        \t<div id=\"left-nav\">\n"
+@output_buffer.concat "    \t\t\t<div class=\"menu\">Menu</div>\n"
+@output_buffer.concat "    \t\t\t<div class=\"item\">Enter Max Weights</div>\n"
+@output_buffer.concat "    \t\t\t<div class=\"item\">View Statistics</div>\n"
+@output_buffer.concat "        \t</div>\n"
+@output_buffer.concat "            \n"
+@output_buffer.concat "            \n"
+@output_buffer.concat " \t<div id=\"content\">\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t<span style=\"color: green\">"; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "</span>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:11:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:81: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+...tput_buffer.concat ", Sign out\", sign_out_path %><Br/>\n"
+                              ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:110: syntax error, unexpected kENSURE, expecting ')'
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112: syntax error, unexpected kEND, expecting ')') on line #81 of app/views/layouts/lifts.html.erb:
+78:     	<div id="header"><img src="/images/liftrr-logo.png" width="192" height="72" alt="logo" />
+79: 		  	
+80: 			<div class="submit_field">
+81: 				<%= link_to "welcome <%=h @user.email %>, Sign out", sign_out_path %><Br/>
+82: 			</div>
+83: 		
+84: 		</div>
+
+    app/views/layouts/lifts.html.erb:112:in `compile!'
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:21:08) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 30ms (View: 13, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:21:15) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (1.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 109ms (View: 90, DB: 7) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:21:37) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (23.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 58ms (View: 15, DB: 29) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:21:59) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+ERROR: compiling _run_erb_app47views47layouts47lifts46html46erb RAISED compile error
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:82: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n"
+                              ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:83: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "\t\t\t\tSign out\", sign_out_path %><Br/>\n"
+                        ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112: syntax error, unexpected kENSURE, expecting ')'
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:114: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47lifts46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\n"
+@output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "<title>Liftrr - Enter your maxes</title>\n"
+@output_buffer.concat(( stylesheet_link_tag 'scaffold' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<style type=\"text/css\">\n"
+@output_buffer.concat "<!--\n"
+@output_buffer.concat "body{\n"
+@output_buffer.concat "\tfont-family:arial;\n"
+@output_buffer.concat "\tfont-size:13px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#container {\n"
+@output_buffer.concat "\tmargin: auto;\n"
+@output_buffer.concat "\twidth: 900px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#header {\n"
+@output_buffer.concat "\tborder-bottom-width: 1px;\n"
+@output_buffer.concat "\tborder-bottom-style: solid;\n"
+@output_buffer.concat "\tborder-bottom-color: #BFBFBF;\n"
+@output_buffer.concat "\tmargin-bottom: 30px;\n"
+@output_buffer.concat "\tpadding-top: 30px;\n"
+@output_buffer.concat "\tpadding-bottom: 30px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#left-nav {\n"
+@output_buffer.concat "\tborder-right-width: 1px;\n"
+@output_buffer.concat "\tborder-right-style: solid;\n"
+@output_buffer.concat "\tborder-right-color: #BFBFBF;\n"
+@output_buffer.concat "\tfloat: left;\n"
+@output_buffer.concat "\theight:200px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".menu{\n"
+@output_buffer.concat "\tbackground-color: #C10000;\n"
+@output_buffer.concat "\twidth: 150px;\n"
+@output_buffer.concat "\tpadding: 4px;\n"
+@output_buffer.concat "\tcolor: #FFF;\n"
+@output_buffer.concat "\ttext-align: right;\n"
+@output_buffer.concat "\tfont-family: arial;\n"
+@output_buffer.concat "\tfont-size: 13px;\n"
+@output_buffer.concat "\tfont-weight: bold;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".item{\n"
+@output_buffer.concat "\twidth: 150px;\n"
+@output_buffer.concat "\tpadding: 4px;\n"
+@output_buffer.concat "\ttext-align: right;\n"
+@output_buffer.concat "\tfont-family: arial;\n"
+@output_buffer.concat "\tfont-size: 13px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#content{\n"
+@output_buffer.concat "\tpadding:20px 0 0 40px;\n"
+@output_buffer.concat "\tfloat:left;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".submit_field {\n"
+@output_buffer.concat "\tfloat:right;\n"
+@output_buffer.concat "\tmargin-top:40px;\n"
+@output_buffer.concat "\tbackground-color:red;\n"
+@output_buffer.concat "\tborder-style:solid;\n"
+@output_buffer.concat "\tborder-color:red;\n"
+@output_buffer.concat "\tborder-width:1px;\n"
+@output_buffer.concat "\tcolor:#fff;\n"
+@output_buffer.concat "\tfont-weight:bold;\n"
+@output_buffer.concat "\tpadding:8px;\n"
+@output_buffer.concat "\tfont-size:16px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".submit_field a{\n"
+@output_buffer.concat "\ttext-decoration:none;\n"
+@output_buffer.concat "\tcolor:#fff;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "-->\n"
+@output_buffer.concat "</style>\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div id=\"container\">\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    \t<div id=\"header\"><img src=\"/images/liftrr-logo.png\" width=\"192\" height=\"72\" alt=\"logo\" />\n"
+@output_buffer.concat "\t\t  \t\n"
+@output_buffer.concat "\t\t\t<div class=\"submit_field\">welcome "; @output_buffer.concat((h @user.email ).to_s); @output_buffer.concat ",\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to "<%= @user.email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\tSign out\", sign_out_path %><Br/>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "<div id=\"main\">\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        \t<div id=\"left-nav\">\n"
+@output_buffer.concat "    \t\t\t<div class=\"menu\">Menu</div>\n"
+@output_buffer.concat "    \t\t\t<div class=\"item\">Enter Max Weights</div>\n"
+@output_buffer.concat "    \t\t\t<div class=\"item\">View Statistics</div>\n"
+@output_buffer.concat "        \t</div>\n"
+@output_buffer.concat "            \n"
+@output_buffer.concat "            \n"
+@output_buffer.concat " \t<div id=\"content\">\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t<span style=\"color: green\">"; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "</span>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:114:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:11:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:82: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n"
+                              ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:83: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "\t\t\t\tSign out\", sign_out_path %><Br/>\n"
+                        ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112: syntax error, unexpected kENSURE, expecting ')'
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:114: syntax error, unexpected kEND, expecting ')') on line #82 of app/views/layouts/lifts.html.erb:
+79: 		  	
+80: 			<div class="submit_field">welcome <%=h @user.email %>,
+81: 			
+82: 				<%= link_to "<%= @user.email %>
+83: 				Sign out", sign_out_path %><Br/>
+84: 			</div>
+85: 		
+
+    app/views/layouts/lifts.html.erb:114:in `compile!'
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:22:04) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+ERROR: compiling _run_erb_app47views47layouts47lifts46html46erb RAISED compile error
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:82: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n"
+                              ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:83: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "\t\t\t\tSign out\", sign_out_path %><Br/>\n"
+                        ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112: syntax error, unexpected kENSURE, expecting ')'
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:114: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47lifts46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "\n"
+@output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "<title>Liftrr - Enter your maxes</title>\n"
+@output_buffer.concat(( stylesheet_link_tag 'scaffold' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<style type=\"text/css\">\n"
+@output_buffer.concat "<!--\n"
+@output_buffer.concat "body{\n"
+@output_buffer.concat "\tfont-family:arial;\n"
+@output_buffer.concat "\tfont-size:13px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#container {\n"
+@output_buffer.concat "\tmargin: auto;\n"
+@output_buffer.concat "\twidth: 900px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#header {\n"
+@output_buffer.concat "\tborder-bottom-width: 1px;\n"
+@output_buffer.concat "\tborder-bottom-style: solid;\n"
+@output_buffer.concat "\tborder-bottom-color: #BFBFBF;\n"
+@output_buffer.concat "\tmargin-bottom: 30px;\n"
+@output_buffer.concat "\tpadding-top: 30px;\n"
+@output_buffer.concat "\tpadding-bottom: 30px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#left-nav {\n"
+@output_buffer.concat "\tborder-right-width: 1px;\n"
+@output_buffer.concat "\tborder-right-style: solid;\n"
+@output_buffer.concat "\tborder-right-color: #BFBFBF;\n"
+@output_buffer.concat "\tfloat: left;\n"
+@output_buffer.concat "\theight:200px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".menu{\n"
+@output_buffer.concat "\tbackground-color: #C10000;\n"
+@output_buffer.concat "\twidth: 150px;\n"
+@output_buffer.concat "\tpadding: 4px;\n"
+@output_buffer.concat "\tcolor: #FFF;\n"
+@output_buffer.concat "\ttext-align: right;\n"
+@output_buffer.concat "\tfont-family: arial;\n"
+@output_buffer.concat "\tfont-size: 13px;\n"
+@output_buffer.concat "\tfont-weight: bold;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".item{\n"
+@output_buffer.concat "\twidth: 150px;\n"
+@output_buffer.concat "\tpadding: 4px;\n"
+@output_buffer.concat "\ttext-align: right;\n"
+@output_buffer.concat "\tfont-family: arial;\n"
+@output_buffer.concat "\tfont-size: 13px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "#content{\n"
+@output_buffer.concat "\tpadding:20px 0 0 40px;\n"
+@output_buffer.concat "\tfloat:left;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".submit_field {\n"
+@output_buffer.concat "\tfloat:right;\n"
+@output_buffer.concat "\tmargin-top:40px;\n"
+@output_buffer.concat "\tbackground-color:red;\n"
+@output_buffer.concat "\tborder-style:solid;\n"
+@output_buffer.concat "\tborder-color:red;\n"
+@output_buffer.concat "\tborder-width:1px;\n"
+@output_buffer.concat "\tcolor:#fff;\n"
+@output_buffer.concat "\tfont-weight:bold;\n"
+@output_buffer.concat "\tpadding:8px;\n"
+@output_buffer.concat "\tfont-size:16px;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat ".submit_field a{\n"
+@output_buffer.concat "\ttext-decoration:none;\n"
+@output_buffer.concat "\tcolor:#fff;\n"
+@output_buffer.concat "}\n"
+@output_buffer.concat "-->\n"
+@output_buffer.concat "</style>\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div id=\"container\">\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    \t<div id=\"header\"><img src=\"/images/liftrr-logo.png\" width=\"192\" height=\"72\" alt=\"logo\" />\n"
+@output_buffer.concat "\t\t  \t\n"
+@output_buffer.concat "\t\t\t<div class=\"submit_field\">welcome "; @output_buffer.concat((h @user.email ).to_s); @output_buffer.concat ",\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to "<% @user.email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\tSign out\", sign_out_path %><Br/>\n"
+@output_buffer.concat "\t\t\t</div>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t</div>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "<div id=\"main\">\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "        \t<div id=\"left-nav\">\n"
+@output_buffer.concat "    \t\t\t<div class=\"menu\">Menu</div>\n"
+@output_buffer.concat "    \t\t\t<div class=\"item\">Enter Max Weights</div>\n"
+@output_buffer.concat "    \t\t\t<div class=\"item\">View Statistics</div>\n"
+@output_buffer.concat "        \t</div>\n"
+@output_buffer.concat "            \n"
+@output_buffer.concat "            \n"
+@output_buffer.concat " \t<div id=\"content\">\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t\t<span style=\"color: green\">"; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "</span>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "        \n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "    \n"
+@output_buffer.concat "    </div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:114:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:11:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/elliot/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/elliot/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Users/elliot/.gem/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:82: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n"
+                              ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:83: syntax error, unexpected $undefined, expecting ')'
+@output_buffer.concat "\t\t\t\tSign out\", sign_out_path %><Br/>\n"
+                        ^
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:112: syntax error, unexpected kENSURE, expecting ')'
+/Users/elliot/work/liftr/app/views/layouts/lifts.html.erb:114: syntax error, unexpected kEND, expecting ')') on line #82 of app/views/layouts/lifts.html.erb:
+79: 		  	
+80: 			<div class="submit_field">welcome <%=h @user.email %>,
+81: 			
+82: 				<%= link_to "<% @user.email %>
+83: 				Sign out", sign_out_path %><Br/>
+84: 			</div>
+85: 		
+
+    app/views/layouts/lifts.html.erb:114:in `compile!'
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:22:47) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (1.0ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 32ms (View: 14, DB: 7) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:23:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 31ms (View: 14, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:24:05) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 29ms (View: 13, DB: 5) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:24:19) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 109ms (View: 15, DB: 8) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:24:37) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 35ms (View: 18, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:24:38) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 24ms (View: 7, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:24:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 32ms (View: 14, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:25:16) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 33ms (View: 16, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:25:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 102ms (View: 85, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:25:33) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 27ms (View: 8, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:27:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.6ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 31ms (View: 13, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:29:49) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (1.7ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined method `merge' for "id":String) on line #8 of app/views/lifts/index.html.erb:
+5:   <p>
+6:     <%= f.label :user_id %><br />
+7:     <%= f.text_field :user_id %>
+8: 	<%= f.text_field "user[]", "id" %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :exercise_id %><br />
+
+    app/views/lifts/index.html.erb:8
+    app/views/lifts/index.html.erb:2
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (46.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:29:56) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+
+ActionView::TemplateError (undefined method `merge' for "id":String) on line #7 of app/views/lifts/index.html.erb:
+4: 
+5:   <p>
+6:     <%= f.label :user_id %><br />
+7: 	<%= f.text_field "user[]", "id" %>
+8:   </p>
+9:   <p>
+10:     <%= f.label :exercise_id %><br />
+
+    app/views/lifts/index.html.erb:7
+    app/views/lifts/index.html.erb:2
+    app/controllers/lifts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:30:31) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (1.6ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+Completed in 32ms (View: 12, DB: 7) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:31:12) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 28ms (View: 11, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#create (for 127.0.0.1 at 2010-03-18 10:31:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "lift"=>{"weight"=>"122", "exercise_id"=>"1", "user_id"=>"1"}}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLift Create (28.4ms)[0m   [0mINSERT INTO `lifts` (`updated_at`, `exercise_id`, `weight`, `user_id`, `created_at`) VALUES('2010-03-18 14:31:18', 1, 122, 1, '2010-03-18 14:31:18')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/lifts/1
+Completed in 118ms (DB: 32) | 302 Found [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#show (for 127.0.0.1 at 2010-03-18 10:31:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mLift Load (0.7ms)[0m   [0;1mSELECT * FROM `lifts` WHERE (`lifts`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/show
+Completed in 22ms (View: 9, DB: 4) | 200 OK [http://0.0.0.0/lifts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:31:22) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:31:43) [GET]
+
+ActionController::RoutingError (No route matches "/user/1/lifts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:31:47) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 28ms (View: 9, DB: 6) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#create (for 127.0.0.1 at 2010-03-18 10:31:53) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8vhgggSWZlaCwA30i/oEB/W2Emq3KryyzqLHkeQ69z8=", "lift"=>{"weight"=>"43234", "exercise_id"=>"1", "user_id"=>"1"}}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mLift Create (0.3ms)[0m   [0;1mINSERT INTO `lifts` (`updated_at`, `exercise_id`, `weight`, `user_id`, `created_at`) VALUES('2010-03-18 14:31:53', 1, 43234, 1, '2010-03-18 14:31:53')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/lifts/2
+Completed in 18ms (DB: 6) | 302 Found [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#show (for 127.0.0.1 at 2010-03-18 10:31:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` WHERE (`lifts`.`id` = 2) [0m
+Rendering template within layouts/lifts
+Rendering lifts/show
+Completed in 16ms (View: 4, DB: 4) | 200 OK [http://0.0.0.0/lifts/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:32:10) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.8ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 35ms (View: 14, DB: 7) | 200 OK [http://0.0.0.0/users/1/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:32:15) [GET]
+  Parameters: {"user_id"=>"2"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (30.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:37:51) [GET]
+  Parameters: {"user_id"=>"1"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:9: syntax error, unexpected ')', expecting ']'):
+  
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:38:12) [GET]
+  Parameters: {"user_id"=>"1"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:9: syntax error, unexpected ')', expecting ']'):
+  
+
+Rendered rescues/_trace (103.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:38:13) [GET]
+  Parameters: {"user_id"=>"1"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:9: syntax error, unexpected ')', expecting ']'):
+  
+
+Rendered rescues/_trace (28.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-18 10:38:14) [GET]
+  Parameters: {"user_id"=>"1"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/lifts_controller.rb:9: syntax error, unexpected ')', expecting ']'):
+  
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:38:40) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/lifts_controller.rb:9:in `session'
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (31.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:38:48) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/lifts_controller.rb:9:in `session'
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:39:00) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (27.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:39:15) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (103.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:39:16) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:40:59) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.7ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (27.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:41:00) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (105.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:41:00) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:41:16) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:41:17) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (105.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:41:18) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:42:51) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (2.0ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (30.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:42:52) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.5ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:43:00) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (2.8ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (103.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:43:09) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #22 of app/views/lifts/index.html.erb:
+19:   </p>
+20: <% end %>
+21: 
+22: <%=h @current_user.id %>
+23: 
+24: 
+25: <h1>Listing lifts</h1>
+
+    app/views/lifts/index.html.erb:22
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:43:18) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (1.7ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 35ms (View: 19, DB: 7) | 200 OK [http://0.0.0.0/lifts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:46:55) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.5ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (104.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:48:18) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.5ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:48:19) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:48:27) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (108.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:48:28) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 10:51:03) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.2ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (28.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 11:04:51) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (2.1ms)[0m   [0mSELECT * FROM `exercises` [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/lifts_controller.rb:9:in `index'
+
+Rendered rescues/_trace (106.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 11:16:24) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` [0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 35ms (View: 19, DB: 6) | 200 OK [http://0.0.0.0/lifts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#new (for 127.0.0.1 at 2010-03-18 11:16:26) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;36;1mLift Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/new
+  [4;36;1mExercise Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+Completed in 21ms (View: 6, DB: 6) | 200 OK [http://0.0.0.0/lifts/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-18 11:16:27) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b467cb22ec45c5d7b0c95596a5ffc4c0d56df7a7') LIMIT 1[0m
+  [4;35;1mLift Load (0.2ms)[0m   [0mSELECT * FROM `lifts` [0m
+  [4;36;1mLift Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 29ms (View: 13, DB: 6) | 200 OK [http://0.0.0.0/lifts]
