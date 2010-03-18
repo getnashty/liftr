@@ -4,7 +4,9 @@
      # xml.message "You can broadcast any message to chart from data XML file", :bg_color => "#FFFFFF", :text_color => "#000000"
      xml.series do    
        @lifts.each_with_index do |lift, index|
+         if lift.user_id == current_user.id
          xml.value lift.created_at,  :xid => index
+          end
        end
      end
   
