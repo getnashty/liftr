@@ -3,10 +3,6 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %><br />
-  </p>
-  <p>
     <%= f.label :exercise_id %><br />
 
     <%= f.select (:exercise_id, @exercises.collect {|exercise| [ exercise.name, exercise.id ] }) %>
@@ -16,10 +12,10 @@
     <%= f.text_field :weight %>
   </p>
   <p>
+    <input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" /<br />
     <%= f.submit 'Create' %>
   </p>
 <% end %>
-
 
 
 <h1>Listing lifts</h1>
@@ -33,6 +29,7 @@
   </tr>
 
 <% @lifts.each do |lift| %>
+<% if lift.user_id == current_user.id %>
 <% @exname=Exercise.find(lift.exercise_id)%>
 
   <tr>
@@ -44,6 +41,7 @@
     <td><%= link_to 'Edit', edit_lift_path(lift) %></td>
     <td><%= link_to 'Destroy', lift, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+<% end %>
 <% end %>
 </table>
 
