@@ -49,7 +49,11 @@
 <h1>Editing Your Max</h1>
 </div>
 
+<% if current_user.id == @lift.user_id  %>
+
+
 <% form_for(@lift) do |f| %>
+
   <%= f.error_messages %>
 
 	<div class="text_field">
@@ -64,6 +68,14 @@
     <%= f.submit 'Update' %>
 	</div>
 <% end %>
+
+
+<% else %>
+
+You are not authorized to edit this max, punk.
+
+<% end %>
+
 <br/><br/>
 <br/><br/>
 <%= link_to 'Back', lifts_path %>
