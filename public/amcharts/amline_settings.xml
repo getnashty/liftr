@@ -372,16 +372,36 @@
       <visible_in_legend></visible_in_legend>                 <!-- [true] (true / false) whether to show legend entry for this graph or not -->
     </graph>
     
-    <graph gid="2">                                                            
+    <graph gid="benchpress">                                                            
       <axis>left</axis>
-      <title>Inflation adjusted</title>              
-      <color>#999999</color>
+      <title>Bench Press</title>              
+      <color>red</color>
       <selected>false</selected>                     
       <balloon_text>
         <![CDATA[${value}]]>
       </balloon_text>
     </graph>
-  </graphs>  
+
+    <graph gid="squats">                                                            
+      <axis>left</axis>
+      <title>Squats</title>              
+      <color>green</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[${value}]]>
+      </balloon_text>
+    </graph>
+
+    <graph gid="deadlifts">                                                            
+      <axis>left</axis>
+      <title>Deadlifts</title>              
+      <color>blue</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[${value}]]>
+      </balloon_text>
+    </graph>
+  </graphs> 
   
 	<guides>	                                                 <!-- guides are straight lines drawn through all plot area at a give value. Can also be filled with color -->
 	 <max_min></max_min>                                       <!-- [false] (true / false) whether to include guides' values when calculating min and max of a chart -->	
