@@ -102,17 +102,62 @@
 <h1>Enter Today's Maxes</h1>
 </div>
 
+
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 1%>
+ 	<% @a=1 %>
+ <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 2%>
+ 	<% @b=1 %>
+ <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 3%>
+ 	<% @c=1 %>
+ <% end %>
+<% end %>
+
+
+<% if @a==1 && @b==1 && @c==1 %> 
+
+<div style="clear:both">
+	Sorry, you have already entered your maxes for today, feel free to edit them below!
+</div>
+
+<% else %>
 <% form_for(@lift) do |f| %>
   <%= f.error_messages %>
 
   	<div class="text_field">
     <%= f.label :exercise_id %><br />
-    <%= f.select (:exercise_id, 
-			@exercises.collect {|exercise|
-				#if exercise.id!=2 
-				[ exercise.name, exercise.id ]
-				#end
-			 }) %>
+	
+		<% if @a!=1 && @b!=1 && @c!=1 %> 
+    	<%= f.select (:exercise_id,{ "Bench Press", 1, "Squat", 2, "Deadlift", 3 }) %>
+		<% end %>
+		
+		<% if @a==1 && @b!=1 && @c!=1 %> 
+    	<%= f.select (:exercise_id,{ "Squat", 2, "Deadlift", 3 }) %>
+		<% end %>
+		
+		<% if @a!=1 && @b==1 && @c!=1 %> 
+    	<%= f.select (:exercise_id,{ "Bench Press", 1,"Deadlift", 3 }) %>
+		<% end %>
+		
+		<% if @a!=1 && @b!=1 && @c==1 %> 
+    	<%= f.select (:exercise_id,{ "Bench Press", 1, "Squat", 2 }) %>
+		<% end %>
+		
+		<% if @a==1 && @b==1 && @c!=1 %> 
+    	<%= f.select (:exercise_id,{ "Deadlift", 3 }) %>
+		<% end %>
+		
+		<% if @a==1 && @b!=1 && @c==1 %> 
+    	<%= f.select (:exercise_id,{ "Squat", 2 }) %>
+		<% end %>
+		
+		<% if @a!=1 && @b==1 && @c==1 %> 
+    	<%= f.select (:exercise_id,{ "Bench Press", 1 }) %>
+		<% end %>
+		
 	</div>
     <div class="text_field">
 	<%= f.label :weight %><br />
@@ -131,9 +176,12 @@
 	<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
 	<% end %>
 	
+	
 	<div style="clear:both">
 		* Please note, each exercise may only have 1 max per day!
 	</div>
+	
+<% end %>
 	
 	<br/>
 	
@@ -215,8 +263,7 @@ Delete
 <% end %>
 </div>
 
-<br/><br/>&nbsp;<br/>
-<div class="headly">
+<div class="headly" style="clear:both;padding-top:15px;">
 <h1>All Your Maxes</h1>
 </div>
 
