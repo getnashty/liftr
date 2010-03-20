@@ -6,6 +6,7 @@
 <!-- "!" before x or y position (for example: <x>!20</x>) means that the coordinate will be calculated from the right side or the bottom -->
 
 <settings> 
+  <digits_after_decimal>0</digits_after_decimal>                                     <!-- [true] (true / false) -->          
   <data_type></data_type>                                     <!-- [xml] (xml / csv) -->
   <csv_separator></csv_separator>                             <!-- [;] (string) csv file data separator (you need it only if you are using csv file for your data) -->
   <skip_rows></skip_rows>                                     <!-- [0] (Number) if you are using csv data type, you can set the number of rows which should be skipped here -->       
@@ -69,12 +70,14 @@
       <enabled></enabled>                                     <!-- [true] (true / false) -->                                                     
       <color></color>                                         <!-- [#000000] (hex color code) -->
       <alpha></alpha>                                         <!-- [15] (0 - 100) -->
+      <integers_only>true</integers_only>                                     <!-- [true] (true / false) -->          
       <dashed></dashed>                                       <!-- [false](true / false) -->
       <dash_length></dash_length>                             <!-- [5] (Number) -->  
       <approx_count></approx_count>                           <!-- [4] (Number) approximate number of gridlines -->
     </x>
     <y_left>                                                  <!-- horizontal grid, Y left axis. Visible only if there is at least one graph assigned to left axis -->
       <enabled></enabled>                                     <!-- [true] (true / false) -->          
+      <integers_only>true</integers_only>                                     <!-- [true] (true / false) -->          
       <color></color>                                         <!-- [#000000] (hex color code) -->
       <alpha></alpha>                                         <!-- [15] (0 - 100) -->
       <dashed></dashed>                                       <!-- [false] (true / false) -->
@@ -85,6 +88,7 @@
     </y_left>
     <y_right>                                                 <!-- horizontal grid, Y right axis. Visible only if there is at least one graph assigned to right axis -->
       <enabled></enabled>                                     <!-- [true] (true / false) -->          
+      <integers_only>true</integers_only>                                     <!-- [true] (true / false) -->          
       <color></color>                                         <!-- [#000000] (hex color code) -->
       <alpha></alpha>                                         <!-- [15] (0 - 100) -->
       <dashed></dashed>                                       <!-- [false] (true / false) -->
@@ -222,7 +226,7 @@
       <enabled>true</enabled>                                 <!-- [false] (true / false) whether to show values near legend entries or not -->
       <width>44</width>                                       <!-- [80] (Number) width of text field for value -->
       <align>left</align>                                     <!-- [right] (right / left) -->
-      <text><![CDATA[: ${value}]]></text>                     <!-- [{value}] ({title} {value} {series} {description} {percents}) You can format any text: {value} will be replaced with value, {description} - with description and so on. You can add your own text or html code too. -->
+      <text><![CDATA[: {value}]]></text>                     <!-- [{value}] ({title} {value} {series} {description} {percents}) You can format any text: {value} will be replaced with value, {description} - with description and so on. You can add your own text or html code too. -->
      </values>
   </legend>
   
@@ -359,7 +363,7 @@
       <hidden></hidden>                                       <!-- [false] (true / false) vill not be visible until you check corresponding checkbox in the legend -->
       <selected></selected>                                   <!-- [true] (true / false) if true, balloon indicating value will be visible then roll over plot area -->
       <balloon_text>
-        <![CDATA[${value}]]>                                          <!-- [<b>{value}</b><br>{description}] ({title} {value} {series} {description} {percents}) You can format any balloon text: {title} will be replaced with real title, {value} - with value and so on. You can add your own text or html code too. -->
+        <![CDATA[{value} ]]>                                          <!-- [<b>{value}</b><br>{description}] ({title} {value} {series} {description} {percents}) You can format any balloon text: {title} will be replaced with real title, {value} - with value and so on. You can add your own text or html code too. -->
       </balloon_text>
       <data_labels>
         <![CDATA[]]>                                          <!-- [] ({title} {value} {series} {description} {percents}) Data labels can display value (and more) near your point on the plot area. -->
@@ -374,31 +378,52 @@
     
     <graph gid="benchpress">                                                            
       <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
       <title>Bench Press</title>              
       <color>red</color>
       <selected>false</selected>                     
       <balloon_text>
-        <![CDATA[${value}]]>
+        <![CDATA[{value} lbs on Bench Press]]>
       </balloon_text>
     </graph>
 
     <graph gid="squats">                                                            
       <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
       <title>Squats</title>              
-      <color>green</color>
+      <color>#FF0000</color>
       <selected>false</selected>                     
       <balloon_text>
-        <![CDATA[${value}]]>
+        <![CDATA[{value} lbs on Squat]]>
       </balloon_text>
     </graph>
 
     <graph gid="deadlifts">                                                            
       <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
       <title>Deadlifts</title>              
       <color>blue</color>
       <selected>false</selected>                     
       <balloon_text>
-        <![CDATA[${value}]]>
+        <![CDATA[{value} lbs on Deadlifts]]>
       </balloon_text>
     </graph>
   </graphs> 
