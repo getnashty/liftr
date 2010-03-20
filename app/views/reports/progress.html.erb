@@ -1,5 +1,105 @@
   <%= javascript_include_tag 'swfobject' %>
 
+<style type="text/css">
+<!--
+.text_field {
+	float:left;
+	text-align:left;
+	margin-bottom:20px;
+	padding:0px 10px 0 0;
+	font-weight:bold;
+}
+.text_field input{
+	background-image: url(/images/input-bg.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	border-style:solid;
+	border-width:1px;
+	border-color:#898989;
+	padding:8px;
+	font-size:12px;
+	font-family:arial;
+}
+.submit_field2 {
+	float:left;
+}
+.submit_field2 input{
+	margin-top:20px;
+	background-color:red;
+	border-style:solid;
+	border-color:red;
+	border-width:1px;
+	color:#fff;
+	font-weight:bold;
+	padding:6px;
+	font-size:16px;
+}
+.submit_field2 a{
+	text-decoration:none;
+	color:#fff;
+}
+.lifts-list{
+	clear:both;
+	padding:0 0 0 6px;
+}
+.headly h1{
+	clear:both;
+	border-bottom-style:solid;
+	border-bottom-color:#BFBFBF;
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
+.head-item{
+	float:left;
+	padding-right:20px;
+	font-weight:bold;
+	width:90px;
+
+}
+.max-item{
+	float:left;
+	padding-right:20px;
+	width:90px;
+	height:26px;
+	line-height:26px;
+}
+.max-item2{
+	float:left;
+	padding-right:20px;
+	width:90px;
+	height:26px;
+	line-height:26px;
+	background-color:#eee;
+}
+.pencil{
+	margin-top:5px;
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/pencil.png);
+	background-position: bottom;
+}
+.pencil:hover{
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/pencil.png);
+	background-position: top;
+}
+.delete{
+	margin-top:5px;
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/delete.png);
+	background-position: top;
+}
+.delete:hover{
+	height: 18px;
+	width: 16px;
+	background-image: url(/images/delete.png);
+	background-position: bottom;
+}
+-->
+</style>
+
 <div id="progress_chart" class='chart'>
   <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
   <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
@@ -16,3 +116,196 @@
   so.write("progress_chart");
   // ]]>
 </script>
+
+
+<div style="float:left;width:350px;">
+<div class="headly">
+<h1>Bench Press's Maxes</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==1%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==1%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+</div>
+
+<div style="float:left;width:350px;">
+<div class="headly">
+<h1>Squat Maxes</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==2%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==2%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+</div>
+
+<div style="width:100%;clear:both;padding-top:10px;">
+<div class="headly">
+<h1>Deadlift Maxes</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==3%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==3%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div></div>
+
+

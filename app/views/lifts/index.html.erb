@@ -98,13 +98,21 @@
 -->
 </style>
 
+<div class="headly">
+<h1>Enter Today's Maxes</h1>
+</div>
 
 <% form_for(@lift) do |f| %>
   <%= f.error_messages %>
 
   	<div class="text_field">
     <%= f.label :exercise_id %><br />
-    <%= f.select (:exercise_id, @exercises.collect {|exercise| [ exercise.name, exercise.id ] }) %>
+    <%= f.select (:exercise_id, 
+			@exercises.collect {|exercise|
+				#if exercise.id!=2 
+				[ exercise.name, exercise.id ]
+				#end
+			 }) %>
 	</div>
     <div class="text_field">
 	<%= f.label :weight %><br />
@@ -123,8 +131,15 @@
 	<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
 	<% end %>
 	
+	<div style="clear:both">
+		* Please note, each exercise may only have 1 max per day!
+	</div>
+	
+	<br/>
+	
+	
 	<div class="headly">
-	<h1>Your Maxes</h1>
+	<h1>Today's Maxes</h1>
 	</div>
 
 <div class="lifts-list">
@@ -147,10 +162,11 @@ Delete
 </div>
 
 <% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
 <% @lifts.each do |lift| %>
 <% x=x+1 %>
 <% if x == 1 %>
- <% if lift.user_id == current_user.id %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today%>
  	<% @exname=Exercise.find(lift.exercise_id)%>
  	<div class="max-item" style="clear:both;">
  	<%=h @exname.name %>	
@@ -171,7 +187,8 @@ Delete
 <% end %>
 
 <% if x == 2 %>
- <% if lift.user_id == current_user.id %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today%>
+
  	<% @exname=Exercise.find(lift.exercise_id)%>
  	<div class="max-item2" style="clear:both;">
  	<%=h @exname.name %>	
@@ -192,6 +209,82 @@ Delete
  <% else %>
 	<% x = 0 %>
  <% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+<br/><br/>&nbsp;<br/>
+<div class="headly">
+<h1>All Your Maxes</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+<div class="head-item" style="width:30px;">
+Edit	
+</div>
+<div class="head-item" style="width:30px;">
+Delete	
+</div>
+
+<% x=0 %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id %>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<div class="max-item" style="width:30px;">
+<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+</div>
+<div class="max-item" style="width:30px;">
+<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id %>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<div class="max-item2" style="width:30px;">
+<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+</div>
+<div class="max-item2" style="width:30px;">
+<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+</div>
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
 
 <% end %>
 
