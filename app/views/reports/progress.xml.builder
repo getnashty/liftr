@@ -65,49 +65,80 @@
          
            
          xml.graph :gid => 'squats' do
-             count=0
-             date2=1
+
+              count=0
+              date2=1
+
              @lifts.each_with_index do |lift, index|
-               if lift.user_id == current_user.id
-                 dates=lift.created_at.strftime("%m/%d/%Y")
 
-                 if dates!=date2 && lift.exercise_id == 2
+                   if lift.user_id == current_user.id
 
-                   count=count+1
+                     dates=lift.created_at.strftime("%m/%d/%Y")
 
-                   progress = lift.weight
-                   xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"
+                       if dates!=date2 && lift.exercise_id == 2
 
-                 elsif dates!=date2
-                   
-                   count=count+1
-    
-              end
+                         count=count+1
+
+                       progress = lift.weight
+                       xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"                 
+
+                     elsif if dates!=date2 && lift.exercise_id != 2
+
+                        count=count+1                 
+
+                     elsif if dates==date2 && lift.exercise_id == 2
+
+                       progress = lift.weight
+                       xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"                 
+
+                       end
+                     end
+                   end
+
+                     date2=dates
+
+                   end
              end
+
             end
-           end
          
          xml.graph :gid => 'deadlifts' do
-             count=0
-             date2=1
+
+              count=0
+              date2=1
+
              @lifts.each_with_index do |lift, index|
-               if lift.user_id == current_user.id
-                 dates=lift.created_at.strftime("%m/%d/%Y")
 
-                 if dates!=date2 && lift.exercise_id == 3
+                   if lift.user_id == current_user.id
 
+                     dates=lift.created_at.strftime("%m/%d/%Y")
 
-                   progress = lift.weight
-                   xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"
+                       if dates!=date2 && lift.exercise_id == 3
 
-               else
-                 
-                 count=count+1
-                 
-              end
+                         count=count+1
+
+                       progress = lift.weight
+                       xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"                 
+
+                     elsif if dates!=date2 && lift.exercise_id != 3
+
+                        count=count+1                 
+
+                     elsif if dates==date2 && lift.exercise_id == 3
+
+                       progress = lift.weight
+                       xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"                 
+
+                       end
+                     end
+                   end
+
+                     date2=dates
+
+                   end
              end
+
             end
-           end
          
        end
 
