@@ -3,7 +3,7 @@ class LiftsController < ApplicationController
   # GET /lifts
   # GET /lifts.xml
   def index
-    @lifts = Lift.all
+    @lifts = Lift.find(:all, :order => 'created_at') 
     @lift = Lift.new
     @exercises = Exercise.all
     
