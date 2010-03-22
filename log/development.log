@@ -38895,3 +38895,822 @@ DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Pleas
 Rendering reports/progress
   [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
 Completed in 19ms (View: 5, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-21 17:24:10) [GET]
+  [4;35;1mUser Columns (13.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;35;1mLift Load (0.6ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 2) [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 115ms (View: 43, DB: 19) | 200 OK [http://0.0.0.0/reports/progress]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-21 17:24:11) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 18ms (View: 4, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-21 17:24:15) [GET]
+
+ActionController::RoutingError (No route matches "/admin" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:25:30) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+
+ActionView::TemplateError (undefined method `name' for #<User:0x243ec28>) on line #10 of app/views/admin/index.html.erb:
+7: 
+8: <% @users.each do |user| %>
+9:   <tr>
+10:     <td><%=h user.name %></td>
+11:     <td><%= link_to 'Show', user %></td>
+12:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+13:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/admin/index.html.erb:10
+    app/views/admin/index.html.erb:8:in `each'
+    app/views/admin/index.html.erb:8
+    app/controllers/admin_controller.rb:7:in `index'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:25:30) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+
+ActionView::TemplateError (undefined method `name' for #<User:0x22a3af8>) on line #10 of app/views/admin/index.html.erb:
+7: 
+8: <% @users.each do |user| %>
+9:   <tr>
+10:     <td><%=h user.name %></td>
+11:     <td><%= link_to 'Show', user %></td>
+12:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+13:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/admin/index.html.erb:10
+    app/views/admin/index.html.erb:8:in `each'
+    app/views/admin/index.html.erb:8
+    app/controllers/admin_controller.rb:7:in `index'
+
+Rendered rescues/_trace (115.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:25:30) [GET]
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+
+ActionView::TemplateError (undefined method `name' for #<User:0x240386c>) on line #10 of app/views/admin/index.html.erb:
+7: 
+8: <% @users.each do |user| %>
+9:   <tr>
+10:     <td><%=h user.name %></td>
+11:     <td><%= link_to 'Show', user %></td>
+12:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+13:     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/admin/index.html.erb:10
+    app/views/admin/index.html.erb:8:in `each'
+    app/views/admin/index.html.erb:8
+    app/controllers/admin_controller.rb:7:in `index'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:26:00) [GET]
+  [4;35;1mUser Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 28ms (View: 9, DB: 8) | 200 OK [http://0.0.0.0/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:26:00) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://0.0.0.0/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#show (for 127.0.0.1 at 2010-03-21 17:26:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"clearance/users"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#edit (for 127.0.0.1 at 2010-03-21 17:26:06) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"clearance/users"}
+
+ActionController::UnknownAction (No action responded to edit. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-21 17:26:16) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 19ms (View: 5, DB: 4) | 200 OK [http://0.0.0.0/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-21 17:26:21) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '9f02370a23966768b0273aad30c93ea6df69dfdf') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121', `updated_at` = '2010-03-21 21:26:21' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 14ms (DB: 4) | 302 Found [http://0.0.0.0/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 17:26:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-21 17:26:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/sign_up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#create (for 127.0.0.1 at 2010-03-21 17:26:31) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"sling31@aol.com"}, "commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"sY6c28jFZzgOIsVZ1TxX+nzMCuhfxZiHORX2csoEHVc=", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (26.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'sling31@aol.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`encrypted_password`, `salt`, `updated_at`, `remember_token`, `confirmation_token`, `email`, `email_confirmed`, `created_at`) VALUES('3ba7d76569517d2e82dd51fc726973a6497b966c', 'e0d533367ba79493afb81b1dbbdaecd2dbe25848', '2010-03-21 21:26:31', '11d85aafe59e9cb67b0587bf910b524ef14995ed', '05c64be484f5d9f0ca267aa4e1f3c30992ab3a44', 'sling31@aol.com', 0, '2010-03-21 21:26:31')[0m
+Sent mail to sling31@aol.com
+
+Date: Sun, 21 Mar 2010 17:26:31 -0400
+From: new@liftrr.com
+To: sling31@aol.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/2/confirmation/new?token=05c64be484f5d9f0ca267aa4e1f3c30992ab3a44
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/sign_in
+Completed in 61ms (DB: 29) | 302 Found [http://0.0.0.0/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 17:26:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::ConfirmationsController#new (for 127.0.0.1 at 2010-03-21 17:26:45) [GET]
+  Parameters: {"token"=>"[FILTERED]", "action"=>"new", "controller"=>"clearance/confirmations", "user_id"=>"2"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`confirmation_token` = '05c64be484f5d9f0ca267aa4e1f3c30992ab3a44' AND `users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`confirmation_token` = '05c64be484f5d9f0ca267aa4e1f3c30992ab3a44' AND `users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `email_confirmed` = 1, `updated_at` = '2010-03-21 21:26:45', `confirmation_token` = NULL WHERE `id` = 2[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 20ms (DB: 4) | 302 Found [http://localhost/users/2/confirmation/new?token=05c64be484f5d9f0ca267aa4e1f3c30992ab3a44]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-21 17:26:45) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 26ms (View: 10, DB: 5) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-21 17:26:47) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.7ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 94ms (View: 77, DB: 6) | 200 OK [http://localhost/reports/progress]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-21 17:26:47) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+Completed in 20ms (View: 4, DB: 5) | 200 OK [http://localhost/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-21 17:26:53) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mLift Load (0.4ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 31ms (View: 11, DB: 6) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress (for 127.0.0.1 at 2010-03-21 17:26:57) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering template within layouts/reports
+Rendering reports/progress
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 24ms (View: 5, DB: 6) | 200 OK [http://localhost/reports/progress]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ReportsController#progress to xml (for 127.0.0.1 at 2010-03-21 17:26:57) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Please pass format to the standard progress_reports_url method instead.. (called from progress at /Users/elliot/work/liftr/app/controllers/reports_controller.rb:8)
+Rendering reports/progress
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+Completed in 17ms (View: 4, DB: 4) | 200 OK [http://localhost/reports/progress.xml]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-21 17:26:59) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (1.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 28ms (View: 10, DB: 7) | 200 OK [http://localhost/lifts/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:27:40) [GET]
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 21ms (View: 10, DB: 4) | 200 OK [http://localhost/admin/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:27:44) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:27:49) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://localhost/admin/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:27:50) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 89ms (View: 81, DB: 2) | 200 OK [http://localhost/admin/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:27:54) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create and new):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:28:30) [GET]
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/admin/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#destroy (for 127.0.0.1 at 2010-03-21 17:28:33) [DELETE]
+  Parameters: {"authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/clearance/users_controller.rb:44: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:28:41) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 17ms (View: 9, DB: 2) | 200 OK [http://localhost/admin/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:28:42) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://localhost/admin/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#destroy (for 127.0.0.1 at 2010-03-21 17:28:44) [DELETE]
+  Parameters: {"authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/clearance/users_controller.rb:44: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (40.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#destroy (for 127.0.0.1 at 2010-03-21 17:29:07) [DELETE]
+  Parameters: {"authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/clearance/users_controller.rb:44: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#destroy (for 127.0.0.1 at 2010-03-21 17:29:07) [DELETE]
+  Parameters: {"authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2"}
+
+SyntaxError (/Users/elliot/work/liftr/app/controllers/clearance/users_controller.rb:44: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:29:34) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ArgumentError (Clearance is not missing constant User!):
+  app/controllers/clearance/users_controller.rb:24:in `destroy'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:29:39) [GET]
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://localhost/admin/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:29:40) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 91ms (View: 10, DB: 2) | 200 OK [http://localhost/admin/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:29:40) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 16ms (View: 8, DB: 2) | 200 OK [http://localhost/admin/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:29:57) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ArgumentError (Clearance is not missing constant User!):
+  app/controllers/clearance/users_controller.rb:24:in `destroy'
+
+Rendered rescues/_trace (43.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:30:08) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/admin/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:31:09) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ArgumentError (Clearance is not missing constant User!):
+  app/controllers/clearance/users_controller.rb:24:in `destroy'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-21 17:31:24) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '11d85aafe59e9cb67b0587bf910b524ef14995ed') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `remember_token` = '571d308e164120e6bc05d58db1e9f796c31a84f0', `updated_at` = '2010-03-21 21:31:24' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 12ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 17:31:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-21 17:31:29) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-21 17:31:29) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121') LIMIT 1[0m
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (1.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 2) [0m
+  [4;35;1mExercise Load (0.5ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 50ms (View: 27, DB: 9) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:31:36) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121') LIMIT 1[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 22ms (View: 13, DB: 3) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:31:39) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ArgumentError (Clearance is not missing constant User!):
+  app/controllers/clearance/users_controller.rb:24:in `destroy'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:32:04) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ArgumentError (Clearance is not missing constant User!):
+  app/controllers/clearance/users_controller.rb:24:in `destroy'
+
+Rendered rescues/_trace (128.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:32:08) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 17ms (View: 9, DB: 2) | 200 OK [http://localhost/admin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-03-21 17:32:08) [GET]
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering admin/index
+Completed in 19ms (View: 10, DB: 3) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#destroy (for 127.0.0.1 at 2010-03-21 17:34:44) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "id"=>"2", "controller"=>"clearance/users"}
+
+ArgumentError (Clearance is not missing constant User!):
+  app/controllers/clearance/users_controller.rb:24:in `destroy'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-21 22:08:16) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121') LIMIT 1[0m
+  [4;36;1mLift Load (0.3ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mLift Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 2) [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+Completed in 58ms (View: 20, DB: 6) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-21 22:08:17) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e480033b0191430f14af3a673a7f7737a54b5121') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `remember_token` = '90f0447a299be15094dfae31ee4d745dfb4b6231', `updated_at` = '2010-03-22 02:08:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 12ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:08:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:08:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:08:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:11:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:11:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:11:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-21 22:11:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://localhost/sign_up]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:11:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:12:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-21 22:12:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://localhost/sign_up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:13:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-21 22:13:07) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]

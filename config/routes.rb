@@ -4,6 +4,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :exercises
 
   map.resources :muscles
+  
+  map.resources :admin
 
   Clearance::Routes.draw(map)
   
