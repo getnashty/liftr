@@ -20,9 +20,31 @@
      end
      
      
+     @dead=2
+     @bench=2
+     @squat=2
+     
+     @lifts.each_with_index do |lift, index|
+           if lift.user_id == current_user.id && lift.exercise_id == 1
+             @bench=1
+           end
+      end
+      @lifts.each_with_index do |lift, index|
+            if lift.user_id == current_user.id && lift.exercise_id == 2
+              @squat=1
+            end
+       end
+       @lifts.each_with_index do |lift, index|
+             if lift.user_id == current_user.id && lift.exercise_id == 3
+               @dead=1
+             end
+        end
+        
+     
        xml.graphs do
         #the gid is used in the settings file to set different settings just for this graph
          
+         if @bench==1
          xml.graph :gid => 'benchpress' do
            
            count=0
@@ -60,10 +82,10 @@
           end
           
          end
-         
+       end
 
          
-           
+         if @squat==1
          xml.graph :gid => 'squats' do
 
               count=0
@@ -101,7 +123,9 @@
              end
 
             end
+         end
          
+         if @dead==1
          xml.graph :gid => 'deadlifts' do
 
               count=0
@@ -139,7 +163,7 @@
              end
 
             end
-         
+         end
        end
 
      end
