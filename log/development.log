@@ -40982,3 +40982,569 @@ DEPRECATION WARNING: formatted_progress_reports_url() has been deprecated. Pleas
 Rendering reports/progress
   [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
 Completed in 19ms (View: 5, DB: 4) | 200 OK [http://localhost/reports/progress.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 21:55:44) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '90f0447a299be15094dfae31ee4d745dfb4b6231') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd', `updated_at` = '2010-03-24 01:55:44' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 15ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 21:55:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#new (for 127.0.0.1 at 2010-03-23 21:55:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/users"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering users/new
+Completed in 22ms (View: 16, DB: 2) | 200 OK [http://localhost/sign_up]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::UsersController#create (for 127.0.0.1 at 2010-03-23 21:56:03) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"elliot.nash@currensee.com"}, "commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "controller"=>"clearance/users"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'elliot.nash@currensee.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`encrypted_password`, `salt`, `updated_at`, `remember_token`, `confirmation_token`, `email`, `email_confirmed`, `created_at`) VALUES('c59e916c80da5c0f63aa62e59fae4aaa4ba9133c', 'afa19d3b51cfc78d3e1c3e13db7f0cd4a0717fa4', '2010-03-24 01:56:03', 'eef30d52e2e8a934562f7e4dfb45a939d4031a57', '303ba1a2204f579baa3a74cf657dc1d65dc3a0d9', 'elliot.nash@currensee.com', 0, '2010-03-24 01:56:03')[0m
+Sent mail to elliot.nash@currensee.com
+
+Date: Tue, 23 Mar 2010 21:56:03 -0400
+From: new@liftrr.com
+To: elliot.nash@currensee.com
+Subject: Account confirmation
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+
+http://localhost:3000/users/3/confirmation/new?token=303ba1a2204f579baa3a74cf657dc1d65dc3a0d9
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 312ms (DB: 4) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 21:56:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::ConfirmationsController#new (for 127.0.0.1 at 2010-03-23 21:58:01) [GET]
+  Parameters: {"token"=>"[FILTERED]", "action"=>"new", "controller"=>"clearance/confirmations", "user_id"=>"3"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`confirmation_token` = '303ba1a2204f579baa3a74cf657dc1d65dc3a0d9' AND `users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`confirmation_token` = '303ba1a2204f579baa3a74cf657dc1d65dc3a0d9' AND `users`.`id` = '3') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `email_confirmed` = 1, `updated_at` = '2010-03-24 01:58:01', `confirmation_token` = NULL WHERE `id` = 3[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/users/3/confirmation/new?token=303ba1a2204f579baa3a74cf657dc1d65dc3a0d9]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 21:58:01) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'eef30d52e2e8a934562f7e4dfb45a939d4031a57') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+Completed in 33ms (View: 20, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 21:58:40) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'eef30d52e2e8a934562f7e4dfb45a939d4031a57') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `remember_token` = 'a0d13b54baf7fbd94695750b20b6a69bc5c79dfa', `updated_at` = '2010-03-24 01:58:40' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 13ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 21:58:40) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'eef30d52e2e8a934562f7e4dfb45a939d4031a57') LIMIT 1[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 11ms (DB: 2) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 21:58:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 21:59:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 21:59:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 21:59:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-23 21:59:54) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "session"=>{"password"=>"[FILTERED]", "email"=>"elliot@venturemedias.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'elliot@venturemedias.com') LIMIT 1[0m
+Rendering sessions/new (unauthorized)
+Completed in 22ms (View: 9, DB: 4) | 401 Unauthorized [http://localhost/session]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-23 22:00:08) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 4) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:08) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.6ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.9ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 67ms (View: 43, DB: 9) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:11) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 42ms (View: 25, DB: 6) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:11) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.8ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 40ms (View: 24, DB: 6) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:38) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.9ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.8ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 59ms (View: 41, DB: 7) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:38) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 43ms (View: 24, DB: 7) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:48) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined local variable or method `key' for #<ActionView::Base:0x206e8f0>) on line #98 of app/views/lifts/index.html.erb:
+95: 	background-image: url(/images/delete.png);
+96: 	background-position: bottom;
+97: }
+98: #flash_<%= key -%>{
+99: 	width:500px;
+100: 	height:60px;
+101: 	line-height:60px;
+
+    app/views/lifts/index.html.erb:98
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (44.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:00:48) [GET]
+  [4;35;1mUser Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.4ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (157.5ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+
+ActionView::TemplateError (undefined local variable or method `key' for #<ActionView::Base:0x234cab8>) on line #98 of app/views/lifts/index.html.erb:
+95: 	background-image: url(/images/delete.png);
+96: 	background-position: bottom;
+97: }
+98: #flash_<%= key -%>{
+99: 	width:500px;
+100: 	height:60px;
+101: 	line-height:60px;
+
+    app/views/lifts/index.html.erb:98
+    app/controllers/lifts_controller.rb:10:in `index'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:01:09) [GET]
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (3.6ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.7ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 62ms (View: 42, DB: 9) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:01:41) [GET]
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mLift Load (0.3ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (0.7ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 54ms (View: 38, DB: 6) | 200 OK [http://localhost/lifts/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 22:01:43) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'b9723151fe932689e3ce4cdf506653fdf1c4a2bd') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `remember_token` = '8ade5ab10980f2b870efc0f4faa8714ce98c2688', `updated_at` = '2010-03-24 02:01:43' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 12ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 22:01:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-23 22:01:49) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 4) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:01:49) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '8ade5ab10980f2b870efc0f4faa8714ce98c2688') LIMIT 1[0m
+  [4;36;1mLift Load (1.2ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mLift Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.4ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (1.5ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mExercise Load (0.4ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 54ms (View: 31, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:01:52) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '8ade5ab10980f2b870efc0f4faa8714ce98c2688') LIMIT 1[0m
+  [4;36;1mLift Load (0.4ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mLift Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.3ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (1.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 120ms (View: 101, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 22:02:02) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = '8ade5ab10980f2b870efc0f4faa8714ce98c2688') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `remember_token` = '4cb7332ffa704a4278fc48bf5bb5a7a9faef5a11', `updated_at` = '2010-03-24 02:02:02' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 13ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 22:02:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-23 22:02:09) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 2) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:02:09) [GET]
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '4cb7332ffa704a4278fc48bf5bb5a7a9faef5a11') LIMIT 1[0m
+  [4;35;1mLift Load (0.6ms)[0m   [0mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;36;1mLift Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `lifts`[0m
+  [4;35;1mExercise Load (0.3ms)[0m   [0mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;36;1mExercise Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `exercises`[0m
+  [4;35;1mExercise Load (1.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 71ms (View: 48, DB: 9) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 22:02:35) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`remember_token` = '4cb7332ffa704a4278fc48bf5bb5a7a9faef5a11') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `remember_token` = 'e6b3d08eb612a895c5cfcc5dc05dcdc006fb646c', `updated_at` = '2010-03-24 02:02:35' WHERE `id` = 1[0m
+  [4;35;1mSQL (31.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 43ms (DB: 34) | 302 Found [http://localhost/sign_out]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 22:02:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#create (for 127.0.0.1 at 2010-03-23 22:02:39) [POST]
+  Parameters: {"commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"OrK1j170jomFxtFAi59ftqE/xiaBv5jm3I5ehV9sh3A=", "session"=>{"password"=>"[FILTERED]", "email"=>"nasherasher@gmail.com"}, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'nasherasher@gmail.com') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 15ms (DB: 3) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LiftsController#index (for 127.0.0.1 at 2010-03-23 22:02:39) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e6b3d08eb612a895c5cfcc5dc05dcdc006fb646c') LIMIT 1[0m
+  [4;36;1mLift Load (0.4ms)[0m   [0;1mSELECT * FROM `lifts` ORDER BY created_at[0m
+  [4;35;1mLift Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lifts`[0m
+  [4;36;1mExercise Load (0.2ms)[0m   [0;1mSELECT * FROM `exercises` [0m
+Rendering template within layouts/lifts
+Rendering lifts/index
+  [4;35;1mExercise Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mExercise Load (0.7ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mExercise Load (0.2ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `exercises` WHERE (`exercises`.`id` = 3) [0m
+Completed in 164ms (View: 144, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#destroy (for 127.0.0.1 at 2010-03-23 22:03:25) [GET]
+  Parameters: {"action"=>"destroy", "method"=>:delete, "controller"=>"clearance/sessions"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'e6b3d08eb612a895c5cfcc5dc05dcdc006fb646c') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `remember_token` = '4cec2e6e554689c384e27cb39acc9fae663ba226', `updated_at` = '2010-03-24 02:03:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/sign_out]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 22:03:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://localhost/sign_in]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Clearance::SessionsController#new (for 127.0.0.1 at 2010-03-23 22:03:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"clearance/sessions"}
+Rendering sessions/new
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/sign_in]

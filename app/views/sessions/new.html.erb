@@ -90,10 +90,29 @@
 	padding:8px;
 	font-size:16px;
 }
+.flash2{
+	width:500px;
+	height:60px;
+	line-height:60px;
+	background-color:#FFFFCC;
+	margin:auto;
+	font-family:arial;
+	font-style:italic;
+	text-align:center;
+	font-weight:bold;
+	font-size:24px;
+	color:#909090;
+}
 -->
 </style>
 </head>
 <body>
+
+	<div id="flash">
+	  <% flash.each do |key, value| -%>
+	    <div class="flash2" id="flash_<%= key -%>"><%= html_escape(value) %></div>
+	  <% end -%>
+	</div>
 
 <div id="login-box">
     	
