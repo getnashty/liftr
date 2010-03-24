@@ -426,6 +426,78 @@
         <![CDATA[{value} lbs on Deadlifts]]>
       </balloon_text>
     </graph>
+
+    <graph gid="rows">                                                            
+      <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
+      <title>Rows</title>              
+      <color>blue</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[{value} lbs on Rows]]>
+      </balloon_text>
+    </graph>
+
+
+    <graph gid="triceps">                                                            
+      <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
+      <title>Tricep Extensions</title>              
+      <color>blue</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[{value} lbs on Tricep Extension]]>
+      </balloon_text>
+    </graph>
+
+
+    <graph gid="biceps">                                                            
+      <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
+      <title>Bicep Curl</title>              
+      <color>blue</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[{value} lbs on Bicep Curl]]>
+      </balloon_text>
+    </graph>
+
+
+    <graph gid="military">                                                            
+      <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
+      <title>Military Press</title>              
+      <color>blue</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[{value} lbs on Military Press]]>
+      </balloon_text>
+    </graph>
+
   </graphs> 
   
 	<guides>	                                                 <!-- guides are straight lines drawn through all plot area at a give value. Can also be filled with color -->

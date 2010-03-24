@@ -119,7 +119,7 @@
 </div>
 
 <div class="headly">
-<h1>Enter Today's Maxes</h1>
+<h1>Enter Today's Weights</h1>
 </div>
 
 
@@ -134,13 +134,25 @@
  <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 3%>
  	<% @c=1 %>
  <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 4%>
+ 	<% @d=1 %>
+ <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 5%>
+ 	<% @e=1 %>
+ <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 6%>
+ 	<% @f=1 %>
+ <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 7%>
+ 	<% @g=1 %>
+ <% end %>
 <% end %>
 
 
 <% if @a==1 && @b==1 && @c==1 %> 
 
 <div style="clear:both">
-	Sorry, you have already entered your maxes for today, feel free to edit them below!
+	Sorry, you have already entered your weights for today, feel free to edit them below!
 </div>
 
 <% else %>
@@ -150,34 +162,8 @@
   	<div class="text_field">
     <%= f.label :exercise_id %><br />
 	
-		<% if @a!=1 && @b!=1 && @c!=1 %> 
-    	<%= f.select (:exercise_id,{ "Bench Press", 1, "Squat", 2, "Deadlift", 3 }) %>
-		<% end %>
-		
-		<% if @a==1 && @b!=1 && @c!=1 %> 
-    	<%= f.select (:exercise_id,{ "Squat", 2, "Deadlift", 3 }) %>
-		<% end %>
-		
-		<% if @a!=1 && @b==1 && @c!=1 %> 
-    	<%= f.select (:exercise_id,{ "Bench Press", 1,"Deadlift", 3 }) %>
-		<% end %>
-		
-		<% if @a!=1 && @b!=1 && @c==1 %> 
-    	<%= f.select (:exercise_id,{ "Bench Press", 1, "Squat", 2 }) %>
-		<% end %>
-		
-		<% if @a==1 && @b==1 && @c!=1 %> 
-    	<%= f.select (:exercise_id,{ "Deadlift", 3 }) %>
-		<% end %>
-		
-		<% if @a==1 && @b!=1 && @c==1 %> 
-    	<%= f.select (:exercise_id,{ "Squat", 2 }) %>
-		<% end %>
-		
-		<% if @a!=1 && @b==1 && @c==1 %> 
-    	<%= f.select (:exercise_id,{ "Bench Press", 1 }) %>
-		<% end %>
-		
+	<%= exercise_select(f) %>
+			
 	</div>
     <div class="text_field">
 	<%= f.label :weight %><br />
@@ -198,7 +184,7 @@
 	
 	
 	<div style="clear:both">
-		* Please note, each exercise may only have 1 max per day!
+		* Please note, each exercise may only have 1 entry per day!
 	</div>
 	
 <% end %>
@@ -207,7 +193,7 @@
 	
 	
 	<div class="headly">
-	<h1>Today's Maxes</h1>
+	<h1>Today's Exercises</h1>
 	</div>
 
 <div class="lifts-list">
@@ -284,7 +270,7 @@ Delete
 </div>
 
 <div class="headly" style="clear:both;padding-top:15px;">
-<h1>All Your Maxes</h1>
+<h1>All of Your Exercises</h1>
 </div>
 
 <div class="lifts-list">

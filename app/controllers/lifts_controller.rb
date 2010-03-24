@@ -11,7 +11,11 @@ class LiftsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @lifts }
     end
+    
   end
+
+
+
 
   # GET /lifts/1
   # GET /lifts/1.xml
