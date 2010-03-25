@@ -126,6 +126,8 @@
 @bicep=2
 @military=2
 
+@count=0
+
 
 @lifts.each_with_index do |lift, index|
       if lift.user_id == current_user.id && lift.exercise_id == 1
@@ -168,6 +170,7 @@
 <div style="width:700px;">
 	
 <% if @bench==1 %>
+<% @count=@count+1 %>
 <div style="float:left;width:350px;margin-bottom:30px;">
 <div class="headly">
 <h1>Bench Press</h1>
@@ -234,6 +237,7 @@ Date
 <% end %>
 
 <% if @squat==1 %>
+<% @count=@count+1 %>
 <div style="float:left;width:350px;margin-bottom:30px;">
 <div class="headly">
 <h1>Squats</h1>
@@ -300,7 +304,8 @@ Date
 <% end %>
 
 <% if @dead==1 %>
-<div style="float:left;width:350px;">
+<% @count=@count+1 %>
+<div style="float:left;width:350px;margin-bottom:30px;<% if @count==3 %>clear:both;<% end %>">
 <div class="headly">
 <h1>Deadlifts</h1>
 </div>
@@ -366,8 +371,8 @@ Date
 <% end %>
 
 <% if @row==1 %>
-<div style="float:left;width:350px;">
-<div class="headly">
+<div style="float:left;width:350px;margin-bottom:30px;<% if @count==2 %>clear:both;<% end %>"><div class="headly">
+<% @count=@count+1 %>
 <h1>Rows</h1>
 </div>
 
@@ -432,8 +437,9 @@ Date
 <% end %>
 
 <% if @tricep==1 %>
-<div style="float:left;width:350px;">
+<div style="float:left;width:350px;margin-bottom:30px;<% if @count==2||@count==4 %>clear:both;<% end %>">
 <div class="headly">
+<% @count=@count+1 %>
 <h1>Tricep Extensions</h1>
 </div>
 
@@ -496,9 +502,9 @@ Date
 
 </div>
 <% end %>
-
 <% if @bicep==1 %>
-<div style="float:left;width:350px;">
+<div style="float:left;width:350px;margin-bottom:30px;<% if @count==2||@count==4||@count==6 %>clear:both;<% end %>">
+<% @count=@count+1 %>
 <div class="headly">
 <h1>Bicep Curls</h1>
 </div>
@@ -564,7 +570,8 @@ Date
 <% end %>
 
 <% if @military==1 %>
-<div style="float:left;width:350px;margin-top:20px;">
+<div style="float:left;width:350px;margin-bottom:30px;<% if @count==2||@count==4||@count==6 %>clear:both;<% end %>">
+<% @count=@count+1 %>
 <div class="headly">
 <h1>Military Press</h1>
 </div>
