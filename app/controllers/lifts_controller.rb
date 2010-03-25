@@ -42,6 +42,7 @@ class LiftsController < ApplicationController
 
   # GET /lifts/1/edit
   def edit
+    @lifts = Lift.find(:all, :order => 'created_at') 
     @exercises = Exercise.all
     @lift = Lift.find(params[:id])
   end
