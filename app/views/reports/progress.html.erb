@@ -118,9 +118,59 @@
 </script>
 
 
-<div style="float:left;width:350px;">
+<% @dead=2
+@bench=2
+@squat=2
+@row=2
+@tricep=2
+@bicep=2
+@military=2
+
+
+@lifts.each_with_index do |lift, index|
+      if lift.user_id == current_user.id && lift.exercise_id == 1
+        @bench=1
+      end
+ end
+ @lifts.each_with_index do |lift, index|
+       if lift.user_id == current_user.id && lift.exercise_id == 2
+         @squat=1
+       end
+  end
+  @lifts.each_with_index do |lift, index|
+        if lift.user_id == current_user.id && lift.exercise_id == 3
+          @dead=1
+        end
+   end
+   @lifts.each_with_index do |lift, index|
+         if lift.user_id == current_user.id && lift.exercise_id == 4
+           @row=1
+         end
+    end
+    @lifts.each_with_index do |lift, index|
+          if lift.user_id == current_user.id && lift.exercise_id == 5
+            @tricep=1
+          end
+     end
+     @lifts.each_with_index do |lift, index|
+           if lift.user_id == current_user.id && lift.exercise_id == 6
+             @bicep=1
+           end
+      end
+      @lifts.each_with_index do |lift, index|
+            if lift.user_id == current_user.id && lift.exercise_id == 7
+              @military=1
+            end
+       end
+
+%>
+
+<div style="width:700px;">
+	
+<% if @bench==1 %>
+<div style="float:left;width:350px;margin-bottom:30px;">
 <div class="headly">
-<h1>Bench Press Maxes</h1>
+<h1>Bench Press</h1>
 </div>
 
 <div class="lifts-list">
@@ -181,10 +231,78 @@ Date
 </div>
 
 </div>
+<% end %>
 
+<% if @squat==1 %>
+<div style="float:left;width:350px;margin-bottom:30px;">
+<div class="headly">
+<h1>Squats</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==2%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==2%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+</div>
+<% end %>
+
+<% if @dead==1 %>
 <div style="float:left;width:350px;">
 <div class="headly">
-<h1>Squat Maxes</h1>
+<h1>Deadlifts</h1>
 </div>
 
 <div class="lifts-list">
@@ -206,7 +324,7 @@ Date
 <% @lifts.each do |lift| %>
 <% x=x+1 %>
 <% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==2%>
+<% if lift.user_id == current_user.id && lift.exercise_id==3%>
 <% @exname=Exercise.find(lift.exercise_id)%>
 <div class="max-item" style="clear:both;">
 <%=h @exname.name %>	
@@ -221,7 +339,7 @@ Date
 <% end %>
 
 <% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==2%>
+<% if lift.user_id == current_user.id && lift.exercise_id==3%>
 
 <% @exname=Exercise.find(lift.exercise_id)%>
 <div class="max-item2" style="clear:both;">
@@ -245,10 +363,12 @@ Date
 </div>
 
 </div>
+<% end %>
 
-<div style="width:100%;clear:both;padding-top:10px;">
+<% if @row==1 %>
+<div style="float:left;width:350px;">
 <div class="headly">
-<h1>Deadlift Maxes</h1>
+<h1>Rows</h1>
 </div>
 
 <div class="lifts-list">
@@ -270,7 +390,7 @@ Date
 <% @lifts.each do |lift| %>
 <% x=x+1 %>
 <% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==3%>
+<% if lift.user_id == current_user.id && lift.exercise_id==4%>
 <% @exname=Exercise.find(lift.exercise_id)%>
 <div class="max-item" style="clear:both;">
 <%=h @exname.name %>	
@@ -285,7 +405,7 @@ Date
 <% end %>
 
 <% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==3%>
+<% if lift.user_id == current_user.id && lift.exercise_id==4%>
 
 <% @exname=Exercise.find(lift.exercise_id)%>
 <div class="max-item2" style="clear:both;">
@@ -306,6 +426,208 @@ Date
 <% end %>
 
 <% end %>
-</div></div>
+</div>
+
+</div>
+<% end %>
+
+<% if @tricep==1 %>
+<div style="float:left;width:350px;">
+<div class="headly">
+<h1>Tricep Extensions</h1>
+</div>
+
+<div class="lifts-list">
 
 
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==5%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==5%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+</div>
+<% end %>
+
+<% if @bicep==1 %>
+<div style="float:left;width:350px;">
+<div class="headly">
+<h1>Bicep Curls</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==6%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==6%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+</div>
+<% end %>
+
+<% if @military==1 %>
+<div style="float:left;width:350px;margin-top:20px;">
+<div class="headly">
+<h1>Military Press</h1>
+</div>
+
+<div class="lifts-list">
+
+
+<div class="head-item">
+Exercise	
+</div>
+<div class="head-item">
+Weight	
+</div>
+<div class="head-item">
+Date	
+</div>
+
+
+<% x=0 %>
+<% today=Time.now.strftime("%m/%d/%Y") %>
+<% @lifts.each do |lift| %>
+<% x=x+1 %>
+<% if x == 1 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==7%>
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+<% end %>
+<% end %>
+
+<% if x == 2 %>
+<% if lift.user_id == current_user.id && lift.exercise_id==7%>
+
+<% @exname=Exercise.find(lift.exercise_id)%>
+<div class="max-item2" style="clear:both;">
+<%=h @exname.name %>	
+</div>
+<div class="max-item2">
+<%=h lift.weight %> lbs	
+</div>
+<div class="max-item2">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+</div>
+
+<% x=0 %>
+<% else %>
+<% x = 0 %>
+<% end %>
+
+<% end %>
+
+<% end %>
+</div>
+
+</div>
+
+<% end %>
+
+</div>
