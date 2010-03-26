@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Liftrr - Enter your maxes</title>
+<%= stylesheet_link_tag 'scaffold' %>
+<style type="text/css">
+<!--
+body{
+	font-family:arial;
+	font-size:13px;
+}
+#container {
+	margin: auto;
+	width: 900px;
+}
+#header {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BFBFBF;
+	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#left-nav {
+	float: left;
+}
+.menu{
+	background-color: #C10000;
+	width: 150px;
+	padding: 4px;
+	color: #FFF;
+	text-align: right;
+	font-family: arial;
+	font-size: 13px;
+	font-weight: bold;
+}
+.item{
+	width: 150px;
+	padding: 4px;
+	text-align: right;
+	font-family: arial;
+	font-size: 13px;
+}
+.lifts{
+	width: 150px;
+	padding: 4px;
+	text-align: right;
+	font-family: arial;
+	font-size: 13px;
+	background-color:#ddd;
+}
+.item a, .lifts a{
+	text-decoration:none;
+}
+.item a{
+	text-decoration:none;
+}
+.item a:hover{
+	color:#ccc;
+	text-decoration:none;
+}
+#content{
+	padding:0px 0 0 40px;
+	float:left;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #BFBFBF;
+}
+.submit_field {
+	float:right;
+	margin-top:40px;
+	background-color:red;
+	border-style:solid;
+	border-color:red;
+	border-width:1px;
+	color:#fff;
+	font-weight:bold;
+	padding:8px;
+	font-size:16px;
+}
+.submit_field a{
+	text-decoration:none;
+	color:#fff;
+}
+-->
+</style>
+</head>
+
+<body>
+
+	<div id="container">
+    
+    	<div id="header"><img src="/images/liftrr-logo.png" width="192" height="72" alt="logo" />
+		  	
+			<div class="submit_field">
+			
+				<%= link_to "Sign out", sign_out_path %><Br/>
+			</div>
+		
+		</div>
+		
+<div id="main">
+        
+        	<div id="left-nav">
+    			<div class="menu">Menu</div>
+    			<div class="lifts"><a href="/lifts/">Enter Max Weights</a></div>
+    			<div class="item"><a href="/reports/progress">View Statistics</a></div>
+        	</div>
+            
+            
+ 	<div id="content">
+	
+		<span style="color: green"><%= flash[:notice] %></span>
+
+		<%= yield %>
+	
+	</div>
+        
+    </div>
+    
+    </div>
+
+</body>
+</html>
