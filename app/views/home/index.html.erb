@@ -1,0 +1,103 @@
+<div id="landing_piechart" class='chart'>
+  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
+  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
+</div>
+
+<script type="text/javascript">
+  // <![CDATA[    
+  var so = new SWFObject("/ampie/ampie.swf", "landing_piechart", "430", "280", "8", "#fff");
+  so.addVariable("path", "/ampie/");
+  so.addVariable("settings_file", escape("/ampie/ampie_settings.xml"));
+  so.addVariable("data_file", escape("<%= @index_data_link %>"));
+  so.addVariable("additional_chart_settings", "<settings><legend><enabled>false</enabled></legend></settings>");
+  so.addVariable("preloader_color", "#000000");
+  so.write("landing_piechart");
+  // ]]>
+</script>
+
+
+<div id="progress_chart" class='chart'>
+  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
+  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
+</div>
+
+<script type="text/javascript">
+  // <![CDATA[    
+  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "470", "280", "8", "#fff");
+  so.addVariable("path", "/amcharts/");
+  so.addVariable("settings_file", escape("/amcharts/amline_settings2.xml"));
+  so.addVariable("data_file", escape("/home/comm.xml"));
+  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><legend><enabled>false</enabled></legend></settings>");
+  so.addVariable("preloader_color", "#000000");
+  so.write("progress_chart");
+  // ]]>
+</script>
+
+
+<% 
+
+@bench=0
+@squat=0
+@rows=0
+@dead=0
+@tricep=0
+@bicep=0
+@military=0
+
+@lifts.each do |lift| 
+	
+	if lift.exercise_id==1
+		@bench=@bench+1
+	end
+	
+	if lift.exercise_id==2
+		@squat=@squat+1
+	end
+	
+	if lift.exercise_id==3
+		@dead=@dead+1
+	end
+	
+	if lift.exercise_id==4
+		@rows=@rows+1
+	end
+	
+	if lift.exercise_id==5
+		@tricep=@tricep+1
+	end
+	
+	if lift.exercise_id==6
+		@bicep=@bicep+1
+	end
+	
+	if lift.exercise_id==7
+		@military=@military+1
+	end
+	
+end%>
+<div id="middlebar">record your lifts, visualize your progress
+	<div class="signupb" style="margin-top:22px;"><%= link_to "sign up", sign_up_path %></div>
+</div>
+<div id="lower-content">
+	<div class="lch">tracking <span class="blockout"><%=h @usernum %></span> liftrrs, with over <span class="blockout"><%=h @liftnum %></span> lifts</div>
+	
+	<div class="content-left">
+	<%=h @bench %> Bench Presses<br/>
+	<%=h @rows %> Rows	<br/>
+	<%=h @squat %> Squats	<br/>
+	<%=h @dead %> Deadlifts<br/>
+		
+	</div>
+	<div class="content-middle">
+		<img src="/images/reflection.png">
+	</div>
+	<div class="content-right">
+		
+		<%=h @bicep %> Bicep Curls	<br/>
+		<%=h @tricep %> Tricep Extensions<br/>	
+		<%=h @military %> Military Presses<br/>
+		
+	</div>
+</div>
+<div class="thicky">A Venture Medias LLC Company</div>
+

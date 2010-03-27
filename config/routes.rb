@@ -9,10 +9,10 @@ ActionController::Routing::Routes.draw do |map|
 
   Clearance::Routes.draw(map)
   
-  map.root :controller => 'lifts'
+  map.root :controller => 'home'
   
   map.resources :reports, :collection => {:progress => :get}
-  map.resources :home, :collection => {:landing => :get, :comm => :get}
+  map.resources :home, :collection => {:index => :get, :comm => :get}
 
     
   # The priority is based upon order of creation: first created -> highest priority.
