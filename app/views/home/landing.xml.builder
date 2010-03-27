@@ -45,12 +45,12 @@ xml.pie do
 
 
                       
-            xml.slice @bench,  :title => "Bench Presses"               
-            xml.slice @squats,  :title => "Squats"               
-            xml.slice @dead,  :title => "Deadlifts"               
-            xml.slice @rows,  :title => "Rows"               
-            xml.slice @tricep,  :title => "Tricep Extensions"               
-            xml.slice @bicep,  :title => "Bicep Curls"               
-            xml.slice @military,  :title => "Military Presses"               
+            xml.slice @bench,  :title => "Bench Presses", :color => "#CC0000"              
+            xml.slice @squats,  :title => "Squats", :color => "#FF6600"               
+            xml.slice @dead,  :title => "Deadlifts", :color => "#003399"               
+            xml.slice @rows,  :title => "Rows", :color => "#FFFF00"               
+            xml.slice @tricep,  :title => "Tricep Extensions", :color => "#339933"                
+            xml.slice @bicep,  :title => "Bicep Curls", :color => "#0000FF"                
+            xml.slice @military,  :title => "Military Presses", :color => "#99FFFF"                
            
    end

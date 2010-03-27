@@ -97,6 +97,9 @@
 	background-image: url(/images/delete.png);
 	background-position: bottom;
 }
+.chart{
+	float:left;
+}
 -->
 </style>
 
@@ -107,15 +110,41 @@
 
 <script type="text/javascript">
   // <![CDATA[    
-  var so = new SWFObject("/ampie/ampie.swf", "landing_piechart", "700", "380", "8", "#fff");
+  var so = new SWFObject("/ampie/ampie.swf", "landing_piechart", "430", "280", "8", "#fff");
   so.addVariable("path", "/ampie/");
   so.addVariable("settings_file", escape("/ampie/ampie_settings.xml"));
   so.addVariable("data_file", escape("<%= @landing_data_link %>"));
-  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><labels><label><x>250</x><y>25</y><text_size>18</text_size><text><![CDATA[<b>Your Maxes</b>]]></text></label></labels></settings>");
+  so.addVariable("additional_chart_settings", "<settings><legend><enabled>false</enabled></legend></settings>");
   so.addVariable("preloader_color", "#000000");
   so.write("landing_piechart");
   // ]]>
 </script>
 
 
+<div id="progress_chart" class='chart'>
+  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
+  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
+</div>
+
+<script type="text/javascript">
+  // <![CDATA[    
+  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "470", "280", "8", "#fff");
+  so.addVariable("path", "/amcharts/");
+  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
+  so.addVariable("data_file", escape("http://0.0.0.0:3000/home/comm.xml"));
+  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><legend><enabled>false</enabled></legend></settings>");
+  so.addVariable("preloader_color", "#000000");
+  so.write("progress_chart");
+  // ]]>
+</script>
+
+<div id="middlebar">text 
+	<div id="signupb">sign up</div>
+</div>
+<div id="lower-content">
+
+	<img src="/images/reflection.png">
+	
+</div>
+<div id="footer">A Venture Medias LLC Company</div>
 
