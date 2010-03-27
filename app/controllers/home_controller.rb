@@ -4,6 +4,9 @@ class HomeController < ApplicationController
 def landing
     @lifts = Lift.find(:all, :order => 'created_at') 
     @exercises = Exercise.all
+    @users = User.find(:all) 
+    @usernum = User.count
+    @liftnum = Lift.count
     @landing_data_link = formatted_landing_home_url(:xml)
     respond_to do |format|
       format.html

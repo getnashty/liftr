@@ -33,17 +33,71 @@
   // ]]>
 </script>
 
+
+<% 
+
+@bench=0
+@squat=0
+@rows=0
+@dead=0
+@tricep=0
+@bicep=0
+@military=0
+
+@lifts.each do |lift| 
+	
+	if lift.exercise_id==1
+		@bench=@bench+1
+	end
+	
+	if lift.exercise_id==2
+		@squat=@squat+1
+	end
+	
+	if lift.exercise_id==3
+		@dead=@dead+1
+	end
+	
+	if lift.exercise_id==4
+		@rows=@rows+1
+	end
+	
+	if lift.exercise_id==5
+		@tricep=@tricep+1
+	end
+	
+	if lift.exercise_id==6
+		@bicep=@bicep+1
+	end
+	
+	if lift.exercise_id==7
+		@military=@military+1
+	end
+	
+end%>
 <div id="middlebar">record your lifts, visualize your progress
 	<div class="signupb" style="margin-top:22px;"><%= link_to "sign up", sign_up_path %></div>
 </div>
 <div id="lower-content">
-	<div class="lch">tracking 453 liftrrs, with over 12,201 lifts</div>
+	<div class="lch">tracking <span class="blockout"><%=h @usernum %></span> liftrrs, with over <span class="blockout"><%=h @liftnum %></span> lifts</div>
 	
-	<div class="content-left">left</div>
+	<div class="content-left">
+	<%=h @bench %> Bench Presses<br/>
+	<%=h @rows %> Rows	<br/>
+	<%=h @squat %> Squats	<br/>
+	<%=h @dead %> Deadlifts<br/>
+		
+	</div>
 	<div class="content-middle">
 		<img src="/images/reflection.png">
 	</div>
-	<div class="content-right">right</div>
+	<div class="content-right">
+		
+		<%=h @bicep %> Bicep Curls	<br/>
+		<%=h @tricep %> Tricep Extensions<br/>	
+		<%=h @military %> Military Presses<br/>
+		
+	</div>
 </div>
-<div id="footer">A Venture Medias LLC Company</div>
+<div class="thicky">A Venture Medias LLC Company</div>
 
