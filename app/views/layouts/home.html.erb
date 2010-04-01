@@ -53,6 +53,16 @@ body{
 	padding:8px;
 	font-size:16px;
 }
+.signedin {
+	float:right;
+	margin-top:40px;
+	color:#404040;
+	padding:8px;
+	font-size:12px;
+}
+.signedin a{
+	text-decoration:none;
+}
 .submit_field a{
 	text-decoration:none;
 	color:#fff;
@@ -259,7 +269,8 @@ padding:0 10px;
     
     	<div id="header"><img src="/images/liftrr-logo.png" width="192" height="72" alt="logo" />
 		  	
-
+			<% if signed_out? %>
+			
 			<div class="signupb">
 			
 				<a href="http://liftrr.com/sign_up">Sign Up</a><Br/>
@@ -268,6 +279,15 @@ padding:0 10px;
 			<div class="signin_field">
 			<a href="http://liftrr.com/lifts">Sign in</a>
 			</div>
+		
+			<% end %>
+			<% if signed_in? %>
+			
+			<div class="signedin">
+			<a href="http://liftrr.com/lifts">Welcome <%=h current_user.email %>, click here to view your lifts!					</a> or <a href="/sign_out">Logout</a>
+			</div>
+		
+			<% end %>
 		
 		</div>
 		
