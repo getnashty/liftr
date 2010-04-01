@@ -81,6 +81,16 @@ body{
 	text-decoration:none;
 	color:#fff;
 }
+.signedin {
+	float:right;
+	margin-top:40px;
+	color:#404040;
+	padding:8px;
+	font-size:12px;
+}
+.signedin a{
+	text-decoration:none;
+}
 -->
 </style>
 </head>
@@ -89,10 +99,14 @@ body{
 	<div id="container">
     
     	<div id="header"><img src="/images/liftrr-logo.png" width="192" height="72" alt="logo" />
-		  	
+			
 			<div class="submit_field">
 			
 				<%= link_to "Sign out", sign_out_path %><Br/>
+			</div>
+		
+			<div class="signedin">
+			Welcome <%=h current_user.email %>
 			</div>
 		
 		</div>

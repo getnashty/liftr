@@ -84,6 +84,16 @@ body{
 	text-decoration:none;
 	color:#fff;
 }
+.signedin {
+	float:right;
+	margin-top:40px;
+	color:#404040;
+	padding:8px;
+	font-size:12px;
+}
+.signedin a{
+	text-decoration:none;
+}
 -->
 </style>
 </head>
@@ -99,6 +109,10 @@ body{
 				<%= link_to "Sign out", sign_out_path %><Br/>
 			</div>
 		
+			<div class="signedin">
+			Welcome <%=h current_user.email %>
+			</div>
+			
 		</div>
 		
 <div id="main">
