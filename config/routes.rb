@@ -11,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => 'home'
   
-  map.resources :reports, :collection => {:progress => :get}
+  map.resources :reports, :collection => {:progress => :get, :export => :get}
   map.resources :home, :collection => {:index => :get, :comm => :get}
 
     

@@ -111,7 +111,7 @@
   so.addVariable("path", "/amcharts/");
   so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
   so.addVariable("data_file", escape("<%= @progress_data_link %>"));
-  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><labels><label><x>250</x><y>25</y><text_size>18</text_size><text><![CDATA[<b>Your Maxes</b>]]></text></label></labels><export_as_image><file>/amcharts/export.php</file></export_as_image></settings>");
+  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><labels><label><x>250</x><y>25</y><text_size>18</text_size><text><![CDATA[<b>Your Maxes</b>]]></text></label></labels><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image></settings>");
   so.addVariable("preloader_color", "#000000");
   so.write("progress_chart");
   // ]]>
