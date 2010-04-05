@@ -24,6 +24,8 @@ Rails::Initializer.run do |config|
     :lib     => 'clearance', 
     :source  => 'http://gems.github.com', 
     :version => '0.8.8'
+    
+  config.gem "rmagick"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
