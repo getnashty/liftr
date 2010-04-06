@@ -26,8 +26,8 @@ class ReportsController < ApplicationController
         img.pixel_color(x, y, "##{data[y][x]}")
       end
     end
-    img.format = "PNG"
-    send_data(img.to_blob , :disposition => 'inline', :type => 'image/png', :filename => "chart.png?#{rand(99999999).to_i}")
+    img.format = "JPEG"
+    send_data(img.to_blob , :disposition => 'inline', :type => 'image/jpg', :filename => "chart.jpg?#{rand(99999999).to_i}")
   end
 
 def progress
