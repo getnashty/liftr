@@ -1,6 +1,8 @@
+require 'RMagick'
+
 class ReportsController < ApplicationController
   before_filter :authenticate
-
+  skip_before_filter :verify_authenticity_token
 
   def export
     width = params[:width].to_i
