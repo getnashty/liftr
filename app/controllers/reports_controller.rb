@@ -27,7 +27,7 @@ class ReportsController < ApplicationController
       end
     end
     img.format = "PNG"
-    send_data(img.to_blob , :disposition => 'inline', :type => 'image/png', :filename => "chart?#{rand(99999999).to_i}.png")
+    send_data(img.to_blob , :type => 'image/png', :filename => "chart?#{rand(99999999).to_i}.png")
   end
 
 def progress
