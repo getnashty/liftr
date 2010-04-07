@@ -503,7 +503,7 @@
       <vertical_lines>true</vertical_lines>
 	  <selected>true</selected>
       <bullet>square</bullet>
-      <bullet_size>5</bullet_size>
+      <bullet_size>0</bullet_size>
       <bullet_alpha>100</bullet_alpha>
       <line_width>4</line_width>
       <line_alpha>50</line_alpha>
