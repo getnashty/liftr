@@ -97,6 +97,16 @@
 	background-image: url(/images/delete.png);
 	background-position: bottom;
 }
+.oneaday{
+	clear:both;
+	background-color:#fafafa;
+	border-width: 0 1px 1px 1px;
+	border-color:#eee;
+	border-style:solid;
+	width:630px;
+	margin:auto;
+	padding:5px;
+}
 -->
 </style>
 
@@ -168,6 +178,10 @@
 %>
 
 <div style="width:700px;">
+	
+	<div class="oneaday">
+		* Right click the chart and choose "Export as image" to download an image of the chart.
+	</div>
 	
 <% if @bench==1 %>
 <% @count=@count+1 %>
