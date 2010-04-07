@@ -27,6 +27,7 @@
      @tricep=2
      @bicep=2
      @military=2
+     @body=2
     
      
      @lifts.each_with_index do |lift, index|
@@ -62,6 +63,11 @@
            @lifts.each_with_index do |lift, index|
                  if lift.user_id == current_user.id && lift.exercise_id == 7
                    @military=1
+                 end
+            end
+           @lifts.each_with_index do |lift, index|
+                 if lift.user_id == current_user.id && lift.exercise_id == 8
+                   @body=1
                  end
             end
         
@@ -272,6 +278,45 @@
             end
          end
          
+         if @body==1
+         xml.graph :gid => 'body' do
+
+              count=0
+              date2=1
+
+             @lifts.each_with_index do |lift, index|
+
+                   if lift.user_id == current_user.id
+
+                     dates=lift.created_at.strftime("%m/%d/%Y")
+
+                       if dates!=date2 && lift.exercise_id == 8
+
+                         count=count+1
+
+                       progress = lift.weight
+                       xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"                 
+
+                     elsif if dates!=date2 && lift.exercise_id != 8
+
+                        count=count+1                 
+
+                     elsif if dates==date2 && lift.exercise_id == 8
+
+                       progress = lift.weight
+                       xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => "lbs"                 
+
+                       end
+                     end
+                   end
+
+                     date2=dates
+
+                   end
+             end
+
+            end
+         end         
          
          if @military==1
          xml.graph :gid => 'military' do
