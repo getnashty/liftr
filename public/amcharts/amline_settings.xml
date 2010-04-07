@@ -499,7 +499,7 @@
     </graph>
 
     <graph gid="body">                                                            
-      <axis>left</axis>
+      <axis>right</axis>
 	  <selected>true</selected>
       <bullet>round_outlined</bullet>
       <bullet_size>10</bullet_size>
