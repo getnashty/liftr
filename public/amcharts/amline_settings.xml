@@ -498,6 +498,23 @@
       </balloon_text>
     </graph>
 
+    <graph gid="body">                                                            
+      <axis>left</axis>
+	  <selected>true</selected>
+      <bullet>round_outlined</bullet>
+      <bullet_size>10</bullet_size>
+      <bullet_alpha>100</bullet_alpha>
+      <line_width>4</line_width>
+      <line_alpha>50</line_alpha>
+      <fill_alpha>5</fill_alpha>
+      <title>Body Weight</title>              
+      <color>black</color>
+      <selected>false</selected>                     
+      <balloon_text>
+        <![CDATA[{value} lbs Body Weight]]>
+      </balloon_text>
+    </graph>
+
   </graphs> 
   
 	<guides>	                                                 <!-- guides are straight lines drawn through all plot area at a give value. Can also be filled with color -->
