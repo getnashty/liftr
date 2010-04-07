@@ -3,7 +3,6 @@
 .text_field {
 	float:left;
 	text-align:left;
-	margin-bottom:20px;
 	padding:0px 10px 0 0;
 	font-weight:bold;
 }
@@ -108,6 +107,26 @@
 	font-size:24px;
 	color:#909090;
 }
+#enter-stuff{
+	clear:both;
+	background-color:#f6f6f6;
+	border-width:1px;
+	border-color:#ddd;
+	border-style:solid;
+	width:620px;
+	margin:auto;
+	padding:10px;
+}
+.oneaday{
+	clear:both;
+	background-color:#fafafa;
+	border-width: 0 1px 1px 1px;
+	border-color:#eee;
+	border-style:solid;
+	width:630px;
+	margin:auto;
+	padding:5px;
+}
 -->
 </style>
 
@@ -146,51 +165,81 @@
  <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 7%>
  	<% @g=1 %>
  <% end %>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 8%>
+ 	<% @bw=1 %>
+ <% end %>
 <% end %>
-
-
-<% if @a==1 && @b==1 && @c==1 && @d==1 && @e==1 && @f==1 && @g==1 %> 
-
-<div style="clear:both">
-	Sorry, you have already entered your weights for today, feel free to edit them below!
-</div>
-
-<% else %>
-<% form_for(@lift) do |f| %>
-  <%= f.error_messages %>
-
-  	<div class="text_field">
-    <%= f.label :exercise_id %><br />
 	
-	<%= exercise_select(f) %>
+	
+	
+	<div id="enter-stuff">
+		
+		<% if @a==1 && @b==1 && @c==1 && @d==1 && @e==1 && @f==1 && @g==1 %> 
+
+			Sorry, you have already entered your weights for today, feel free to edit them below!
 			
-	</div>
-    <div class="text_field">
-	<%= f.label :weight %><br />
-    <%= f.text_field (:weight, :size=>5) %>
-	</div>
-	<div class="text_field">
-	Date<br />
-	<div style="font-weight:normal;margin-top:10px;">
-	<%=h Time.now.strftime("%m/%d/%Y") %>
-	</div>
-	</div>
-    <div class="submit_field2">
-    <%= f.submit 'Add Max' %>
+		<% else %>
+		<% form_for(@lift) do |f| %>
+		  <%= f.error_messages %>
+		
+			<div style="float:left;">
+		
+		  	<div class="text_field">
+		    <%= f.label :exercise_id %><br />
+
+			<%= exercise_select(f) %>
+
+			</div>
+		    <div class="text_field">
+			<%= f.label :weight %><br />
+		    <%= f.text_field (:weight, :size=>3) %>
+			</div>
+			<div class="text_field">
+			Date<br />
+			<div style="font-weight:normal;margin-top:10px;">
+			<%=h Time.now.strftime("%m/%d/%Y") %>
+			</div>
+			</div>
+		    <div class="submit_field2" style="margin-top:-5px">
+		    <%= f.submit 'Add Max' %>
+			</div>
+
+			<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
+			
+			</div>
+			
+			<% end %>	
+
+
+		<% end %>
+
+		<% if @bw!=1 %> 
+		<% form_for(@lift) do |f| %>
+		<%= f.error_messages %>
+		
+		<div style="float:right;border-left:1px solid #ccc;padding-left:10px;margin-left:10px;">
+		<div class="text_field">
+		Body Weight<br>
+		<%= f.text_field (:weight, :size=>5) %>
+		</div>
+		<div class="submit_field2" style="margin-top:-5px">
+		<%= f.submit '+ Body Weight' %>
+		</div>
+		</div>
+
+		<input id="lift_exercise_id" name="lift[exercise_id]" size="30" type="hidden" value="9" >
+		<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
+		<% end %>	
+		<% end %>
+				
+				
+				<div style="clear:both;"></div>
+				
 	</div>
 	
-	<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
-	<% end %>
-	
-	
-	<div style="clear:both">
+	<div class="oneaday">
 		* Please note, each exercise may only have 1 entry per day!
 	</div>
-	
-<% end %>
-	
-	<br/>
-	
 	
 	<div class="headly">
 	<h1>Today's Weights</h1>
