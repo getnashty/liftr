@@ -500,6 +500,7 @@
 
     <graph gid="body">                                                            
       <axis>left</axis>
+      <vertical_lines>true</vertical_lines>
 	  <selected>true</selected>
       <bullet>round_outlined</bullet>
       <bullet_size>10</bullet_size>
