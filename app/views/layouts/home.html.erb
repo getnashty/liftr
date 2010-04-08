@@ -260,6 +260,12 @@ background-color:#484848;
 color:#d0d0d0;
 padding:0 10px;
 }
+#flash{
+	width:100%;
+	padding:20px;
+	background-color:#ccc;
+	text-align:center;
+}
 -->
 </style>
 <%= javascript_include_tag 'swfobject' %>
@@ -267,6 +273,13 @@ padding:0 10px;
 
 
 <body>
+	
+	<div id="flash">
+	  <% flash.each do |key, value| -%>
+	    <div class="flash2" id="flash_<%= key -%>"><%= html_escape(value) %></div>
+	  <% end -%>
+	</div>
+	
 	<div id="container">
     
     	<div id="header"><img src="/images/liftrr-logo.png" width="192" height="72" alt="logo" />
