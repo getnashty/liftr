@@ -53,6 +53,13 @@
 	width:100px;
 	
 }
+.head-item-weight{
+	float:left;
+	padding-right:20px;
+	font-weight:bold;
+	width:50px;
+	
+}
 .max-item{
 	float:left;
 	padding-right:20px;
@@ -64,6 +71,21 @@
 	float:left;
 	padding-right:20px;
 	width:100px;
+	height:26px;
+	line-height:26px;
+	background-color:#eee;
+}
+.max-item-weight{
+	float:left;
+	padding-right:20px;
+	width:50px;
+	height:26px;
+	line-height:26px;
+}
+.max-item2-weight{
+	float:left;
+	padding-right:20px;
+	width:50px;
 	height:26px;
 	line-height:26px;
 	background-color:#eee;
@@ -125,6 +147,15 @@
 	width:640px;
 	margin:auto;
 	padding:5px;
+}
+.left-content{
+	float:left;
+	width:450px;
+}
+.right-content{
+	float:left;
+	width:230px;
+	padding-left:20px;
 }
 -->
 </style>
@@ -240,8 +271,11 @@
 		* Please note, each exercise may only have 1 entry per day!
 	</div>
 	
+	
+<div class="left-content">
+	
 	<div class="headly">
-	<h1>Today's Weights</h1>
+	<h1>Today's Lifts</h1>
 	</div>
 
 <div class="lifts-list">
@@ -250,7 +284,7 @@
 <div class="head-item">
 Exercise	
 </div>
-<div class="head-item">
+<div class="head-item-weight">
 Weight	
 </div>
 <div class="head-item">
@@ -273,7 +307,7 @@ Delete
  	<div class="max-item" style="clear:both;">
  	<%=h @exname.name %>	
  	</div>
- 	<div class="max-item">
+ 	<div class="max-item-weight">
  	<%=h lift.weight %> lbs	
  	</div>
  	<div class="max-item">
@@ -295,7 +329,7 @@ Delete
  	<div class="max-item2" style="clear:both;">
  	<%=h @exname.name %>	
  	</div>
- 	<div class="max-item2">
+ 	<div class="max-item2-weight">
  	<%=h lift.weight %> lbs	
  	</div>
  	<div class="max-item2">
@@ -318,7 +352,7 @@ Delete
 </div>
 
 <div class="headly" style="clear:both;padding-top:15px;">
-<h1>All of Your Weights</h1>
+<h1>All Lifts</h1>
 </div>
 
 <div class="lifts-list">
@@ -327,7 +361,7 @@ Delete
 <div class="head-item">
 Exercise	
 </div>
-<div class="head-item">
+<div class="head-item-weight">
 Weight	
 </div>
 <div class="head-item">
@@ -344,12 +378,12 @@ Delete
 <% @lifts.each do |lift| %>
 <% x=x+1 %>
 <% if x == 1 %>
-<% if lift.user_id == current_user.id %>
+<% if lift.user_id == current_user.id && lift.exercise_id != 8%>
 <% @exname=Exercise.find(lift.exercise_id)%>
 <div class="max-item" style="clear:both;">
 <%=h @exname.name %>	
 </div>
-<div class="max-item">
+<div class="max-item-weight">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
@@ -365,12 +399,12 @@ Delete
 <% end %>
 
 <% if x == 2 %>
-<% if lift.user_id == current_user.id %>
+<% if lift.user_id == current_user.id && lift.exercise_id != 8 %>
 <% @exname=Exercise.find(lift.exercise_id)%>
 <div class="max-item2" style="clear:both;">
 <%=h @exname.name %>	
 </div>
-<div class="max-item2">
+<div class="max-item2-weight">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item2">
@@ -390,4 +424,71 @@ Delete
 <% end %>
 
 <% end %>
+</div>
+</div>
+<div class="right-content">
+	
+	<div class="headly">
+	<h1>Body Weight</h1>
+	</div>
+
+	<div class="lifts-list">
+
+	<div class="head-item-weight">
+	Weight	
+	</div>
+	<div class="head-item" style="width:50px;">
+	Date	
+	</div>
+	<div class="head-item" style="width:20px;">
+	Edit	
+	</div>
+	<div class="head-item" style="width:20px;">
+	Delete	
+	</div>
+
+	<% x=0 %>
+	<% @lifts.each do |lift| %>
+	<% x=x+1 %>
+	<% if x == 1 %>
+	<% if lift.user_id == current_user.id && lift.exercise_id == 8%>
+	<div class="max-item-weight">
+	<%=h lift.weight %> lbs	
+	</div>
+	<div class="max-item" style="width:50px;">
+	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	</div>
+	<div class="max-item" style="width:20px;">
+	<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+	</div>
+	<div class="max-item" style="width:20px;">
+	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+	</div>
+	<% end %>
+	<% end %>
+
+	<% if x == 2 %>
+	<% if lift.user_id == current_user.id && lift.exercise_id == 8 %>
+	<div class="max-item2-weight">
+	<%=h lift.weight %> lbs	
+	</div>
+	<div class="max-item2" style="width:50px;">
+	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	</div>
+	<div class="max-item2" style="width:20px;">
+	<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+	</div>
+	<div class="max-item2" style="width:20px;">
+	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+	</div>
+	<% x=0 %>
+	<% else %>
+	<% x = 0 %>
+	<% end %>
+
+	<% end %>
+
+	<% end %>
+	</div>
+	
 </div>
