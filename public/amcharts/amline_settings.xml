@@ -510,7 +510,8 @@
       <fill_alpha>5</fill_alpha>
       <title>Body Weight</title>              
       <color>#FFA500</color>
-      <selected>false</selected>                     
+      <selected>false</selected>
+      <connect>false</connect>
       <balloon_text>
         <![CDATA[{value} lbs Body Weight]]>
       </balloon_text>
