@@ -62,6 +62,6 @@ class Clearance::SessionsController < ApplicationController
   end
 
   def url_after_destroy
-    sign_in_url
+    "http://www.liftrr.com"
   end
 end
