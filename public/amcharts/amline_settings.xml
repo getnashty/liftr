@@ -504,10 +504,10 @@
 	  <selected>true</selected>
       <bullet>square</bullet>
       <bullet_size>0</bullet_size>
-      <bullet_alpha>100</bullet_alpha>
-      <line_width>4</line_width>
-      <line_alpha>50</line_alpha>
-      <fill_alpha>5</fill_alpha>
+      <bullet_alpha>0</bullet_alpha>
+      <line_width>0</line_width>
+      <line_alpha>0</line_alpha>
+      <fill_alpha>0</fill_alpha>
       <title>Body Weight</title>              
       <color>#FFA500</color>
       <selected>false</selected>
