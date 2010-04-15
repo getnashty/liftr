@@ -1,116 +1,5 @@
   <%= javascript_include_tag 'swfobject' %>
 
-<style type="text/css">
-<!--
-.text_field {
-	float:left;
-	text-align:left;
-	margin-bottom:20px;
-	padding:0px 10px 0 0;
-	font-weight:bold;
-}
-.text_field input{
-	background-image: url(/images/input-bg.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-	border-style:solid;
-	border-width:1px;
-	border-color:#898989;
-	padding:8px;
-	font-size:12px;
-	font-family:arial;
-}
-.submit_field2 {
-	float:left;
-}
-.submit_field2 input{
-	margin-top:20px;
-	background-color:red;
-	border-style:solid;
-	border-color:red;
-	border-width:1px;
-	color:#fff;
-	font-weight:bold;
-	padding:6px;
-	font-size:16px;
-}
-.submit_field2 a{
-	text-decoration:none;
-	color:#fff;
-}
-.lifts-list{
-	clear:both;
-	padding:0 0 0 6px;
-}
-.headly h1{
-	clear:both;
-	border-bottom-style:solid;
-	border-bottom-color:#BFBFBF;
-	border-bottom-width:1px;
-	padding-bottom:10px;
-}
-.head-item{
-	float:left;
-	padding-right:00px;
-	font-weight:bold;
-	width:110px;
-
-}
-.max-item{
-	float:left;
-	padding-right:00px;
-	width:110px;
-	height:26px;
-	line-height:26px;
-}
-.max-item2{
-	float:left;
-	padding-right:00px;
-	width:110px;
-	height:26px;
-	line-height:26px;
-	background-color:#eee;
-}
-.pencil{
-	margin-top:5px;
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/pencil.png);
-	background-position: bottom;
-}
-.pencil:hover{
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/pencil.png);
-	background-position: top;
-}
-.delete{
-	margin-top:5px;
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/delete.png);
-	background-position: top;
-}
-.delete:hover{
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/delete.png);
-	background-position: bottom;
-}
-.oneaday{
-	clear:both;
-	background-color:#f6f6f6;
-	border-width:1px;
-	border-color:#ddd;
-	border-style:solid;
-	width:630px;
-	text-align:center;
-	margin:auto;
-	padding:5px;
-}
--->
-</style>
-
 <div id="progress_chart" class='chart'>
   <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
   <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
@@ -129,54 +18,18 @@
 </script>
 
 
-<% @dead=2
-@bench=2
-@squat=2
-@row=2
-@tricep=2
-@bicep=2
-@military=2
+<% show_stats %>
+<!-- Get Maxes-->
+<% max_bench %>
+<% max_squat %>
+<% max_dead %>
+<% max_row %>
+<% max_tri %>
+<% max_bi %>
+<% max_mil %>
+<!-- Get Maxes-->
 
-@count=0
 
-
-@lifts.each_with_index do |lift, index|
-      if lift.user_id == current_user.id && lift.exercise_id == 1
-        @bench=1
-      end
- end
- @lifts.each_with_index do |lift, index|
-       if lift.user_id == current_user.id && lift.exercise_id == 2
-         @squat=1
-       end
-  end
-  @lifts.each_with_index do |lift, index|
-        if lift.user_id == current_user.id && lift.exercise_id == 3
-          @dead=1
-        end
-   end
-   @lifts.each_with_index do |lift, index|
-         if lift.user_id == current_user.id && lift.exercise_id == 4
-           @row=1
-         end
-    end
-    @lifts.each_with_index do |lift, index|
-          if lift.user_id == current_user.id && lift.exercise_id == 5
-            @tricep=1
-          end
-     end
-     @lifts.each_with_index do |lift, index|
-           if lift.user_id == current_user.id && lift.exercise_id == 6
-             @bicep=1
-           end
-      end
-      @lifts.each_with_index do |lift, index|
-            if lift.user_id == current_user.id && lift.exercise_id == 7
-              @military=1
-            end
-       end
-
-%>
 
 <div style="width:700px;">
 	
@@ -188,66 +41,47 @@
 <% @count=@count+1 %>
 <div style="float:left;width:350px;margin-bottom:10px;">
 <div class="headly">
-<h1>Bench Press</h1>
+<h1>Bench Press<div class="maxh1"><%=h @maxbench %> lbs max</div></h1>
 </div>
-
 <div class="lifts-list">
-
-
-<div class="head-item">
-Exercise	
+<div class="head-item" style="text-align:left;">
+Date	
 </div>
 <div class="head-item">
 Weight	
 </div>
 <div class="head-item">
-Date	
+Up/Down
 </div>
-
-
-<% x=0 %>
+<div class="head-item">
+% Change
+</div>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==1%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+
+<% if lift.user_id == current_user.id && lift.exercise_id==1	
+	@weightchange1=lift.weight %>
+<div class="max-item" style="clear:both;text-align:left;">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+<% @weightdif=@weightchange1-@weightchange2 %>
+<%=h @weightchange1-@weightchange2 %> lbs 
+</div>
+<div class="max-item">
+<% if @weightchange2!=0 %>
+<%=h (@weightdif*100)/@weightchange2 %> %
+<% end %>
+<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==1%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
 </div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
-<% end %>
-</div>
-
 </div>
 <% end %>
 
@@ -255,63 +89,48 @@ Date
 <% @count=@count+1 %>
 <div style="float:left;width:350px;margin-bottom:10px;">
 <div class="headly">
-<h1>Squats</h1>
+<h1>Squats<div class="maxh1"><%=h @maxsquat %> lbs max</div></h1>
 </div>
 
 <div class="lifts-list">
 
 
-<div class="head-item">
-Exercise	
-</div>
-<div class="head-item">
-Weight	
-</div>
-<div class="head-item">
-Date	
-</div>
+	<div class="head-item" style="text-align:left;">
+	Date	
+	</div>
+	<div class="head-item">
+	Weight	
+	</div>
+	<div class="head-item">
+	Up/Down
+	</div>
+	<div class="head-item">
+	% Change
+	</div>
 
-
-<% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==2%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+<% if lift.user_id == current_user.id && lift.exercise_id==2
+		@weightchange1=lift.weight %>
+<div class="max-item" style="text-align:left;">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	<% @weightdif=@weightchange1-@weightchange2 %>
+	<%=h @weightchange1-@weightchange2 %> lbs
+</div>
+<div class="max-item">
+	<% if @weightchange2!=0 %>
+	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% end %>
+	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
-<% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==2%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
 <% end %>
 </div>
 
@@ -322,63 +141,49 @@ Date
 <% @count=@count+1 %>
 <div style="float:left;width:350px;margin-bottom:10px;<% if @count==3 %>clear:both;<% end %>">
 <div class="headly">
-<h1>Deadlifts</h1>
+<h1>Deadlifts<div class="maxh1"><%=h @maxdead %> lbs max</div></h1>
 </div>
 
 <div class="lifts-list">
 
 
-<div class="head-item">
-Exercise	
-</div>
-<div class="head-item">
-Weight	
-</div>
-<div class="head-item">
-Date	
-</div>
+	<div class="head-item" style="text-align:left;">
+	Date	
+	</div>
+	<div class="head-item">
+	Weight	
+	</div>
+	<div class="head-item">
+	Up/Down
+	</div>
+	<div class="head-item">
+	% Change
+	</div>
 
 
-<% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==3%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+<% if lift.user_id == current_user.id && lift.exercise_id==3
+	@weightchange1=lift.weight %>
+<div class="max-item" style="text-align:left;">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	<% @weightdif=@weightchange1-@weightchange2 %>
+	<%=h @weightchange1-@weightchange2 %> lbs
+</div>
+<div class="max-item">
+	<% if @weightchange2!=0 %>
+	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% end %>
+	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
-<% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==3%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
 <% end %>
 </div>
 
@@ -388,63 +193,49 @@ Date
 <% if @row==1 %>
 <div style="float:left;width:350px;margin-bottom:10px;<% if @count==2 %>clear:both;<% end %>"><div class="headly">
 <% @count=@count+1 %>
-<h1>Rows</h1>
+<h1>Rows<div class="maxh1"><%=h @maxrow %> lbs max</div></h1>
 </div>
 
 <div class="lifts-list">
 
 
-<div class="head-item">
-Exercise	
-</div>
-<div class="head-item">
-Weight	
-</div>
-<div class="head-item">
-Date	
-</div>
+	<div class="head-item" style="text-align:left;">
+	Date	
+	</div>
+	<div class="head-item">
+	Weight	
+	</div>
+	<div class="head-item">
+	Up/Down
+	</div>
+	<div class="head-item">
+	% Change
+	</div>
 
 
-<% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==4%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+<% if lift.user_id == current_user.id && lift.exercise_id==4
+		@weightchange1=lift.weight %>
+<div class="max-item" style="text-align:left;">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	<% @weightdif=@weightchange1-@weightchange2 %>
+	<%=h @weightchange1-@weightchange2 %> lbs
+</div>
+<div class="max-item">
+	<% if @weightchange2!=0 %>
+	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% end %>
+	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
-<% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==4%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
 <% end %>
 </div>
 
@@ -455,129 +246,101 @@ Date
 <div style="float:left;width:350px;margin-bottom:10px;<% if @count==2||@count==4 %>clear:both;<% end %>">
 <div class="headly">
 <% @count=@count+1 %>
-<h1>Tricep Extensions</h1>
+<h1>Tricep Extensions<div class="maxh1"><%=h @maxtri %> lbs max</div></h1>
 </div>
 
 <div class="lifts-list">
 
 
-<div class="head-item">
-Exercise	
-</div>
-<div class="head-item">
-Weight	
-</div>
-<div class="head-item">
-Date	
-</div>
+	<div class="head-item" style="text-align:left;">
+	Date	
+	</div>
+	<div class="head-item">
+	Weight	
+	</div>
+	<div class="head-item">
+	Up/Down
+	</div>
+	<div class="head-item">
+	% Change
+	</div>
 
 
-<% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==5%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+<% if lift.user_id == current_user.id && lift.exercise_id==5
+			@weightchange1=lift.weight %>
+<div class="max-item" style="text-align:left;">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	<% @weightdif=@weightchange1-@weightchange2 %>
+	<%=h @weightchange1-@weightchange2 %> lbs
+</div>
+<div class="max-item">
+	<% if @weightchange2!=0 %>
+	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% end %>
+	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
-<% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==5%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
 <% end %>
 </div>
 
 </div>
 <% end %>
+
 <% if @bicep==1 %>
 <div style="float:left;width:350px;margin-bottom:10px;<% if @count==2||@count==4||@count==6 %>clear:both;<% end %>">
 <% @count=@count+1 %>
 <div class="headly">
-<h1>Bicep Curls</h1>
+<h1>Bicep Curls<div class="maxh1"><%=h @maxbi %> lbs max</div></h1>
 </div>
 
 <div class="lifts-list">
 
 
-<div class="head-item">
-Exercise	
-</div>
-<div class="head-item">
-Weight	
-</div>
-<div class="head-item">
-Date	
-</div>
+	<div class="head-item" style="text-align:left">
+	Date	
+	</div>
+	<div class="head-item">
+	Weight	
+	</div>
+	<div class="head-item">
+	Up/Down
+	</div>
+	<div class="head-item">
+	% Change
+	</div>
 
-
-<% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==6%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+<% if lift.user_id == current_user.id && lift.exercise_id==6
+	@weightchange1=lift.weight %>
+<div class="max-item" style="text-align:left">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	<% @weightdif=@weightchange1-@weightchange2 %>
+	<%=h @weightchange1-@weightchange2 %> lbs
+</div>
+<div class="max-item">
+	<% if @weightchange2!=0 %>
+	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% end %>
+	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
-<% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==6%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
 <% end %>
 </div>
 
@@ -588,63 +351,48 @@ Date
 <div style="float:left;width:350px;margin-bottom:10px;<% if @count==2||@count==4||@count==6 %>clear:both;<% end %>">
 <% @count=@count+1 %>
 <div class="headly">
-<h1>Military Press</h1>
+<h1>Military Press<div class="maxh1"><%=h @maxmil %> lbs max</div></h1>
 </div>
 
 <div class="lifts-list">
 
 
-<div class="head-item">
-Exercise	
-</div>
-<div class="head-item">
-Weight	
-</div>
-<div class="head-item">
-Date	
-</div>
+	<div class="head-item" style="text-align:left;">
+	Date	
+	</div>
+	<div class="head-item">
+	Weight	
+	</div>
+	<div class="head-item">
+	Up/Down
+	</div>
+	<div class="head-item">
+	% Change
+	</div>
 
-
-<% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
+<% @weightchange1=0 
+   @weightchange2=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==7%>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item" style="clear:both;">
-<%=h @exname.name %>	
+<% if lift.user_id == current_user.id && lift.exercise_id==7
+		@weightchange1=lift.weight %>
+<div class="max-item" style="text-align:left;">
+<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+	<% @weightdif=@weightchange1-@weightchange2 %>
+	<%=h @weightchange1-@weightchange2 %> lbs
+</div>
+<div class="max-item">
+	<% if @weightchange2!=0 %>
+	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% end %>
+	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
-<% end %>
-
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id==7%>
-
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
-
-<% end %>
-
 <% end %>
 </div>
 
