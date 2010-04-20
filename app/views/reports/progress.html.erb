@@ -58,7 +58,9 @@ Up/Down
 </div>
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 
 <% if lift.user_id == current_user.id && lift.exercise_id==1	
@@ -70,17 +72,35 @@ Up/Down
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>	
 <% @weightdif=@weightchange1-@weightchange2 %>
 <%=h @weightchange1-@weightchange2 %> lbs 
+<% end %>
 </div>
 <div class="max-item">
 <% if @weightchange2!=0 %>
 <%=h (@weightdif*100)/@weightchange2 %> %
+<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 <% end %>
 <% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+			<div class="max-item" style="text-align:left;">
+			</div>
+			<div class="max-item">
+			<strong>Total:</strong>	
+			</div>
+			<div class="max-item">
+				<%=h sum %> lbs
+			</div>
+			<div class="max-item">
+				<%=h sum2 %> %
+			</div>
+		
+		
 </div>
 </div>
 <% end %>
@@ -110,7 +130,9 @@ Up/Down
 
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 <% if lift.user_id == current_user.id && lift.exercise_id==2
 		@weightchange1=lift.weight %>
@@ -121,17 +143,34 @@ Up/Down
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>
 	<% @weightdif=@weightchange1-@weightchange2 %>
 	<%=h @weightchange1-@weightchange2 %> lbs
+	<% end %>
 </div>
 <div class="max-item">
 	<% if @weightchange2!=0 %>
 	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 	<% end %>
 	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+			<div class="max-item" style="text-align:left;">
+			</div>
+			<div class="max-item">
+			<strong>Total:</strong>	
+			</div>
+			<div class="max-item">
+				<%=h sum %> lbs
+			</div>
+			<div class="max-item">
+				<%=h sum2 %> %
+			</div>
+			
 </div>
 
 </div>
@@ -163,7 +202,9 @@ Up/Down
 
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 <% if lift.user_id == current_user.id && lift.exercise_id==3
 	@weightchange1=lift.weight %>
@@ -174,17 +215,34 @@ Up/Down
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>
 	<% @weightdif=@weightchange1-@weightchange2 %>
 	<%=h @weightchange1-@weightchange2 %> lbs
+	<% end %>
 </div>
 <div class="max-item">
 	<% if @weightchange2!=0 %>
 	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 	<% end %>
 	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+			<div class="max-item" style="text-align:left;">
+			</div>
+			<div class="max-item">
+			<strong>Total:</strong>	
+			</div>
+			<div class="max-item">
+				<%=h sum %> lbs
+			</div>
+			<div class="max-item">
+				<%=h sum2 %> %
+			</div>
+			
 </div>
 
 </div>
@@ -215,7 +273,9 @@ Up/Down
 
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 <% if lift.user_id == current_user.id && lift.exercise_id==4
 		@weightchange1=lift.weight %>
@@ -226,17 +286,34 @@ Up/Down
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>
 	<% @weightdif=@weightchange1-@weightchange2 %>
 	<%=h @weightchange1-@weightchange2 %> lbs
+	<% end %>
 </div>
 <div class="max-item">
 	<% if @weightchange2!=0 %>
 	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 	<% end %>
 	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+		<div class="max-item" style="text-align:left;">
+		</div>
+		<div class="max-item">
+		<strong>Total:</strong>	
+		</div>
+		<div class="max-item">
+			<%=h sum %> lbs
+		</div>
+		<div class="max-item">
+			<%=h sum2 %> %
+		</div>
+		
 </div>
 
 </div>
@@ -268,7 +345,9 @@ Up/Down
 
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 <% if lift.user_id == current_user.id && lift.exercise_id==5
 			@weightchange1=lift.weight %>
@@ -279,17 +358,34 @@ Up/Down
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>
 	<% @weightdif=@weightchange1-@weightchange2 %>
 	<%=h @weightchange1-@weightchange2 %> lbs
+	<% end %>
 </div>
 <div class="max-item">
 	<% if @weightchange2!=0 %>
 	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 	<% end %>
 	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+		<div class="max-item" style="text-align:left;">
+		</div>
+		<div class="max-item">
+		<strong>Total:</strong>	
+		</div>
+		<div class="max-item">
+			<%=h sum %> lbs
+		</div>
+		<div class="max-item">
+			<%=h sum2 %> %
+		</div>
+		
 </div>
 
 </div>
@@ -320,7 +416,9 @@ Up/Down
 
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 <% if lift.user_id == current_user.id && lift.exercise_id==6
 	@weightchange1=lift.weight %>
@@ -331,17 +429,35 @@ Up/Down
 <%=h lift.weight %> lbs	
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>
 	<% @weightdif=@weightchange1-@weightchange2 %>
 	<%=h @weightchange1-@weightchange2 %> lbs
+	<% end %>
 </div>
 <div class="max-item">
 	<% if @weightchange2!=0 %>
 	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 	<% end %>
 	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+			<div class="max-item" style="text-align:left;">
+			</div>
+			<div class="max-item">
+			<strong>Total:</strong>	
+			</div>
+			<div class="max-item">
+				<%=h sum %>
+			</div>
+			<div class="max-item">
+				<%=h sum2 %> %
+			</div>
+			
+
 </div>
 
 </div>
@@ -372,7 +488,9 @@ Up/Down
 
 <% today=Time.now.strftime("%m/%d/%Y") %>
 <% @weightchange1=0 
-   @weightchange2=0 %>
+   @weightchange2=0 
+   sum=0
+   sum2=0 %>
 <% @lifts.each do |lift| %>
 <% if lift.user_id == current_user.id && lift.exercise_id==7
 		@weightchange1=lift.weight %>
@@ -380,20 +498,39 @@ Up/Down
 <%=h lift.created_at.strftime("%m/%d/%Y") %>	
 </div>
 <div class="max-item">
-<%=h lift.weight %> lbs	
+<%=h lift.weight %> lbs
 </div>
 <div class="max-item">
+	<% if @weightchange2!=0
+		sum=@weightchange1-@weightchange2+sum %>
 	<% @weightdif=@weightchange1-@weightchange2 %>
 	<%=h @weightchange1-@weightchange2 %> lbs
+	<% end %>	
+	
 </div>
 <div class="max-item">
 	<% if @weightchange2!=0 %>
 	<%=h (@weightdif*100)/@weightchange2 %> %
+	<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
 	<% end %>
 	<% @weightchange2=lift.weight %>
 </div>
 <% end %>
 <% end %>
+
+		<div class="max-item" style="text-align:left;">
+		</div>
+		<div class="max-item">
+		<strong>Total:</strong>	
+		</div>
+		<div class="max-item">
+			<%=h sum %>
+		</div>
+		<div class="max-item">
+			<%=h sum2 %> %
+		</div>
+
+
 </div>
 
 </div>
