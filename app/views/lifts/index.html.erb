@@ -271,7 +271,7 @@ Delete
 <% @lifts.each do |lift| %>
 <% x=x+1 %>
 <% if x == 1 %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today%>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
  	<% @exname=Exercise.find(lift.exercise_id)%>
  	<div class="max-item" style="clear:both;">
  	<%=h @exname.name %>	
