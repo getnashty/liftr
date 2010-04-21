@@ -170,37 +170,6 @@
 <div class="headly">
 <h1>Enter Today's Weights</h1>
 </div>
-
-
-<% today=Time.now.strftime("%m/%d/%Y") %>
-<% @lifts.each do |lift| %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 1%>
- 	<% @a=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 2%>
- 	<% @b=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 3%>
- 	<% @c=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 4%>
- 	<% @d=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 5%>
- 	<% @e=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 6%>
- 	<% @f=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 7%>
- 	<% @g=1 %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 8%>
- 	<% @bw=1 %>
- <% end %>
-<% end %>
-	
-	
 	
 	<div id="enter-stuff">
 		
