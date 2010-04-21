@@ -292,7 +292,7 @@ Delete
 <% end %>
 
 <% if x == 2 %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today%>
+ <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
 
  	<% @exname=Exercise.find(lift.exercise_id)%>
  	<div class="max-item2" style="clear:both;">
