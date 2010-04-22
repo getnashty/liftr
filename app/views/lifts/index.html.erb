@@ -268,7 +268,7 @@ Delete
 
 <% x=0 %>
 <% today=Time.now.strftime("%m/%d/%Y") %>
-<% @lifts.each do |lift| %>
+<% @todaylifts.each do |lift| %>
 <% x=x+1 %>
 <% if x == 1 %>
  <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
@@ -364,8 +364,6 @@ Delete
 <% end %>
 <% end %>
 
-
-
 <div style="width:90%;text-align:center;"><%= will_paginate @lifts %></div>
 
 </div>
@@ -395,7 +393,7 @@ Delete
 	</div>
 
 	<% x=0 %>
-	<% @lifts.each do |lift| %>
+	<% @todaylifts.each do |lift| %>
 	<% x=x+1 %>
 	<% if x == 1 %>
 	<% if lift.user_id == current_user.id && lift.exercise_id == 8%>
