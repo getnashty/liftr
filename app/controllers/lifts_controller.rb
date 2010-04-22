@@ -3,7 +3,9 @@ class LiftsController < ApplicationController
   # GET /lifts
   # GET /lifts.xml
   def index
-    @lifts = Lift.find(:all, :order => 'created_at') 
+    
+    @lifts = Lift.paginate :page => params[:page], :order => 'created_at DESC'
+    
     @lift = Lift.new
     @exercises = Exercise.all
     
