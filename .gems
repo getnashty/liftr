@@ -1,1 +1,2 @@
 rmagick --version 1.15.17
+will_paginate --version '~> 2.3.12' --source http://gemcutter.org
