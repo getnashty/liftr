@@ -5,7 +5,7 @@ class LiftsController < ApplicationController
   def index
     
     @lifts = Lift.paginate_by_user_id current_user.id, :page => params[:page], :order => 'created_at DESC' 
-    @todaylifts = Lift.paginate_by_user_id current_user.id, :page => params[:page], :order => 'created_at DESC' 
+    @todaylifts = Lift.find(:all, :order => 'created_at') 
     
     @lift = Lift.new
     @exercises = Exercise.all
