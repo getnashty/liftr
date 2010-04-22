@@ -343,12 +343,9 @@ Edit
 Delete	
 </div>
 
-<% x=0 %>
 <% @lifts.each do |lift| %>
-<% x=x+1 %>
-<% if x == 1 %>
-<% if lift.user_id == current_user.id && lift.exercise_id != 8%>
 <% @exname=Exercise.find(lift.exercise_id)%>
+<% if @exname.name != "Body Weight" %>
 <div class="max-item" style="clear:both;">
 <%=h @exname.name %>	
 </div>
@@ -367,32 +364,7 @@ Delete
 <% end %>
 <% end %>
 
-<% if x == 2 %>
-<% if lift.user_id == current_user.id && lift.exercise_id != 8 %>
-<% @exname=Exercise.find(lift.exercise_id)%>
-<div class="max-item2" style="clear:both;">
-<%=h @exname.name %>	
-</div>
-<div class="max-item2-weight">
-<%=h lift.weight %> lbs	
-</div>
-<div class="max-item2">
-<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-</div>
-<div class="max-item2" style="width:30px;">
-<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-</div>
-<div class="max-item2" style="width:30px;">
-<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-</div>
-<% x=0 %>
-<% else %>
-<% x = 0 %>
-<% end %>
 
-<% end %>
-
-<% end %>
 
 <div style="width:90%;text-align:center;"><%= will_paginate @lifts %></div>
 
