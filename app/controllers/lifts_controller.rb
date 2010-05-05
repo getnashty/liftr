@@ -9,6 +9,7 @@ class LiftsController < ApplicationController
     
     @lift = Lift.new
     @exercises = Exercise.all
+    @muscles = Muscle.all
     
     respond_to do |format|
       format.html # index.html.erb

@@ -3,8 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Liftrr - Enter your maxes</title>
+<title>Liftrr - Enter your weights</title>
 <%= stylesheet_link_tag 'scaffold' %>
+<%= javascript_include_tag 'for-tabs' %>
+
+<script>
+	document.observe('dom:loaded',function(){
+		
+//example 1
+new Control.Tabs('enter-weights');
+
+	});
+</script>
+
+
 <style type="text/css">
 <!--
 body{
