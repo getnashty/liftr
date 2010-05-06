@@ -45,44 +45,7 @@
 }
 </style>
 
-<% today=@lift.created_at.strftime("%m/%d/%Y") %>
-<% @lifts.each do |lift| %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 1%>
-	<% if @lift.exercise_id!=1%>
- 		<% @a=1 %>
-	<% end %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 2%>
-	<% if @lift.exercise_id!=2%>
- 		<% @b=1 %>
-	<% end %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 3%>
-	<% if @lift.exercise_id!=3%>
- 		<% @c=1 %>
-	<% end %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 4%>
-	<% if @lift.exercise_id!=4%>
- 		<% @d=1 %>
-	<% end %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 5%>
-	<% if @lift.exercise_id!=5%>
- 		<% @e=1 %>
-	<% end %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 6%>
-	<% if @lift.exercise_id!=6%>
- 		<% @f=1 %>
-	<% end %>
- <% end %>
- <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == 7%>
-	<% if @lift.exercise_id!=7%>
- 		<% @g=1 %>
-	<% end %>
- <% end %>
-<% end %>
+
 
 <div class="headly">
 <h1>Editing Your Max</h1>
@@ -97,7 +60,7 @@
 
 	<div class="text_field">
   <%= f.label :exercise_id %><br />
-	<%= exercise_select(f) %>
+	<%= exercise_edit(f) %>
 	</div>
     <div class="text_field">
 	<%= f.label :weight %><br />
