@@ -395,7 +395,7 @@ html, body {
 .text_field {
 	float:left;
 	text-align:center;
-	padding:0px 10px 0 2%;
+	padding:0px 5px 0 2%;
 	font-weight:bold;
 	color:#000;
 	font-family:Arial, Helvetica, sans-serif;
