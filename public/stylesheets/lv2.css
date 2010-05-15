@@ -297,6 +297,9 @@ html, body {
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #909090;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #909090;
 }
 .right_content2{
 	float:left;
@@ -305,6 +308,9 @@ html, body {
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #909090;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #909090;
 }
 .right_content3{
 	float:left;
@@ -313,6 +319,9 @@ html, body {
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #909090;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #909090;
 }
 
 .muscle-items ul.subsection_tabs {
@@ -364,7 +373,7 @@ html, body {
 	font-size:16px;
 	color:#fff;
 	background-color:#333;
-	width:100%;
+	width:830px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:bold;
 	text-shadow:#000 1px 1px;
