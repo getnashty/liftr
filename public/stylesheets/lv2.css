@@ -264,7 +264,6 @@ html, body {
 #left_menu{
 	text-align:right;
 	float:left;
-	height: 405px;
 	width:127px;
 	padding-top:15px;
 	padding-right:15px;
@@ -293,7 +292,6 @@ html, body {
 }
 .right_content{
 	float:left;
-	height: 420px;
 	width:850px;
 	padding:0px;
 	border-left-width: 1px;
@@ -302,7 +300,6 @@ html, body {
 }
 .right_content2{
 	float:left;
-	height: 420px;
 	width:850px;
 	padding:0px;
 	border-left-width: 1px;
@@ -311,7 +308,6 @@ html, body {
 }
 .right_content3{
 	float:left;
-	height: 420px;
 	width:850px;
 	padding:0px;
 	border-left-width: 1px;
