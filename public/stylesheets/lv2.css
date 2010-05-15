@@ -167,6 +167,8 @@ html, body {
 	height: 100%;
 	margin:0px;
 	padding:0px;
+	background-repeat: repeat;
+	background-image: url(/images/content-bg2.png);
 }
 #container {
 	background-image: url(/images/content-bg.png);
