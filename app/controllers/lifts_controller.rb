@@ -26,6 +26,8 @@ class LiftsController < ApplicationController
   # GET /lifts/1.xml
   def show
     @lift = Lift.find(params[:id])
+    @exercises = Exercise.all
+    @muscles = Muscle.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -49,6 +51,7 @@ class LiftsController < ApplicationController
   def edit
     @lifts = Lift.find(:all, :order => 'created_at') 
     @exercises = Exercise.all
+    @muscles = Muscle.all
     @lift = Lift.find(params[:id])
   end
 
