@@ -1,121 +1,8 @@
 <style type="text/css">
 <!--
-.text_field {
-	float:left;
-	text-align:left;
-	padding:0px 10px 0 0;
-	font-weight:bold;
-}
-.text_field input{
-	background-image: url(/images/input-bg.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-	border-style:solid;
-	border-width:1px;
-	border-color:#898989;
-	padding:8px;
-	font-size:12px;
-	font-family:arial;
-}
-.submit_field2 {
-	float:left;
-}
-.submit_field2 input{
-	margin-top:20px;
-	background-color:red;
-	border-style:solid;
-	border-color:red;
-	border-width:1px;
-	color:#fff;
-	font-weight:bold;
-	padding:4px;
-	font-size:16px;
-}
-.submit_field2 a{
-	text-decoration:none;
-	color:#fff;
-}
 .lifts-list{
 	clear:both;
 	padding:0 0 0 6px;
-}
-.headly h1{
-	clear:both;
-	border-bottom-style:solid;
-	border-bottom-color:#BFBFBF;
-	border-bottom-width:1px;
-	padding-bottom:10px;
-	margin:0;
-}
-.head-item{
-	float:left;
-	padding-right:20px;
-	font-weight:bold;
-	width:100px;
-	
-}
-.head-item-weight{
-	float:left;
-	padding-right:20px;
-	font-weight:bold;
-	width:50px;
-	
-}
-.max-item{
-	float:left;
-	padding-right:20px;
-	width:100px;
-	height:26px;
-	line-height:26px;
-}
-.max-item2{
-	float:left;
-	padding-right:20px;
-	width:100px;
-	height:26px;
-	line-height:26px;
-	background-color:#eee;
-}
-.max-item-weight{
-	float:left;
-	padding-right:20px;
-	width:50px;
-	height:26px;
-	line-height:26px;
-}
-.max-item2-weight{
-	float:left;
-	padding-right:20px;
-	width:50px;
-	height:26px;
-	line-height:26px;
-	background-color:#eee;
-}
-.pencil{
-	margin-top:5px;
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/pencil.png);
-	background-position: bottom;
-}
-.pencil:hover{
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/pencil.png);
-	background-position: top;
-}
-.delete{
-	margin-top:5px;
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/delete.png);
-	background-position: top;
-}
-.delete:hover{
-	height: 18px;
-	width: 16px;
-	background-image: url(/images/delete.png);
-	background-position: bottom;
 }
 .flash2{
 	width:700px;
@@ -129,16 +16,7 @@
 	font-size:18px;
 	color:#fff;
 }
-#enter-stuff{
-	clear:both;
-	background-color:#f6f6f6;
-	border-width:1px;
-	border-color:#ddd;
-	border-style:solid;
-	width:400px;
-	margin:auto;
-	padding:10px;
-}
+
 .enter-body-weight{
 	float:left;
 	padding-top:10px;
@@ -151,366 +29,245 @@
 	width:208px;
 	text-align:center;
 }
-.oneaday{
-	clear:both;
-	background-color:#fafafa;
-	border-width: 0 1px 1px 1px;
-	border-color:#eee;
-	border-style:solid;
-	width:410px;
-	margin:auto;
-	padding:5px;
-}
-.left-content{
-	float:left;
-	width:450px;
-}
-.right-content{
-	float:left;
-	width:230px;
-	padding-left:20px;
-}
-
-
-#main ul.subsection_tabs {
-clear:both;
-height:20px;
-list-style-image:none;
-list-style-position:outside;
-list-style-type:none;
-margin:20px 0 0px;
-}
-#main ul.subsection_tabs li.tab {
-float:left;
-margin-right:7px;
-text-align:center;
-}
-#main ul.subsection_tabs li.tab a {
-background-color:#FFFFFF;
-color:#666666;
-display:block;
-height:20px;
-padding:0 6px;
-text-decoration:none;
-}
-#main ul.subsection_tabs li.tab a:hover {
-color:#000;
-}
-#main ul.subsection_tabs li.tab a.active {
-background-color: #C10000;
-color:#fff;
-}
-#main ul.subsection_tabs li.source_code {
-float:right;
-}
-
-
 -->
 </style>
 
+<% @muscles.each do |muscle| %>
+	<% if muscle.name != "Body" %>
+	<% @muscleid = muscle.id %>
+
+<div id="<%=h muscle.name %>">
 
 
-<div id="flash">
-  <% flash.each do |key, value| -%>
-    <div class="flash2" id="flash_<%= key -%>"><%= html_escape(value) %></div>
-  <% end -%>
-</div>
-
-<div class="left-content">
-
-<div class="headly">
-<h1>Enter Today's Weights</h1>
-</div>
-
-
- <!-- example 1 -->  
-	<ul id="enter-weights" class="subsection_tabs">
-		<% @muscles.each do |muscle| %>
-			<% if muscle.name != "Body" %>
-			<li class="tab"><a href="#<%=h muscle.name %>"><%=h muscle.name %></a></li>
-			<% end %>
-		<% end %>
-	</ul>
+<div id="content">
 	
-	<% @muscles.each do |muscle| %>
-		<% if muscle.name != "Body" %>
-		<% @muscleid = muscle.id %>
+	<div id="content-wrap">
+	   	
+		<div id="left_menu">
+        	<a href="#" onclick="
+				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
+				Effect.Fade('right_content3<%=h muscle.name %>',{ duration: 0 });
+				Effect.BlindDown('right_content<%=h muscle.name %>');
+				return false">
+				Add <%=h muscle.name %> Lifts</a><br/><br/>
+	       	<a href="#" onclick="
+				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
+				Effect.Fade('right_content3<%=h muscle.name %>',{ duration: 0 });
+				Effect.BlindDown('right_content2<%=h muscle.name %>'); return false">  
+        		All <%=h muscle.name %> Lifts</a><br/><br/>
+        	<a href="#" onclick="
+				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
+				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
+				Effect.BlindDown('right_content3<%=h muscle.name %>'); return false">
+	        	View By Exercise</a>
+        </div>
+	    
+		<div class="right_content" id="right_content<%=h muscle.name %>">
 
-	<div id="<%=h muscle.name %>">
-	
+			<div class="headly">
+				<h1>Add <%=h muscle.name %> Lift
+					<span style="float:right;font-weight:normal;font-size:14px;">
+						* Each exercise may only have 1 entry per day!
+					</span>
+				</h1>
+			</div>
+
 			<div id="enter-stuff">
-				
+
 				<% optcount %>
-		
+
 				<% if @xcount == @lcount %> 
 
-					Sorry, you have already entered your <strong><%=h muscle.name %></strong> exercises for today, feel free to edit them below!
+					<strong>Sorry, you have already entered your <%=h muscle.name %>
+					exercises for today, feel free to edit them below!</strong>
 
 				<% else %>
-				<% form_for(@lift) do |f| %>
-				  <%= f.error_messages %>
+					
+					<% form_for(@lift) do |f| %>
+			  	    <%= f.error_messages %>
 
-					<div style="float:left;">
+							<div class="text_field">
+						    	<%= f.label :exercise_id %><br />
+								<%= exercise_select(f) %>
+							</div>
+							
+						    <div class="text_field">
+								<%= f.label :weight %><br />
+								
+							<div class="track-left"></div>
+							<div id="track1<%=h muscle.name %>" class="track">
+								<div id="handle1<%=h muscle.name %>" class="handle">
+								</div>
+							</div>
+							<div class="track-right"></div>
+				
+							<p id="debug1<%=h muscle.name %>" style="display:none;">&nbsp;</p>
+							
+							manual entry: <input id="lift_weight<%=h muscle.name %>"  id="lift_weight" name="lift[weight]" 
+							size="3" class="linput" type="text" value="0" /> lbs
+							
+						<script type="text/javascript" language="javascript">
 
-				  	<div class="text_field">
-				    <%= f.label :exercise_id %><br />
-					<%= exercise_select(f) %>
+						// horizontal slider control
+						var slider1 = new Control.Slider('handle1<%=h muscle.name %>', 'track1<%=h muscle.name %>', {
+						onSlide: function(v) { $('debug1<%=h muscle.name %>').innerHTML = 'slide: ' + (v*500).toFixed();
+						 $('lift_weight<%=h muscle.name %>').value = (v*500).toFixed(); },
+						onChange: function(v) { $('debug1<%=h muscle.name %>').innerHTML = 'changed: ' + (v*500).toFixed();
+						 $('lift_weight<%=h muscle.name %>').value = (v*500).toFixed(); }
+						});
 
-					</div>
-				    <div class="text_field">
-					<%= f.label :weight %><br />
-				    <%= f.text_field (:weight, :size=>3) %>
-					</div>
-					<div class="text_field">
-					Date<br />
-					<div style="font-weight:normal;margin-top:10px;">
-					<%=h Time.now.strftime("%m/%d/%Y") %>
-					</div>
-					</div>
-				    <div class="submit_field2" style="margin-top:-5px">
-				    <%= f.submit 'Add Max' %>
-					</div>
+						</script>
+								
+							</div>
+				
+							<div class="text_field">
+								
+								<label>Date</label><Br/>
+								<div style="font-weight:normal;margin-top:10px;">
+								<%=h Time.now.strftime("%m/%d/%Y") %>
+								</div>
+			
+							</div>
+			
+						    <div class="submit_field2" style="margin-top:-5px">
+							    <input src="/images/red-button.png" id="lift_submit" name="commit" type="image">
+							</div>
 
 					<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
 
-					</div>
 
-					<% end %>	
-
-
-				<% end %>
-
+						<% end %>	
+						<% end %>
+						
+			</div>
+					
 						<div style="clear:both;"></div>
 
+			<div class="headly" style="margin-top:20px;">
+				<h1>All Lifts Added Today</h1>
 			</div>
-
-			<div class="oneaday">
-				* Please note, each exercise may only have 1 entry per day!
-			</div>
-	
-	</div>
-		<% end %>
-	<% end %>
-	
-	
-	
-		<div style="margin-top:20px;">
-
-			<div class="headly">
-			<h1>Today's Lifts</h1>
-			</div>
-
-		<div class="lifts-list">
-
-
-		<div class="head-item">
-		Exercise	
-		</div>
-		<div class="head-item-weight">
-		Weight	
-		</div>
-		<div class="head-item">
-		Date	
-		</div>
-		<div class="head-item" style="width:30px;">
-		Edit	
-		</div>
-		<div class="head-item" style="width:30px;">
-		Delete	
-		</div>
-
-		<% x=0 %>
-		<% today=Time.now.strftime("%m/%d/%Y") %>
-		<% @todaylifts.each do |lift| %>
-		<% x=x+1 %>
-		<% if x == 1 %>
-		 <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
-		 	<% @exname=Exercise.find(lift.exercise_id)%>
-		 	<div class="max-item" style="clear:both;">
-		 	<%=h @exname.name %>	
-		 	</div>
-		 	<div class="max-item-weight">
-		 	<%=h lift.weight %> lbs	
-		 	</div>
-		 	<div class="max-item">
-		 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-		 	</div>
-		 	<div class="max-item" style="width:30px;">
-		 	<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-		 	</div>
-		 	<div class="max-item" style="width:30px;">
-		 	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-		 	</div>
-		 <% end %>
-		<% end %>
-
-		<% if x == 2 %>
-		 <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
-
-		 	<% @exname=Exercise.find(lift.exercise_id)%>
-		 	<div class="max-item2" style="clear:both;">
-		 	<%=h @exname.name %>	
-		 	</div>
-		 	<div class="max-item2-weight">
-		 	<%=h lift.weight %> lbs	
-		 	</div>
-		 	<div class="max-item2">
-		 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-		 	</div>
-		 	<div class="max-item2" style="width:30px;">
-		 	<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-		 	</div>
-		 	<div class="max-item2" style="width:30px;">
-		 	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-		 	</div>
-			<% x=0 %>
-		 <% else %>
-			<% x = 0 %>
-		 <% end %>
-
-		<% end %>
-
-		<% end %>
-		</div>
-
-		<div class="headly" style="clear:both;padding-top:15px;">
-		<h1>All Lifts</h1>
-		</div>
-
-		<div class="lifts-list">
-
-
-		<div class="head-item">
-		Exercise	
-		</div>
-		<div class="head-item-weight">
-		Weight	
-		</div>
-		<div class="head-item">
-		Date	
-		</div>
-		<div class="head-item" style="width:30px;">
-		Edit	
-		</div>
-		<div class="head-item" style="width:30px;">
-		Delete	
-		</div>
-
-		<% @lifts.each do |lift| %>
-		<% @exname=Exercise.find(lift.exercise_id)%>
-		<% if @exname.name != "Body Weight" %>
-		<div class="max-item" style="clear:both;">
-		<%=h @exname.name %>	
-		</div>
-		<div class="max-item-weight">
-		<%=h lift.weight %> lbs	
-		</div>
-		<div class="max-item">
-		<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-		</div>
-		<div class="max-item" style="width:30px;">
-		<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-		</div>
-		<div class="max-item" style="width:30px;">
-		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-		</div>
-		<% end %>
-		<% end %>
-
-		<div style="width:90%;text-align:center;"><%= will_paginate @lifts %></div>
-
-		</div>
-
-
-		</div>
-		
-	
-	
-</div>
-	
-	
-		<div class="right-content">
-
-			<div class="headly">
-			<h1>Body Weight</h1>
-			</div>
-			<% if @bw!=1 %> 
-			<% form_for(@lift) do |f| %>
-			<%= f.error_messages %>
-
-			<div class="enter-body-weight">
-			<div class="text_field">
-			<%= f.text_field (:weight, :size=>5) %>
-			</div>
-			<div class="submit_field2" style="margin-top:-20px;">
-			<%= f.submit 'Add Weight' %>
-			</div>
-			</div>
-
-			<input id="lift_exercise_id" name="lift[exercise_id]" size="30" type="hidden" value="8" >
-			<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
-			<% end %>	
-			<% end %>
-			
 
 			<div class="lifts-list">
 
-			<div class="head-item-weight" style="width:45px;">
-			Weight	
-			</div>
-			<div class="head-item" style="width:55px;">
-			Date	
-			</div>
-			<div class="head-item" style="width:20px;">
-			Edit	
-			</div>
-			<div class="head-item" style="width:20px;">
-			Delete	
-			</div>
+				<div class="head-item-exercise">
+					Exercise	
+				</div>
+				<div class="head-item-delete">
+					Delete	
+				</div>
+				<div class="head-item-edit">
+					Edit	
+				</div>
+				<div class="head-item-date">
+					Date	
+				</div>
+				<div class="head-item-muscle">
+					Muscle	
+				</div>
+				<div class="head-item-weight">
+					Weight	
+				</div>
+				
+				<% today=Time.now.strftime("%m/%d/%Y") %>
+				<% @todaylifts.each do |lift| %>
+			 <% if lift.user_id == current_user.id && lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
+			 	<% @exname=Exercise.find(lift.exercise_id)%>
+				<% @mcmuscle=Muscle.find(@exname.muscle_id)%>
+			 	<div class="item-exercise" style="clear:both;">
+			 		<%=h @exname.name %>	
+			 	</div>
+			 	<div class="item-delete">
+			 		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+			 	</div>
+				<div class="item-edit" style="width:30px;">
+			 		<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+			 	</div>
+			 	<div class="item-date">
+				 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+			 	</div>
+			 	<div class="item-muscle">
+				 	<%=h @mcmuscle.name %>	
+			 	</div>
+			 	<div class="item-weight">
+				 	<%=h lift.weight %> lbs	
+			 	</div>
 
-			<% x=0 %>
-			<% @todaylifts.each do |lift| %>
-			<% x=x+1 %>
-			<% if x == 1 %>
-			<% if lift.user_id == current_user.id && lift.exercise_id == 8%>
-			<div class="max-item-weight" style="width:45px;">
-			<%=h lift.weight %> lbs	
-			</div>
-			<div class="max-item" style="width:55px;">
-			<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-			</div>
-			<div class="max-item" style="width:20px;">
-			<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-			</div>
-			<div class="max-item" style="width:20px;">
-			<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-			</div>
-			<% end %>
-			<% end %>
 
-			<% if x == 2 %>
-			<% if lift.user_id == current_user.id && lift.exercise_id == 8 %>
-			<div class="max-item2-weight" style="width:45px;">
-			<%=h lift.weight %> lbs	
-			</div>
-			<div class="max-item2" style="width:55px;">
-			<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-			</div>
-			<div class="max-item2" style="width:20px;">
-			<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-			</div>
-			<div class="max-item2" style="width:20px;">
-			<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-			</div>
-			<% x=0 %>
-			<% else %>
-			<% x = 0 %>
-			<% end %>
 
-			<% end %>
-
-			<% end %>
+				<% end %>
+				<% end %>
+				</div>			
 			</div>
+        </div>
 
+		<div class="right_content2" id="right_content2<%=h muscle.name %>" style="display:none;">
+			<div class="headly">
+				<h1>All <%=h muscle.name %> Lifts</h1>
+			</div>	
+
+			<div class="lifts-list">
+
+				<div class="head-item-exercise">
+					Exercise	
+				</div>
+				<div class="head-item-delete">
+					Delete	
+				</div>
+				<div class="head-item-edit">
+					Edit	
+				</div>
+				<div class="head-item-date">
+					Date	
+				</div>
+				<div class="head-item-muscle">
+					Muscle	
+				</div>
+				<div class="head-item-weight">
+					Weight	
+				</div>
+
+				<% @lifts.each do |lift| %>
+				<% @exname=Exercise.find(lift.exercise_id)%>
+				<% @mcmuscle=Muscle.find(@exname.muscle_id)%>
+				<% if @exname.name != "Body Weight" && @mcmuscle.name == muscle.name %>
+				
+				<div class="item-exercise" style="clear:both;">
+			 		<%=h @exname.name %>	
+			 	</div>
+			 	<div class="item-delete">
+			 		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+			 	</div>
+				<div class="item-edit" style="width:30px;">
+			 		<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
+			 	</div>
+			 	<div class="item-date">
+				 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
+			 	</div>
+			 	<div class="item-muscle">
+				 	<%=h @mcmuscle.name %>	
+			 	</div>
+			 	<div class="item-weight">
+				 	<%=h lift.weight %> lbs	
+			 	</div>
+				<% end %>
+				<% end %>
+
+				<div style="display:none;width:90%;text-align:center;clear:both;"><%= will_paginate @lifts %></div>
+
+			</div>
+			
+		</div>	    
+
+		<div class="right_content3" id="right_content3<%=h muscle.name %>" style="display:none;">
+			<div class="headly">
+				<h1>View by Exercise</h1>
+			</div>
 		</div>
-		
+
+
+
+	</div>
+</div>
+<% end %>
+<% end %>
+    
