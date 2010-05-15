@@ -128,6 +128,14 @@
 	margin:21px 10px;
 	background-position: 0 34px;
 }
+#stats_button.selected{
+	float:left;
+	width: 130px;
+	background-image: url(/images/view-stats-button.png);
+	height: 34px;
+	margin:21px 10px;
+	background-position: 0 34px;
+}
 .accountlinks{
 	margin:32px 10px;
 	float:right;

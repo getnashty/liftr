@@ -1,49 +1,87 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Liftrr - Enter your maxes</title>
-<%= stylesheet_link_tag 'scaffold' %>
-<%= stylesheet_link_tag 'reports' %>
+<title>Liftrr.com - View your stats</title>
+<%= stylesheet_link_tag 'lv2' %>
+<%= javascript_include_tag 'for-tabs' %>
+<%= javascript_include_tag 'prototype' %>
+<%= javascript_include_tag 'scriptaculous' %>
+<%= javascript_include_tag 'slider' %>
+
+<script>
+	document.observe('dom:loaded',function(){
+		
+//example 1
+new Control.Tabs('enter-weights');
+
+	});
+</script>
+
 </head>
 
 <body>
-	<div id="container">
-    
-    	<div id="header"><img src="/images/liftrr-logo.png" width="192" height="72" alt="logo" />
-			
-			<div class="submit_field">
-			
-				<%= link_to "Sign out", sign_out_path %><Br/>
-			</div>
-		
-			<div class="signedin">
-			Welcome <%=h current_user.email %>
-			</div>
-		
-		</div>
-		
-<div id="main">
-        
-	<div id="left-nav">
-		<div class="menu">Menu</div>
-		<div class="item"><a href="/lifts/">Enter Max Weights</a></div>
-		<div class="reports"><a href="/reports/progress">View Statistics</a></div>
-	</div>
-            
-            
- 	<div id="content">
-	
-		<span style="color: green"><%= flash[:notice] %></span>
 
-		<%= yield %>
-	
+<div id="container">
+
+	<div id="menu_bar">
+    	<div id="header">
+    		<div id="logo"><img src="/images/logo.png" width="142" height="76" alt="logo" /></div>
+            <a href="/">
+        		<div id="dashboard_button"></div>
+			</a>
+			<a href="/lifts">
+            	<div id="enter_lifts_button"></div>
+			</a>
+			<div id="stats_button" class="selected"></div>
+            <a href="/sign_out"><div class="accountlinks">Logout</div></a>
+            <a href="/passwords/new"><div class="accountlinks">My Account</div></a>
+    	</div>
+    </div>
+
+	<div id="subnav_bar">
+		<div id="subnavity">
+	    	<div class="menu-title">Muscles</div>
+	    	<div class="muscle-items">
+
+				<ul id="enter-weights" class="subsection_tabs">
+					<% @muscles.each do |muscle| %>
+						<% if muscle.name != "Body" %>
+						<li class="tab"><a href="#<%=h muscle.name %>"><%=h muscle.name %></a></li>
+						<% end %>
+					<% end %>
+				</ul>
+
+	        </div>
+	    </div>
 	</div>
-        
+	
+	<%= yield %>
+	
+    <div class="push"></div>
+
+
+</div>
+
+<div class="footer">
+	<div id="footer_top"></div>
+	<div id="footer_bottom">
+    	<div id="footer-cont">
+        	<span style="float:left">
+            	a <a href="http://www.venturemedias.com">venture medias</a> jump off.
+            </span>
+        	<span class="socialinks">
+				<a href="http://www.facebook.com/home.php?#!/pages/Liftrr/107678535935258?v=info&ref=nf">facebook</a>
+            </span>
+        	<span class="socialinks">
+				<a href="http://liftrr.tumblr.com/">tumblr</a>
+            </span>
+        	<span class="socialinks">
+				<a href="http://www.twitter.com/liftrr">twitter</a>
+            </span>
+        </div>
     </div>
-    
-    </div>
+</div>
 
 </body>
 </html>

@@ -1,127 +1,125 @@
-  <%= javascript_include_tag 'swfobject' %>
+<%= javascript_include_tag 'swfobject' %>
+<style type="text/css">
+<!--
+.lifts-list{
+	clear:both;
+	padding:0 0 0 6px;
+}
+.flash2{
+	width:700px;
+	height:35px;
+	line-height:35px;
+	background-color:#7d0000;
+	margin:auto;
+	font-family:arial;
+	text-align:center;
+	font-weight:bold;
+	font-size:18px;
+	color:#fff;
+}
 
-<div id="progress_chart" class='chart'>
-  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
-  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
-</div>
+.enter-body-weight{
+	float:left;
+	padding-top:10px;
+	padding-left:20px;
+	padding-bottom:10px;
+	background-color:#f6f6f6;
+	border-width:0px 1px 1px;
+	border-color:#ddd;
+	border-style:solid;
+	width:208px;
+	text-align:center;
+}
+-->
+</style>
 
-<script type="text/javascript">
-  // <![CDATA[    
-  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "700", "380", "8", "#fff");
-  so.addVariable("path", "/amcharts/");
-  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
-  so.addVariable("data_file", escape("<%= @progress_data_link %>"));
-  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><labels><label><x>250</x><y>25</y><text_size>18</text_size><text><![CDATA[<b>Your Maxes</b>]]></text></label></labels><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>liftrr-logo.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines></settings>");
-  so.addVariable("preloader_color", "#000000");
-  so.write("progress_chart");
-  // ]]>
-</script>
+<% @muscles.each do |muscle| %>
+	<% if muscle.name != "Body" %>
+	<% @muscleid = muscle.id %>
 
-<!-- Get Maxes-->
-<% @count=0 %>
-<!-- Get Maxes-->
+<div id="<%=h muscle.name %>">
 
 
-
-<div style="width:700px;">
+<div id="content">
 	
-	<div class="oneaday">
-		* Right click the chart and choose "Export as image" to download an image of the chart.
-	</div>
-	
-<% @exercises.each do |exercise| %>
-
-	<% if exercise.name!="Body Weight" %>
-		
-		<% @exyes=0 %>
-  
-   		<% @lifts.each_with_index do |lift, index|
-        	if lift.user_id == current_user.id && lift.exercise_id == exercise.id
-          		@exyes=1
-        	end
-     	end %>
-
-	<% if @exyes==1 %>
-	<% @exid=exercise.id%>
-	<% max_main %>
-
-		<div style="float:left;width:350px;margin-bottom:10px;<% if @count==2||@count==4||@count==6 %>clear:both;<% end %>">
-		
-			<% @count=@count+1 %>
-		
-			<div class="headly">
-				<h1><%=h exercise.name %><div class="maxh1"><%=h @maxmain %> lbs max</div></h1>
+	<div id="content-wrap">
+	   	
+		<div id="left_menu">
+        	<a href="#" onclick="
+				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
+				Effect.Fade('right_content3<%=h muscle.name %>',{ duration: 0 });
+				Effect.BlindDown('right_content<%=h muscle.name %>');
+				return false">
+				View stats</a><br/><br/>
+	       	<a href="#" onclick="
+				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
+				Effect.Fade('right_content3<%=h muscle.name %>',{ duration: 0 });
+				Effect.BlindDown('right_content2<%=h muscle.name %>'); return false">  
+        		Coming Soon...</a><br/><br/>
+        	<a href="#" onclick="
+				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
+				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
+				Effect.BlindDown('right_content3<%=h muscle.name %>'); return false">
+	        	Coming Soon...</a>
+        </div>
+	    
+		<div class="right_content" style="text-align:center;padding-top:30px;" id="right_content<%=h muscle.name %>">			
+			
+			<div id="progress_chart" class='chart'>
+			  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
+			  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
 			</div>
 
-			<div class="lifts-list">
+			<script type="text/javascript">
+			  // <![CDATA[    
+			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "700", "380", "8", "#fff");
+			  so.addVariable("path", "/amcharts/");
+			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
+			  so.addVariable("data_file", escape("<%= @progress_data_link %>"));
+			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><labels><label><x>250</x><y>25</y><text_size>18</text_size><text><![CDATA[<b>Your Maxes</b>]]></text></label></labels><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>liftrr-logo.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines></settings>");
+			  so.addVariable("preloader_color", "#000000");
+			  so.write("progress_chart");
+			  // ]]>
+			</script>
 
-				<div class="head-item" style="text-align:left;">
-					Date	
-				</div>
-				<div class="head-item">
-					Weight	
-				</div>
-				<div class="head-item">
-					Up/Down
-				</div>
-				<div class="head-item">
-					% Change
-				</div>
+			<!-- Get Maxes-->
+			<% @count=0 %>
+			<!-- Get Maxes-->
 
-				<% today=Time.now.strftime("%m/%d/%Y") %>
-				<% @weightchange1=0 
-   				@weightchange2=0 
-   				sum=0
-   				sum2=0 %>
-				
-				<% @lifts.each do |lift| %>
-					<% if lift.user_id == current_user.id && lift.exercise_id==exercise.id
-						@weightchange1=lift.weight %>
+			<div style="display:none;width:700px;">
+			
+        </div>
 
-						<div class="max-item" style="text-align:left;">
-							<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-						</div>
-						<div class="max-item">
-							<%=h lift.weight %> lbs
-						</div>
-						<div class="max-item">
-							<% if @weightchange2!=0
-								sum=@weightchange1-@weightchange2+sum %>
-								<% @weightdif=@weightchange1-@weightchange2 %>
-								<%=h @weightchange1-@weightchange2 %> lbs
-							<% end %>	
-						</div>
-						<div class="max-item">
-							<% if @weightchange2!=0 %>
-							<%=h (@weightdif*100)/@weightchange2 %> %
-							<% sum2=(@weightdif*100)/@weightchange2+sum2 %>	
-							<% end %>
-							<% @weightchange2=lift.weight %>
-						</div>
-					<% end %>
-				<% end %>
+		<div class="right_content2" id="right_content2<%=h muscle.name %>" style="display:none;">
+			<div class="headly">
+				<h1>Coming Soon...</h1>
+			</div>	
 
-				<div class="max-item" style="text-align:left;">
-				</div>
-				<div class="max-item">
-					<strong>Total:</strong>	
-				</div>
-				<div class="max-item">
-					<%=h sum %> lbs
-				</div>
-				<div class="max-item">
-					<%=h sum2 %> %
-				</div>
+			
+		</div>	    
 
-
+		<div class="right_content3" id="right_content3<%=h muscle.name %>" style="display:none;">
+			<div class="headly">
+				<h1>Coming Soon...</h1>
 			</div>
 		</div>
 
-		<% end %>
-	<% end %>
+
+
+	</div>
+</div>
+</div>
+</div>
+<% end %>
 <% end %>
 
 
 
 
-</div>
+
+
+
+
+
+  
+
