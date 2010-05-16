@@ -2,6 +2,8 @@
 	<% if muscle.name != "Body" %>
 	<% @muscleid = muscle.id %>
 
+<% cache muscle.name do %>
+
 <div id="<%=h muscle.name %>">
 
 
@@ -290,6 +292,7 @@
 
 </div>
 
+<% end %>
 <% end %>
 <% end %>
     
