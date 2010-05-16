@@ -1,0 +1,82 @@
+body {
+	margin:0px;
+	padding:0px;
+	background-image: url(/images/splash-bg.png);
+	background-repeat: repeat;
+}
+#main{
+	min-height:600px;
+	width:100%;
+	background-image: url(/images/splash-top-bg.png);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+#content{
+	padding:50px 0px;
+	width:840px;
+	margin:auto;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #222;
+}
+#header{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:110px;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 2px 2px;
+	text-align:left;
+	width:100%;
+}
+#header img{
+	padding:10px 20px 10px 0;	
+}
+.left{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 2px 2px;
+	float:right;
+	text-align:right;
+	padding:80px 40px 0 0;
+	line-height:40px;
+}
+.right{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:110px;
+	color:#fff;
+	font-weight:bold;
+	text-shadow:#000 2px 2px;
+	text-align:left;
+	padding-right:10px;
+	float:right;
+	opacity:0.1;
+	filter:alpha(opacity=10);
+}
+#footer{
+	width:840px;
+	margin:auto;
+	clear:both;
+	padding-top:10px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #666;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+	color:#151515;
+	font-weight:bold;
+	text-shadow:#666 1px 1px;
+}
+.login{
+	float:left;
+}
+.login a{
+	color:#fff;
+	text-decoration:none;
+}
+.login a:hover{
+	color:#000;
+	text-shadow:#666 1px 1px;
+}
