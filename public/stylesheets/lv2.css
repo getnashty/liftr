@@ -262,13 +262,13 @@ html, body {
 #left_menu{
 	text-align:right;
 	float:left;
-	width:127px;
+	width:128px;
 	padding-top:15px;
 	padding-right:15px;
-	border-right-width: 1px;
+/*	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #000;	
-	font-family:Arial, Helvetica, sans-serif;
+*/	font-family:Arial, Helvetica, sans-serif;
 	font-size:13px;
 	font-weight:bold;
 	color:#fff;
