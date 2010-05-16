@@ -6,9 +6,15 @@
 <meta name="description" content="Free site to track your exercises and view detailed reports on slick, easy to use charts.">
 <meta name="keywords" content="fitness tracking, exercise tracking, lift, liftr, liftrr">
 <%= stylesheet_link_tag 'splash' %>
+<% if signed_in? %>
+<SCRIPT language="JavaScript">
+window.location="/lifts";
+</SCRIPT>
+<% end %>
 </head>
 
 <body>
+	
 
 	<div id="content">
     
@@ -18,11 +24,7 @@
         <Br/>
         <Br/>
         <Br/>
-		<% if signed_in? %>
-        <div class="login"><a href="/lifts">login</a> or </div>
-		<% else %>
 		<div class="login"><a href="/sign_in">login</a> or </div>
-        <% end %>
 		<div style="margin-top:6px;float:left;padding:0 8px;">
 			<a href="/sign_up">
 				<img src="/images/sign-up-button.png" width="82" height="32" border="0">
