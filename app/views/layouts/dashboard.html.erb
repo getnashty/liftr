@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Liftrr.com - Your Dashboard</title>
+<%= stylesheet_link_tag 'lv2' %>
+
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="menu_bar">
+    	<div id="header">
+    		<div id="logo"><img src="/images/logo.png" width="142" height="76" alt="logo" /></div>
+        		<div id="dashboard_button" class="selected"></div>
+			<a href="/lifts">
+            	<div id="enter_lifts_button"></div>
+			</a>
+			<a href="/reports/progress">
+			<div id="stats_button"></div>
+			</a>
+            <div class="accountlinks"><a href="/sign_out">Logout</a></div>
+            <div class="accountlinks"><a href="/passwords/new">My Account</a></div>
+    	</div>
+    </div>
+	
+	<%= yield %>
+	
+    <div class="push"></div>
+
+
+</div>
+<div style="clear:both;">
+<div class="footer">
+	<div id="footer_top"></div>
+	<div id="footer_bottom">
+    	<div id="footer-cont">
+        	<span style="float:left">
+            	a <a href="http://www.venturemedias.com">venture medias</a> jump off.
+            </span>
+        	<span class="socialinks">
+				<a href="http://www.facebook.com/home.php?#!/pages/Liftrr/107678535935258?v=info&ref=nf">facebook</a>
+            </span>
+        	<span class="socialinks">
+				<a href="http://liftrr.tumblr.com/">tumblr</a>
+            </span>
+        	<span class="socialinks">
+				<a href="http://www.twitter.com/liftrr">twitter</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
