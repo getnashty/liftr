@@ -606,3 +606,7 @@ html, body {
 	background-image: url(/images/delete.png);
 	background-position: bottom;
 }
+.lifts-list{
+	clear:both;
+	padding:0 0 0 6px;
+}

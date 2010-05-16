@@ -1,37 +1,3 @@
-<style type="text/css">
-<!--
-.lifts-list{
-	clear:both;
-	padding:0 0 0 6px;
-}
-.flash2{
-	width:700px;
-	height:35px;
-	line-height:35px;
-	background-color:#7d0000;
-	margin:auto;
-	font-family:arial;
-	text-align:center;
-	font-weight:bold;
-	font-size:18px;
-	color:#fff;
-}
-
-.enter-body-weight{
-	float:left;
-	padding-top:10px;
-	padding-left:20px;
-	padding-bottom:10px;
-	background-color:#f6f6f6;
-	border-width:0px 1px 1px;
-	border-color:#ddd;
-	border-style:solid;
-	width:208px;
-	text-align:center;
-}
--->
-</style>
-
 <% @muscles.each do |muscle| %>
 	<% if muscle.name != "Body" %>
 	<% @muscleid = muscle.id %>
@@ -191,9 +157,6 @@
 			 	<div class="item-weight">
 				 	<%=h lift.weight %> lbs	
 			 	</div>
-
-
-
 				<% end %>
 				<% end %>
 				</div>			
