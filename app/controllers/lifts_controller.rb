@@ -6,8 +6,7 @@ class LiftsController < ApplicationController
     
     #@lifts = Lift.paginate_by_user_id current_user.id, :page => params[:page], :order => 'created_at DESC' 
     @lifts = Lift.find_all_by_user_id(current_user.id, :order => 'created_at') 
-    @todaylifts = Lift.find_all_by_user_id(current_user.id, :order => 'created_at') 
-    
+    @todaylifts = Lift.find_all_by_user_id(current_user.id, :order => 'created_at')     
     
     @lift = Lift.new
     @exercises = Exercise.all
@@ -31,7 +30,7 @@ class LiftsController < ApplicationController
     @muscles = Muscle.all
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to :back}
       format.xml  { render :xml => @lift }
     end
   end
@@ -43,7 +42,7 @@ class LiftsController < ApplicationController
     @exercises = Exercise.all
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.xml  { render :xml => @lift }
     end
   end

@@ -46,8 +46,8 @@ new Control.Tabs('enter-weights');
 
 				<ul id="enter-weights" class="subsection_tabs">
 					<% @muscles.each do |muscle| %>
-						<% if muscle.name != "Body" %>
-						<li class="tab"><a href="#<%=h muscle.name %>"><%=h muscle.name %></a></li>
+						<% if muscle.name == "Chest" %>
+						<li class="tab"><a href="#<%=h muscle.name %>">All</a></li>
 						<% end %>
 					<% end %>
 				</ul>

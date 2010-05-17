@@ -34,7 +34,7 @@
 </style>
 
 <% @muscles.each do |muscle| %>
-	<% if muscle.name != "Body" %>
+	<% if muscle.name == "Chest" %>
 	<% @muscleid = muscle.id %>
 
 <div id="<%=h muscle.name %>">
@@ -51,21 +51,17 @@
 				Effect.BlindDown('right_content<%=h muscle.name %>');
 				return false">
 				View stats</a><br/><br/>
-	       	<a href="#" onclick="
-				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
-				Effect.Fade('right_content3<%=h muscle.name %>',{ duration: 0 });
-				Effect.BlindDown('right_content2<%=h muscle.name %>'); return false">  
-        		Coming Soon...</a><br/><br/>
+<!--
         	<a href="#" onclick="
 				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
 				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
 				Effect.BlindDown('right_content3<%=h muscle.name %>'); return false">
-	        	Coming Soon...</a>
+	        	Coming Soon...</a>-->
         </div>
 	    
 		<div class="right_content" style="text-align:center;padding-top:30px;" id="right_content<%=h muscle.name %>">			
 			
-			<div id="progress_chart" class='chart'>
+			<div id="progress_chart" class='chart' style="margin-left:75px;margin-bottom:20px;">
 			  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
 			  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
 			</div>
@@ -85,29 +81,18 @@
 			<!-- Get Maxes-->
 			<% @count=0 %>
 			<!-- Get Maxes-->
-
-			<div style="display:none;width:700px;">
 			
-        </div>
+        </div>    
 
-		<div class="right_content2" id="right_content2<%=h muscle.name %>" style="display:none;">
-			<div class="headly">
-				<h1>Coming Soon...</h1>
-			</div>	
-
-			
-		</div>	    
-
-		<div class="right_content3" id="right_content3<%=h muscle.name %>" style="display:none;">
+<!--		<div class="right_content3" id="right_content3<#%=h muscle.name %>" style="display:none;">
 			<div class="headly">
 				<h1>Coming Soon...</h1>
 			</div>
 		</div>
-
+-->
 
 
 	</div>
-</div>
 </div>
 </div>
 <% end %>
