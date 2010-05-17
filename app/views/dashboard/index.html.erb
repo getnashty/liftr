@@ -32,7 +32,7 @@
 				  var so = new SWFObject("/ampie/ampie.swf", "landing_piechart", "430", "280", "8", "#fff");
 				  so.addVariable("path", "/ampie/");
 				  so.addVariable("settings_file", escape("/ampie/ampie_settings.xml"));
-				  so.addVariable("data_file", escape("<%= @index_data_link %>"));
+				  so.addVariable("data_file", escape("<%= @pipe_data_link %>"));
 				  so.addVariable("additional_chart_settings", "<settings><legend><enabled>false</enabled></legend></settings>");
 				  so.addVariable("preloader_color", "#000000");
 				  so.write("landing_piechart");
