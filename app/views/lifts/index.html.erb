@@ -135,12 +135,10 @@
 				</div>
 				
 				<% today=Time.now.strftime("%m/%d/%Y") %>
-				<% @todaylifts.each do |lift| %>
-			 <% if lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
-			 	<% @exname=Exercise.find(lift.exercise_id)%>
-				<% @mcmuscle=Muscle.find(@exname.muscle_id)%>
+				<% @lifts.each do |lift| %>
+			 	<% if lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
 			 	<div class="item-exercise" style="clear:both;">
-			 		<%=h @exname.name %>	
+			 		<%=h lift.exercise.name %>
 			 	</div>
 			 	<div class="item-delete">
 			 		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
@@ -152,7 +150,7 @@
 				 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 			 	</div>
 			 	<div class="item-muscle">
-				 	<%=h @mcmuscle.name %>	
+				 	<%=h lift.exercise.muscle.name %>
 			 	</div>
 			 	<div class="item-weight">
 				 	<%=h lift.weight %> lbs	
@@ -190,12 +188,10 @@
 				</div>
 
 				<% @lifts.each do |lift| %>
-				<% @exname=Exercise.find(lift.exercise_id)%>
-				<% @mcmuscle=Muscle.find(@exname.muscle_id)%>
-				<% if @exname.name != "Body Weight" && @mcmuscle.name == muscle.name %>
+				<% if lift.exercise.name != "Body Weight" && lift.exercise.muscle.name == muscle.name %>
 				
 				<div class="item-exercise" style="clear:both;">
-			 		<%=h @exname.name %>	
+			 		<%=h lift.exercise.name %>
 			 	</div>
 			 	<div class="item-delete">
 			 		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
@@ -207,7 +203,7 @@
 				 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 			 	</div>
 			 	<div class="item-muscle">
-				 	<%=h @mcmuscle.name %>	
+				 	<%=h lift.exercise.muscle.name %>
 			 	</div>
 			 	<div class="item-weight">
 				 	<%=h lift.weight %> lbs	
@@ -251,12 +247,10 @@
 				</div>
 
 				<% @lifts.each do |lift| %>
-				<% @exname=Exercise.find(lift.exercise_id)%>
-				<% @mcmuscle=Muscle.find(@exname.muscle_id)%>
-				<% if @exname.name == exercise.name && @mcmuscle.name == muscle.name %>
+				<% if lift.exercise.name == exercise.name && lift.exercise.muscle.name == muscle.name %>
 				
 				<div class="item-exercise" style="clear:both;">
-			 		<%=h @exname.name %>	
+			 		<%=h lift.exercise.name %>	
 			 	</div>
 			 	<div class="item-delete">
 			 		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
@@ -268,7 +262,7 @@
 				 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
 			 	</div>
 			 	<div class="item-muscle">
-				 	<%=h @mcmuscle.name %>	
+				 	<%=h lift.exercise.muscle.name %>	
 			 	</div>
 			 	<div class="item-weight">
 				 	<%=h lift.weight %> lbs	
