@@ -219,7 +219,9 @@
 
 		<div class="right_content3" id="right_content3<%=h muscle.name %>" style="display:none;">
 
-			<% @exercises.each do |exercise| %>
+			
+			
+			<% @exercises.select {|exc| exc.lifts.count > 0}.each do |exercise| %>
 			<% if exercise.muscle_id == muscle.id %>
 			<div class="headly">
 				<h1><%=h exercise.name %></h1>
@@ -246,8 +248,7 @@
 					Weight	
 				</div>
 
-				<% @lifts.each do |lift| %>
-				<% if lift.exercise.name == exercise.name && lift.exercise.muscle.name == muscle.name %>
+				<% exercise.lifts.select {|lift| lift.user == current_user}.each do |lift| %>
 				
 				<div class="item-exercise" style="clear:both;">
 			 		<%=h lift.exercise.name %>	
@@ -267,7 +268,6 @@
 			 	<div class="item-weight">
 				 	<%=h lift.weight %> lbs	
 			 	</div>
-				<% end %>
 				<% end %>
 
 				<!--><div style="display:none;width:90%;text-align:center;clear:both;"><#%= will_paginate @lifts %></div>-->
