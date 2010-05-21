@@ -34,6 +34,7 @@ xml.graphs do
        :line_width => '4',
        :line_alpha => '50',
        :fill_alpha => '25',
+       :hidden => 'true',
        :title => exercise.name
        ) do
          

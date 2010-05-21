@@ -61,18 +61,18 @@
 	    
 		<div class="right_content" style="text-align:center;padding-top:30px;" id="right_content<%=h muscle.name %>">			
 			
-			<div id="progress_chart" class='chart' style="margin-left:75px;margin-bottom:20px;">
+			<div id="progress_chart" class='chart' style="margin-left:25px;margin-bottom:20px;">
 			  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
 			  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
 			</div>
 
 			<script type="text/javascript">
 			  // <![CDATA[    
-			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "700", "1180", "8", "#fff");
+			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "800", "600", "8", "#fff");
 			  so.addVariable("path", "/amcharts/");
 			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
 			  so.addVariable("data_file", escape("<%= @progress_data_link %>"));
-			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>liftrr-logo.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines></settings>");
+			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>liftrr-logo.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>350</left><right>15</right><top>15</top></margins></plot_area><legend><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>290</width><margins>10</margins><values><text>{value} lbs</text></values></legend></settings>");
 			  so.addVariable("preloader_color", "#000000");
 			  so.write("progress_chart");
 			  // ]]>
