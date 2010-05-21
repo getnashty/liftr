@@ -32,7 +32,7 @@ class ReportsController < ApplicationController
 
 def progress
     #@lifts = Lift.find(:all, :order => 'created_at') 
-    @lifts=current_user.lifts(:page => params[:page], :include => [:exercise => :muscle], :order => 'lifts.created_at DESC').sort_by(&:created_at).reverse
+    @lifts=current_user.lifts(:page => params[:page], :include => [:exercise => :muscle])
     #@exercises = Exercise.all
     @exercises = current_user.exercises
     @muscles = Muscle.all
