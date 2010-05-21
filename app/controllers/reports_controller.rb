@@ -33,7 +33,8 @@ class ReportsController < ApplicationController
 def progress
     #@lifts = Lift.find(:all, :order => 'created_at') 
     @lifts=current_user.lifts(:page => params[:page], :include => [:exercise => :muscle], :order => 'lifts.created_at DESC').sort_by(&:created_at).reverse
-    @exercises = Exercise.all
+    #@exercises = Exercise.all
+    @exercises = current_user.exercises
     @muscles = Muscle.all
     @progress_data_link = formatted_progress_reports_url(:xml)
     respond_to do |format|
