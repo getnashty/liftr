@@ -27,7 +27,7 @@ xml.graphs do
        xml.graph (
        :gid => exercise.name,
        :axis => 'left',
-       :selected => 'true',
+       :selected => 'false',
        :bullet => 'round_outlined', 
        :bullet_size => '10',
        :bullet_alpha => '100',
