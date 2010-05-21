@@ -6,12 +6,14 @@ class LiftsController < ApplicationController
     
     #@lifts = Lift.paginate_by_user_id current_user.id, :page => params[:page], :order => 'created_at DESC' 
     #@lifts = Lift.find_all_by_user_id(current_user.id, :order => 'created_at DESC') 
-    @lifts=current_user.lifts(:include => [:exercise => :muscle], :order => 'lifts.created_at DESC').sort_by(&:created_at).reverse
+    @lifts=current_user.lifts(:page => params[:page], :include => [:exercise => :muscle], :order => 'lifts.created_at DESC').sort_by(&:created_at).reverse
+    #@lifts = Lift.paginate_by_user_id (current_user.id, :page => params[:page], :include => [:exercise => :muscle], :order => 'created_at DESC')
     #@lifts=Lift.find_all_by_user_id(current_user.id, :include => [:exercise => :muscle], :order => 'created_at DESC')
     @todaylifts = Lift.find_all_by_user_id(current_user.id, :order => 'created_at DESC')     
     
     @lift = Lift.new
     @exercises = Exercise.all
+    @by_exercise = current_user.exercises
     @muscles = Muscle.all
     
     respond_to do |format|

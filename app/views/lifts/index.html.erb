@@ -221,7 +221,7 @@
 
 			
 			
-			<% @exercises.select {|exc| exc.lifts.count > 0}.each do |exercise| %>
+			<% @by_exercise.select {|exc| exc.lifts.count > 0 }.each do |exercise| %>
 			<% if exercise.muscle_id == muscle.id %>
 			<div class="headly">
 				<h1><%=h exercise.name %></h1>
