@@ -37,7 +37,7 @@ xml.graphs do
        :fill_alpha => '25',
        :hidden => 'true',
        :title => exercise.name,
-       :balloon_text => '{value} % change {description}'
+       :balloon_text => '{value}% change {description}'
        ) do
          
          count=0
@@ -57,7 +57,8 @@ xml.graphs do
                   if progress != 1
                     progress=(((lift.weight-progress)*100)/progress)
                   end
-                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => exercise.name                 
+                  test = exercise.name+" "+lift.weight.to_s+"lbs"
+                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => test                 
                   progress = lift.weight
                   
                 elsif if dates!=date2 && lift.exercise_id != exercise.id
@@ -72,7 +73,9 @@ xml.graphs do
                   if progress != 1
                     progress=(((lift.weight-progress)*100)/progress)
                   end
-                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => exercise.name                 
+
+                  test = exercise.name+" "+lift.weight.to_s+"lbs"
+                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => test             
                   progress = lift.weight
                   
                   end
