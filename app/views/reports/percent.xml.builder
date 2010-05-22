@@ -51,8 +51,12 @@ xml.graphs do
                   if dates!=date2 && lift.exercise_id == exercise.id
                     
                     count=count+1
-             
-                  progress=(((lift.weight-progress)*100)/progress)
+                  if progress == 1
+                    progress=((((lift.weight-lift.weight)+1)*100)/progress)
+                  end
+                  if progress != 1
+                    progress=(((lift.weight-progress)*100)/progress)
+                  end
                   if progress < 0
                     progress = (progress * -1)
                   end
@@ -65,7 +69,12 @@ xml.graphs do
  
                 elsif if dates==date2 && lift.exercise_id == exercise.id
                                       
-                  progress=(((lift.weight-progress)*100)/progress)
+                  if progress == 1
+                    progress=(((lift.weight-lift.weight+1)*100)/progress)
+                   end
+                  if progress != 1
+                    progress=(((lift.weight-progress)*100)/progress)
+                  end
                   if progress < 0
                     progress = (progress * -1)
                   end
