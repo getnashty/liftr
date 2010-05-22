@@ -4,20 +4,20 @@
     	<div class="muscle-items">
 
 			<ul id="enter-weights" class="subsection_tabs">
-				<li class="tab"><a href="#all">All</a></li>
+				<li class="tab"><a href="progress">All</a></li>
 				<li class="tab"><a href="chest">Chest</a></li>
 				<li class="tab"><a href="back">Back</a></li>
 				<li class="tab"><a href="biceps">Biceps</a></li>
 				<li class="tab"><a href="triceps">Triceps</a></li>
 				<li class="tab"><a href="legs">Legs</a></li>
-				<li class="tab"><a href="shoulders">Shoulders</a></li>
+				<li class="tab"><a href="#Shoulders">Shoulders</a></li>
 			</ul>
 
         </div>
     </div>
 </div>
 
-<div id="all">
+<div id="Shoulders">
 
 
 <div id="content">
@@ -56,7 +56,7 @@
 			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "800", "800", "8", "#fff");
 			  so.addVariable("path", "/amcharts/");
 			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
-			  so.addVariable("data_file", escape("<%= @progress_data_link %>"));
+			  so.addVariable("data_file", escape("<%= @shoulders_pounds_data_link %>"));
 			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>content-bgg.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>250</left><right>15</right><top>15</top></margins></plot_area><legend><color>#ffffff</color><alpha>100</alpha><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>180</width><margins>10</margins><values><text>{value} lbs</text></values></legend></settings>");
 			  so.addVariable("preloader_color", "#000000");
 			  so.write("progress_chart");
@@ -86,7 +86,7 @@
 			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "800", "800", "8", "#fff");
 			  so.addVariable("path", "/amcharts/");
 			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
-			  so.addVariable("data_file", escape("<%= @progress_data_link_percent %>"));
+			  so.addVariable("data_file", escape("<%= @shoulderspercent_data_link %>"));
 			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>content-bgg.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>250</left><right>15</right><top>15</top></margins></plot_area><legend><color>#ffffff</color><alpha>100</alpha><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>180</width><margins>10</margins><values><text>{value} % change</text><x><skip_first>true</skip_first></x></values></legend></settings>");
 			  so.addVariable("preloader_color", "#000000");
 			  so.write("percent_chart");
@@ -103,12 +103,13 @@
 </div>
 
 <% @muscles.each do |muscle| %>
-	<% if muscle.name != "Body" %>
+	<% if muscle.name != "Body" || muscle.name != "Shoulders" %>
 	<% @muscleid = muscle.id %>
 
 <div id="<%=h muscle.name %>"></div>
 <%end%>
 <%end%>
+<div id="all"></div>
 
 
 

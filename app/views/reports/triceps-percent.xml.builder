@@ -17,13 +17,13 @@ xml.chart do
      end       
    end
    
-      
+@midly=Muscle.find_by_name("Triceps")      
    
 xml.graphs do
       #the gid is used in the settings file to set different settings just for this graph
        
     @exercises.each do |exercise|
-          
+      if exercise.muscle_id == @midly.id
           
        xml.graph (
        :gid => exercise.name,
@@ -37,11 +37,12 @@ xml.graphs do
        :fill_alpha => '25',
        :hidden => 'true',
        :title => exercise.name,
-       :balloon_text => '{value} lbs {description}'
+       :balloon_text => '{value}% change {description}'
        ) do
          
          count=0
          date2=1
+         progress=1
          
         @lifts.each_with_index do |lift, index|
                            
@@ -50,18 +51,32 @@ xml.graphs do
                   if dates!=date2 && lift.exercise_id == exercise.id
                     
                     count=count+1
-             
+                  if progress == 1
+                    progress=((((lift.weight-lift.weight)+1)*100)/progress)
+                  end
+                  if progress != 1
+                    progress=(((lift.weight-progress)*100)/progress)
+                  end
+                  test = exercise.name+" "+lift.weight.to_s+"lbs"
+                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => test                 
                   progress = lift.weight
-                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => exercise.name                 
-        
+                  
                 elsif if dates!=date2 && lift.exercise_id != exercise.id
 
                    count=count+1                 
  
                 elsif if dates==date2 && lift.exercise_id == exercise.id
                                       
+                  if progress == 1
+                    progress=(((lift.weight-lift.weight+1)*100)/progress)
+                   end
+                  if progress != 1
+                    progress=(((lift.weight-progress)*100)/progress)
+                  end
+
+                  test = exercise.name+" "+lift.weight.to_s+"lbs"
+                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => test             
                   progress = lift.weight
-                  xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => exercise.name                 
                   
                   end
                 end
@@ -73,7 +88,7 @@ xml.graphs do
 
     end         
 
-       
+  end
 
 
 

@@ -17,13 +17,13 @@ xml.chart do
      end       
    end
    
-      
+@midly=Muscle.find_by_name("Legs")      
    
 xml.graphs do
       #the gid is used in the settings file to set different settings just for this graph
        
     @exercises.each do |exercise|
-          
+      if exercise.muscle_id == @midly.id
           
        xml.graph (
        :gid => exercise.name,
@@ -72,7 +72,7 @@ xml.graphs do
      end
 
     end         
-
+end
        
 
 

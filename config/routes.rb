@@ -11,7 +11,21 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => 'home'
   
-  map.resources :reports, :collection => {:progress => :get, :export => :get, :percent => :get}
+  map.resources :reports, :collection => {:progress => :get,
+                                            :export => :get, 
+                                            :percent => :get, 
+                                            :chest => :get, 
+                                            :chest_percent => :get,
+                                            :back => :get, 
+                                            :back_percent => :get,
+                                            :biceps => :get, 
+                                            :biceps_percent => :get,
+                                            :legs => :get, 
+                                            :legs_percent => :get,
+                                            :shoulders => :get, 
+                                            :shoulders_percent => :get,
+                                            :triceps => :get, 
+                                            :triceps_percent => :get}
   map.resources :dashboard, :collection => {:index => :get, :comm => :get}
 
   # The priority is based upon order of creation: first created -> highest priority.
