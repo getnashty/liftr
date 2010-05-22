@@ -57,9 +57,6 @@ xml.graphs do
                   if progress != 1
                     progress=(((lift.weight-progress)*100)/progress)
                   end
-                  if progress < 0
-                    progress = (progress * -1)
-                  end
                   xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => exercise.name                 
                   progress = lift.weight
                   
@@ -74,9 +71,6 @@ xml.graphs do
                    end
                   if progress != 1
                     progress=(((lift.weight-progress)*100)/progress)
-                  end
-                  if progress < 0
-                    progress = (progress * -1)
                   end
                   xml.value progress,  :xid => count, :color => "#00C3C6", :gradient_fill_colors => "#009c9d,#00C3C6", :description => exercise.name                 
                   progress = lift.weight

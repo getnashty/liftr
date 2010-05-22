@@ -70,7 +70,7 @@
 			  so.addVariable("path", "/amcharts/");
 			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
 			  so.addVariable("data_file", escape("<%= @progress_data_link_percent %>"));
-			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>content-bgg.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>250</left><right>15</right><top>15</top></margins></plot_area><legend><color>#ffffff</color><alpha>100</alpha><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>180</width><margins>10</margins><values><text>{value} % change</text></values></legend></settings>");
+			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>content-bgg.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>250</left><right>15</right><top>15</top></margins></plot_area><legend><color>#ffffff</color><alpha>100</alpha><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>180</width><margins>10</margins><values><text>{value} % change</text><x><skip_first>true</skip_first></x></values></legend></settings>");
 			  so.addVariable("preloader_color", "#000000");
 			  so.write("percent_chart");
 			</script>
