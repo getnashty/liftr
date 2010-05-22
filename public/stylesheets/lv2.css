@@ -172,7 +172,7 @@ html, body {
 	margin:0px;
 	padding:0px;
 	background-repeat: repeat;
-	background-image: url(/images/content-bg2.png);
+	background-image: url(/images/content-bg3.png);
 }
 #container {
 	background-image: url(/images/content-bg.png);
@@ -382,6 +382,15 @@ html, body {
 	background-position: center center;
 }
 .muscle-items ul.subsection_tabs li.tab a.active {
+	background-image: url(/images/muscle-bg.png);
+	text-align:center;
+	color:#fff;
+	margin-right:10px;
+	text-shadow:#000 1px 1px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.muscle-items ul.subsection_tabs li.tab-selected {
 	background-image: url(/images/muscle-bg.png);
 	text-align:center;
 	color:#fff;
