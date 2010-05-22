@@ -35,7 +35,7 @@ xml.graphs do
        :line_width => '4',
        :line_alpha => '50',
        :fill_alpha => '25',
-       :hidden => 'false',
+       :hidden => 'true',
        :title => exercise.name,
        :balloon_text => '{value} % change {description}'
        ) do
