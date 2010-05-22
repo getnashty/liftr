@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-
+  before_filter :authenticate
 
 def index
     @lifts = Lift.find(:all, :order => 'created_at') 
