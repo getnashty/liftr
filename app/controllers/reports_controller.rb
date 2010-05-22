@@ -37,10 +37,26 @@ def progress
     @exercises = current_user.exercises
     @muscles = Muscle.all
     @progress_data_link = formatted_progress_reports_url(:xml)
+    @progress_data_link_percent = formatted_percent_reports_url(:xml)
     respond_to do |format|
       format.html
       format.xml  { render :action => "progress.xml.builder", :layout => false }
+      format.xml  { render :action => "percent.xml.builder", :layout => false }
     end
   end
+  
+  def percent
+      #@lifts = Lift.find(:all, :order => 'created_at') 
+      @lifts=current_user.lifts(:page => params[:page], :include => [:exercise => :muscle])
+      #@exercises = Exercise.all
+      @exercises = current_user.exercises
+      @muscles = Muscle.all
+      @percent_data_link = formatted_percent_reports_url(:xml)
+      respond_to do |format|
+        format.html
+        format.xml  { render :action => "percent.xml.builder", :layout => false }
+      end
+    end
+  
   
 end

@@ -38,16 +38,17 @@ new Control.Tabs('enter-weights');
             <div class="accountlinks"><a href="/passwords/new">My Account</a></div>
     	</div>
     </div>
-
+	
 	<div id="subnav_bar">
 		<div id="subnavity">
 	    	<div class="menu-title">Muscles</div>
 	    	<div class="muscle-items">
 
 				<ul id="enter-weights" class="subsection_tabs">
+					<li class="tab"><a href="#all">All</a></li>
 					<% @muscles.each do |muscle| %>
-						<% if muscle.name == "Chest" %>
-						<li class="tab"><a href="#<%=h muscle.name %>">All</a></li>
+						<% if muscle.name != "Body" %>
+						<li class="tab"><a href="#<%=h muscle.name %>"><%=h muscle.name %></a></li>
 						<% end %>
 					<% end %>
 				</ul>

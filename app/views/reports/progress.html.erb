@@ -1,43 +1,6 @@
 <%= javascript_include_tag 'swfobject' %>
-<style type="text/css">
-<!--
-.lifts-list{
-	clear:both;
-	padding:0 0 0 6px;
-}
-.flash2{
-	width:700px;
-	height:35px;
-	line-height:35px;
-	background-color:#7d0000;
-	margin:auto;
-	font-family:arial;
-	text-align:center;
-	font-weight:bold;
-	font-size:18px;
-	color:#fff;
-}
 
-.enter-body-weight{
-	float:left;
-	padding-top:10px;
-	padding-left:20px;
-	padding-bottom:10px;
-	background-color:#f6f6f6;
-	border-width:0px 1px 1px;
-	border-color:#ddd;
-	border-style:solid;
-	width:208px;
-	text-align:center;
-}
--->
-</style>
-
-<% @muscles.each do |muscle| %>
-	<% if muscle.name == "Chest" %>
-	<% @muscleid = muscle.id %>
-
-<div id="<%=h muscle.name %>">
+<div id="all">
 
 
 <div id="content">
@@ -46,20 +9,26 @@
 	   	
 		<div id="left_menu">
         	<a href="#" onclick="
-				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
-				Effect.Fade('right_content3<%=h muscle.name %>',{ duration: 0 });
-				Effect.BlindDown('right_content<%=h muscle.name %>');
+				Effect.Fade('bypercent',{ duration: 0 });
+				Effect.BlindDown('bypounds');
 				return false">
-				View stats</a><br/><br/>
-<!--
+				By Pounds</a><br/><br/>
+
         	<a href="#" onclick="
-				Effect.Fade('right_content<%=h muscle.name %>',{ duration: 0 });
-				Effect.Fade('right_content2<%=h muscle.name %>',{ duration: 0 });
-				Effect.BlindDown('right_content3<%=h muscle.name %>'); return false">
-	        	Coming Soon...</a>-->
+				Effect.Fade('bypounds',{ duration: 0 });
+				Effect.BlindDown('bypercent'); return false">
+	        	By % Gain/Loss</a>
         </div>
 	    
-		<div class="right_content" style="text-align:center;padding-top:30px;" id="right_content<%=h muscle.name %>">			
+		<div class="right_content" id="bypounds">			
+			
+			<div class="headly">
+				<h1>View Stats By Pounds
+					<span style="float:right;font-weight:normal;font-size:14px;">
+					
+					</span>
+				</h1>
+			</div>
 			
 			<div id="progress_chart" class='chart' style="margin-left:25px;margin-bottom:20px;">
 			  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
@@ -67,7 +36,6 @@
 			</div>
 
 			<script type="text/javascript">
-			  // <![CDATA[    
 			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "800", "800", "8", "#fff");
 			  so.addVariable("path", "/amcharts/");
 			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
@@ -75,7 +43,6 @@
 			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>content-bgg.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>250</left><right>15</right><top>15</top></margins></plot_area><legend><color>#ffffff</color><alpha>100</alpha><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>180</width><margins>10</margins><values><text>{value} lbs</text></values></legend></settings>");
 			  so.addVariable("preloader_color", "#000000");
 			  so.write("progress_chart");
-			  // ]]>
 			</script>
 
 			<!-- Get Maxes-->
@@ -84,23 +51,47 @@
 			
         </div>    
 
-<!--		<div class="right_content3" id="right_content3<#%=h muscle.name %>" style="display:none;">
+		<div class="right_content3" id="bypercent" style="display:none;">
 			<div class="headly">
-				<h1>Coming Soon...</h1>
+				<h1>View Stats By Percent Gain/Loss
+					<span style="float:right;font-weight:normal;font-size:14px;">
+					
+					</span>
+				</h1>
 			</div>
+			
+			<div id="percent_chart" class='chart' style="margin-left:25px;margin-bottom:20px;">
+			  <strong>Text displayed when the user doesn't have Flash. You might want to display a simple table with the population, search engines and visitor without flash would love that.</strong>
+			  <p> To see this page properly, you need to upgrade your Flash Player, please visit the Adobe web site</p>
+			</div>
+
+			<script type="text/javascript">
+			  var so = new SWFObject("/amcharts/amline.swf", "progress_chart", "800", "800", "8", "#fff");
+			  so.addVariable("path", "/amcharts/");
+			  so.addVariable("settings_file", escape("/amcharts/amline_settings.xml"));
+			  so.addVariable("data_file", escape("<%= @progress_data_link_percent %>"));
+			  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><export_as_image><file>/reports/export</file><color>#000</color><alpha>80</alpha></export_as_image><background><file>content-bgg.png</file></background><vertical_lines><width>20</width><alpha>70</alpha></vertical_lines><plot_area><margins><left>250</left><right>15</right><top>15</top></margins></plot_area><legend><color>#ffffff</color><alpha>100</alpha><x>10</x><y>30</y><max_columns>3</max_columns><border_alpha>100</border_alpha><width>180</width><margins>10</margins><values><text>{value} lbs</text></values></legend></settings>");
+			  so.addVariable("preloader_color", "#000000");
+			  so.write("percent_chart");
+			</script>
+
+			<!-- Get Maxes-->
+			<% @count=0 %>
+			<!-- Get Maxes-->
 		</div>
--->
 
 
 	</div>
 </div>
 </div>
-<% end %>
-<% end %>
 
+<% @muscles.each do |muscle| %>
+	<% if muscle.name != "Body" %>
+	<% @muscleid = muscle.id %>
 
-
-
+<div id="<%=h muscle.name %>"></div>
+<%end%>
+<%end%>
 
 
 
