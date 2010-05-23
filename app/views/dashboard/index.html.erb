@@ -7,9 +7,113 @@
 
 		<div class="right_content" id="right_content" style="width:1000px">
 			<div class="headly">
-				<h1 style="width:980px">Your Vitals</h1>
-				<div class="dashcont">
-					Coming soon! Check back for updates!
+
+				<h1 style="width:980px">Enter Body Weight
+					<span style="float:right;">
+					Recent Body Weight
+					</span>
+				</h1>
+				<div class="dashcont" style="margin-top:-10px;padding-bottom:30px;">
+					<% @exerciseid=Exercise.find_by_name("Body Weight") %>
+					<% today=Time.now.strftime("%m/%d/%Y") %>
+					<% @lifts.each do |lift| %>
+				 	<% if lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id == @exerciseid.id%>
+						<% @sorry = "yes" %>
+					<% end %>
+					<% end %>
+				
+				
+				<div id="enter-stuff" style="float:left;width:650px;margin-top:0px;padding-top:0px;border-right-style:solid;border-right-width:1px;border-right-color:#333;margin-bottom:10px;">
+				<% if @sorry!="yes"%>
+						
+						<% form_for(@lift) do |f| %>
+				  	    <%= f.error_messages %>
+
+					    <div class="text_field" style="text-align:center">
+							<label>Body</label> <%= f.label :weight %><br />
+
+							<div class="track-left"></div>
+							<div id="track1body" class="track" style="width:400px;">
+								<div id="handle1body" class="handle">
+								</div>
+							</div>
+							<div class="track-right"></div>
+
+							<p id="debug1body" style="display:none;">&nbsp;</p><br/>
+							manual entry: <input id="lift_weightbody"  id="lift_weight" name="lift[weight]" 
+							size="3" class="linput" type="text" value="0" /> lbs
+
+							<script type="text/javascript" language="javascript">
+
+							// horizontal slider control
+							var slider1 = new Control.Slider('handle1body', 'track1body', {
+							onSlide: function(v) { $('debug1body').innerHTML = 'slide: ' + (v*400).toFixed();
+							$('lift_weightbody').value = (v*400).toFixed(); },
+							onChange: function(v) { $('debug1body').innerHTML = 'changed: ' + (v*400).toFixed();
+							$('lift_weightbody').value = (v*400).toFixed(); }
+							});
+						
+							</script>
+						</div>
+
+						<div class="text_field" style="width:110px;">
+
+							<label>Date</label><Br/>
+							<div style="font-weight:normal;margin-top:10px;">
+								<%=h Time.now.strftime("%m/%d/%Y") %>
+							</div>
+
+						</div>
+
+					    <div class="submit_field2" style="margin-top:-5px">
+						    <input src="/images/red-button.png" id="lift_submit" name="commit" type="image">
+						</div>
+
+					<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
+					<input type="hidden" id="lift_exercise_id" name="lift[exercise_id]" value="<%=h @exerciseid.id %>">
+
+					<% end %>	
+					<% else %>
+					<h3 style="padding-top:20px;">Sorry, you've already entered a body weight for today!</h3>
+					<% end %>
+				</div>
+
+					<div class="lifts-list" style="float:left;width:290px;clear:none;margin-top:0px;padding-top:0px;">
+
+						<div class="head-item-delete">
+							Delete	
+						</div>
+						<div class="head-item-date">
+							Date	
+						</div>
+						<div class="head-item-weight">
+							Weight	
+						</div>
+						<div style="clear:both;"></div>
+						<% today=Time.now.strftime("%m/%d/%Y") %>
+						<% @lifts.each do |lift| %>
+					 	<% if lift.exercise_id == @exerciseid.id%>
+					 	<div class="item-delete">
+					 	<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
+					 	</div>
+					 	<div class="item-date">
+						 <%=h lift.created_at.strftime("%m/%d/%Y") %>	
+					 	</div>
+					 	<div class="item-weight">
+						<%=h lift.weight %> lbs	
+					 	</div>
+						<% end %>
+						<% end %>
+					
+					</div>			
+
+					
+					
+					
+					
+					
+					
+					
 				</div>
 			</div>
 
@@ -33,7 +137,7 @@
 				  so.addVariable("path", "/ampie/");
 				  so.addVariable("settings_file", escape("/ampie/ampie_settings.xml"));
 				  so.addVariable("data_file", escape("<%= @pipe_data_link %>"));
-				  so.addVariable("additional_chart_settings", "<settings><legend><enabled>false</enabled></legend></settings>");
+				  so.addVariable("additional_chart_settings", "<settings><legend><enabled>false</enabled></legend><background><file>content-bgg.png</file></background></settings>");
 				  so.addVariable("preloader_color", "#000000");
 				  so.write("landing_piechart");
 				  // ]]>
@@ -51,7 +155,7 @@
 				  so.addVariable("path", "/amcharts/");
 				  so.addVariable("settings_file", escape("/amcharts/amline_settings2.xml"));
 				  so.addVariable("data_file", escape("/dashboard/comm.xml"));
-				  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><legend><enabled>false</enabled></legend></settings>");
+				  so.addVariable("additional_chart_settings", "<settings><connect>true</connect><legend><enabled>false</enabled></legend><background><file>content-bgg.png</file></background></settings>");
 				  so.addVariable("preloader_color", "#000000");
 				  so.write("progress_chart");
 				  // ]]>

@@ -2,7 +2,8 @@ class DashboardController < ApplicationController
   before_filter :authenticate
 
 def index
-    @lifts = Lift.find(:all, :order => 'created_at') 
+    @lift = Lift.new
+    @lifts = Lift.find(:all, :order => 'created_at DESC') 
     @exercises = Exercise.all
     @users = User.find(:all) 
     @usernum = User.count
@@ -15,6 +16,16 @@ def index
     end
   end
   
+  def destroy
+    @lift = Lift.find(params[:id])
+    @lift.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(dashboard_url) }
+      format.xml  { head :ok }
+    end
+  end
+  
   def comm
       @lifts = Lift.find(:all, :order => 'created_at') 
       @exercises = Exercise.all
@@ -24,5 +35,6 @@ def index
         format.xml  { render :action => "comm.xml.builder", :layout => false }
       end
     end
+    
   
 end
