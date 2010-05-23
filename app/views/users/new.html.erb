@@ -3,142 +3,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Liftrr - Enter your maxes</title>
-<style type="text/css">
-<!--
-#login-footer {
-	background-image: url(images/login-bottom.png);
-	background-repeat: no-repeat;
-	background-position: center top;
-	height: 16px;
-	width: 294px;
-}
-#login-main {
-	border-right-width: 1px;
-	border-left-width: 1px;
-	border-right-style: solid;
-	border-left-style: solid;
-	border-right-color: #898989;
-	border-left-color: #898989;
-	width: 292px;
-	text-align:center;
-	height:340px;
-}
-#login-header {
-	background-image: url(images/login_top.png);
-	background-repeat: no-repeat;
-	background-position: center top;
-	width: 294px;
-	height: 11px;
-}
-#login-box {
-	margin: 120px auto;
-	width: 294px;
-	font-size:12px;
-	font-family:arial;
-}
-.text_field {
-	width:225px;
-	text-align:left;
-	margin-left:26px;
-	padding:10px 0px;
-}
-.text_field input{
-	background-image: url(images/input-bg.png);
-	background-repeat: no-repeat;
-	background-position: left top;
-	border-style:solid;
-	border-width:1px;
-	border-color:#898989;
-	width:225px;
-	padding:8px;
-	font-size:12px;
-	font-family:arial;
-}
-.text_field input:focus{
-	border-color:red;
-}
-.divider{
-	border-bottom-style:solid;
-	border-bottom-width:1px;
-	border-bottom-color:#ccc;
-	width:245px;
-	padding-top:10px;
-	margin:auto;
-}
-.signuplinks{
-	float:left;
-	text-align:left;
-	padding:0px 0px 0px 32px;
-}
-.signuplinks a{
-	text-decoration:none;
-	color:#999;
-}
-.submit_field {
-	float:right;
-	margin-right:32px;
-	margin-top:8px;
-}
-.submit_field input{
-	background-color:red;
-	border-style:solid;
-	border-color:red;
-	border-width:1px;
-	color:#fff;
-	font-weight:bold;
-	padding:8px;
-	font-size:16px;
-}
-.flash2{
-	width:500px;
-	height:60px;
-	line-height:60px;
-	background-color:#FFFFCC;
-	margin:auto;
-	font-family:arial;
-	font-style:italic;
-	text-align:center;
-	font-weight:bold;
-	font-size:24px;
-	color:#909090;
-}
--->
-</style>
+<title>Liftrr - Forgot your password?</title>
+<%= stylesheet_link_tag 'logins' %>
 </head>
 <body>
 
 
-	<div id="flash">
-	  <% flash.each do |key, value| -%>
-	    <div class="flash2" id="flash_<%= key -%>"><%= html_escape(value) %></div>
-	  <% end -%>
-	</div>
-
-
 
 <div id="login-box">
-    	
-        <div id="login-header"></div>
-        
-        <div id="login-main">   
-          <img src="images/liftrr-logo.png" width="192" height="72" alt="logo" />
+	
+	
+	<div id="login-top"><img src="/images/login-top.png"></div>
+	
+	<div id="login-content">
+		<div id="login-left" style="height:270px;"></div>
+		<div id="login-middle" style="padding-top:20px;height:250px;">
 			
-			<div class="divider"></div>
-		
-		
 			<% form_for @user do |form| %>
 			  		<%= form.error_messages %>
-					<div class="text_field">
-					  <%= form.label :email %>
+					<div class="text_field" style="color:#ccc;font-weight:bold;">
+					  <%= form.label :email %><br>
 					  <%= form.text_field :email %>
 					</div>
-					<div class="text_field">
-					  <%= form.label :password %>
+					<div class="text_field" style="color:#ccc;font-weight:bold;">
+					  <%= form.label :password %><br>
 					  <%= form.password_field :password %>
 					</div>
-					<div class="text_field">
-					  <%= form.label :password_confirmation, "Confirm password" %>
+					<div class="text_field" style="color:#ccc;font-weight:bold;">
+					  <%= form.label :password_confirmation, "Confirm password" %><br>
 					  <%= form.password_field :password_confirmation %>
 					</div>
 			  <div class="submit_field">
@@ -151,12 +43,14 @@
 			    <%= link_to "Sign in", sign_in_path %><Br/>
 			    <%= link_to "Forgot password?", new_password_path %>
 				</div>
-
-        </div>
-        
-        <div id="login-footer"></div>
-    
-    </div>
+			
+		</div>
+		<div id="login-right" style="height:270px;"></div>
+	</div>
+	
+    <div id="login-bottom"><img src="/images/login-bottom.png"></div>	        
+            
+</div>
 
 </body>
 </html>
