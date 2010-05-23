@@ -23,7 +23,7 @@
 					<% end %>
 				
 				
-				<div id="enter-stuff" style="float:left;width:650px;margin-top:0px;padding-top:0px;border-right-style:solid;border-right-width:1px;border-right-color:#333;margin-bottom:10px;">
+				<div id="enter-stuff" style="float:left;width:650px;margin-top:0px;padding-top:0px;border-right-style:solid;border-right-width:1px;border-right-color:#333;margin-bottom:10px;height:100px;overflow:hidden;">
 				<% if @sorry!="yes"%>
 						
 						<% form_for(@lift) do |f| %>
@@ -90,7 +90,6 @@
 							Weight	
 						</div>
 						<div style="clear:both;"></div>
-						<% today=Time.now.strftime("%m/%d/%Y") %>
 						<% @lifts.each do |lift| %>
 					 	<% if lift.exercise_id == @exerciseid.id%>
 					 	<div class="item-delete">
