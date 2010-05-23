@@ -3,7 +3,10 @@ class DashboardController < ApplicationController
 
 def index
     @lift = Lift.new
-    @lifts = Lift.find(:all, :order => 'created_at DESC') 
+    @lifts=current_user.lifts
+    #@lifts2 = Lift.paginate_by_exercise_id ("8", :page => params[:page], :order => 'created_at DESC')
+    
+    #@lifts = Lift.all
     @exercises = Exercise.all
     @users = User.find(:all) 
     @usernum = User.count
