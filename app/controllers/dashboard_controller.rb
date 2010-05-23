@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
 
 def index
     @lift = Lift.new
-    @lifts=current_user.lifts
+    @lifts=current_user.lifts.sort_by(&:created_at).reverse
     #@lifts2 = Lift.paginate_by_exercise_id ("8", :page => params[:page], :order => 'created_at DESC')
     
     #@lifts = Lift.all
