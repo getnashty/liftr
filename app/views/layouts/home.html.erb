@@ -6,6 +6,14 @@
 <meta name="description" content="Free site to track your exercises and view detailed reports on slick, easy to use charts.">
 <meta name="keywords" content="fitness tracking, exercise tracking, lift, liftr, liftrr">
 <%= stylesheet_link_tag 'splash' %>
+<%= stylesheet_link_tag 'lightbox' %>
+<%= javascript_include_tag 'prototype' %>
+<%= javascript_include_tag 'scriptaculous' %>
+<%= javascript_include_tag 'effects' %>
+<%= javascript_include_tag 'builder' %>
+<%= javascript_include_tag 'lightbox' %>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+
 <% if signed_in? %>
 <SCRIPT language="JavaScript">
 window.location="/lifts";
@@ -23,7 +31,6 @@ window.location="/lifts";
    	  	<div class="left">we can help.<br/>we've got the tools<br/>to make you
         <Br/>
         <Br/>
-        <Br/>
 		<div class="login"><a href="/lifts">login</a> or </div>
 		<div style="margin-top:6px;float:left;padding:0 8px;">
 			<a href="/sign_up">
@@ -31,10 +38,15 @@ window.location="/lifts";
 			</a>
 		</div>
 		<div style="float:left;">its free</div> 
+		<br/><br/>
+		<div class="sneak"><a href="images/preview1.png" rel="lightbox[roadtrip]">Sneak Peak</a> ;)</div> 
 		
     </div>
 
-      <div style="clear:both"></div> 
+      <div style="clear:both;">
+		<div style="display:none"><a href="images/preview1.png" rel="lightbox[roadtrip]">image #1</a>
+		<a href="images/preview2.png" rel="lightbox[roadtrip]">image #2</a></div>
+   	  </div> 
        
     </div>
 

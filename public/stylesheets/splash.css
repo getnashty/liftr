@@ -39,7 +39,7 @@ body {
 	text-shadow:#000 2px 2px;
 	float:right;
 	text-align:right;
-	padding:80px 40px 0 0;
+	padding:60px 40px 0 0;
 	line-height:40px;
 }
 .right{
@@ -74,9 +74,16 @@ body {
 }
 .login a{
 	color:#fff;
-	text-decoration:none;
+	text-decoration:underline;
 }
 .login a:hover{
 	color:#000;
 	text-shadow:#666 1px 1px;
+}
+.sneak{
+	float:left;text-align:center;padding-left:70px;
+}
+.sneak a{
+	text-decoration:underline;
+	color:#fff;
 }
