@@ -1,4 +1,6 @@
+if @lift.save
 page.insert_html :bottom, :testly, :partial => 'lift', :object => @lift
+end
 page[:new_lift].reset
 page.replace_html :notice, flash[:notice]
 flash.discard
