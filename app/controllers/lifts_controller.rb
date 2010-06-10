@@ -63,15 +63,21 @@ class LiftsController < ApplicationController
   # POST /lifts.xml
   def create
     @lift = Lift.new(params[:lift])
+    @lifts=current_user.lifts(:page => params[:page], :include => [:exercise => :muscle], :order => 'lifts.created_at DESC').sort_by(&:created_at).reverse
+    @exercises = Exercise.all
+    @muscleid = @lift.exercise.muscle_id
 
     respond_to do |format|
       if @lift.save
         flash[:notice] = 'Lift was successfully created.'
         format.html { redirect_to(@lift) }
         format.xml  { render :xml => @lift, :status => :created, :location => @lift }
+        format.js
       else
+        flash[:notice] = 'This lift already exists!'
         format.html { render :action => "new" }
         format.xml  { render :xml => @lift.errors, :status => :unprocessable_entity }
+        format.js
       end
     end
   end

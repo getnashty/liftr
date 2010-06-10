@@ -1,0 +1,65 @@
+<% optcount %>
+<% @muscle = Muscle.find_by_id(@muscleid) %>
+<% if @xcount == @lcount %> 
+
+	<strong>Sorry, you have already entered your <%=h @muscle.name %>
+	exercises for today, feel free to edit them below!</strong>
+
+<% else %>
+
+	<% form_remote_for(@lift) do |f| %>
+    <%= f.error_messages %>
+
+			<div class="text_field" style="width:20%" id="nig">
+		    	<%= f.label :exercise_id %><br />
+				<%= exercise_select(f) %>
+			</div>
+			
+		    <div class="text_field" style="width:52%;text-align:center">
+				<%= f.label :weight %><br />
+				
+			<div class="track-left"></div>
+			<div id="track1<%=h @muscle.name %>" class="track">
+				<div id="handle1<%=h @muscle.name %>" class="handle">
+				</div>
+			</div>
+			<div class="track-right"></div>
+
+			<p id="debug1<%=h @muscle.name %>" style="display:none;">&nbsp;</p>
+			
+			manual entry: <input id="lift_weight<%=h @muscle.name %>"  id="lift_weight" name="lift[weight]" 
+			size="3" class="linput" type="text" value="0" /> lbs
+			
+		<script type="text/javascript" language="javascript">
+
+		// horizontal slider control
+		var slider1 = new Control.Slider('handle1<%=h @muscle.name %>', 'track1<%=h @muscle.name %>', {
+		onSlide: function(v) { $('debug1<%=h @muscle.name %>').innerHTML = 'slide: ' + (v*500).toFixed();
+		 $('lift_weight<%=h @muscle.name %>').value = (v*500).toFixed(); },
+		onChange: function(v) { $('debug1<%=h @muscle.name %>').innerHTML = 'changed: ' + (v*500).toFixed();
+		 $('lift_weight<%=h @muscle.name %>').value = (v*500).toFixed(); }
+		});
+
+		</script>
+				
+			</div>
+
+			<div class="text_field" style="width:8%">
+				
+				<label>Date</label><Br/>
+				<div style="font-weight:normal;margin-top:10px;">
+				<%=h Time.now.strftime("%m/%d/%Y") %>
+				</div>
+
+			</div>
+
+		    <div class="submit_field2" style="margin-top:-5px">
+			    <input src="/images/red-button.png" id="lift_submit" name="commit" type="image">
+			</div>
+
+	<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
+	<input id="lift_created_at" name="lift[created_at]" size="30" type="hidden" value="<%=h Time.now.strftime("%m/%d/%Y") %>" >
+
+
+		<% end %>	
+		<% end %>

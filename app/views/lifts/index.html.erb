@@ -1,6 +1,7 @@
 <% @muscles.each do |muscle| %>
 	<% if muscle.name != "Body" %>
 	<% @muscleid = muscle.id %>
+	
 
 <div id="<%=h muscle.name %>">
 
@@ -38,126 +39,14 @@
 				</h1>
 			</div>
 
-			<div id="enter-stuff">
-
-				<% optcount %>
-
-				<% if @xcount == @lcount %> 
-
-					<strong>Sorry, you have already entered your <%=h muscle.name %>
-					exercises for today, feel free to edit them below!</strong>
-
-				<% else %>
-					
-					<% form_for(@lift) do |f| %>
-			  	    <%= f.error_messages %>
-
-							<div class="text_field" style="width:20%">
-						    	<%= f.label :exercise_id %><br />
-								<%= exercise_select(f) %>
-							</div>
-							
-						    <div class="text_field" style="width:52%;text-align:center">
-								<%= f.label :weight %><br />
-								
-							<div class="track-left"></div>
-							<div id="track1<%=h muscle.name %>" class="track">
-								<div id="handle1<%=h muscle.name %>" class="handle">
-								</div>
-							</div>
-							<div class="track-right"></div>
+			<div id="enter_stuff">
 				
-							<p id="debug1<%=h muscle.name %>" style="display:none;">&nbsp;</p>
-							
-							manual entry: <input id="lift_weight<%=h muscle.name %>"  id="lift_weight" name="lift[weight]" 
-							size="3" class="linput" type="text" value="0" /> lbs
-							
-						<script type="text/javascript" language="javascript">
-
-						// horizontal slider control
-						var slider1 = new Control.Slider('handle1<%=h muscle.name %>', 'track1<%=h muscle.name %>', {
-						onSlide: function(v) { $('debug1<%=h muscle.name %>').innerHTML = 'slide: ' + (v*500).toFixed();
-						 $('lift_weight<%=h muscle.name %>').value = (v*500).toFixed(); },
-						onChange: function(v) { $('debug1<%=h muscle.name %>').innerHTML = 'changed: ' + (v*500).toFixed();
-						 $('lift_weight<%=h muscle.name %>').value = (v*500).toFixed(); }
-						});
-
-						</script>
-								
-							</div>
-				
-							<div class="text_field" style="width:8%">
-								
-								<label>Date</label><Br/>
-								<div style="font-weight:normal;margin-top:10px;">
-								<%=h Time.now.strftime("%m/%d/%Y") %>
-								</div>
-			
-							</div>
-			
-						    <div class="submit_field2" style="margin-top:-5px">
-							    <input src="/images/red-button.png" id="lift_submit" name="commit" type="image">
-							</div>
-
-					<input id="lift_user_id" name="lift[user_id]" size="30" type="hidden" value="<%=h current_user.id %>" >
-
-
-						<% end %>	
-						<% end %>
+				<%= render "input", :muscleid => @muscleid  %>
 						
 			</div>
 					
 						<div style="clear:both;"></div>
-
-			<div class="headly" style="margin-top:20px;">
-				<h1>All Lifts Added Today</h1>
-			</div>
-
-			<div class="lifts-list">
-
-				<div class="head-item-exercise">
-					Exercise	
-				</div>
-				<div class="head-item-delete">
-					Delete	
-				</div>
-				<div class="head-item-edit">
-					Edit	
-				</div>
-				<div class="head-item-date">
-					Date	
-				</div>
-				<div class="head-item-muscle">
-					Muscle	
-				</div>
-				<div class="head-item-weight">
-					Weight	
-				</div>
-				
-				<% today=Time.now.strftime("%m/%d/%Y") %>
-				<% @lifts.each do |lift| %>
-			 	<% if lift.created_at.strftime("%m/%d/%Y")==today && lift.exercise_id != 8%>
-			 	<div class="item-exercise" style="clear:both;">
-			 		<%=h lift.exercise.name %>
-			 	</div>
-			 	<div class="item-delete">
-			 		<%= link_to '<div class="delete"></div>', lift, :confirm => 'Are you sure?', :method => :delete %>	
-			 	</div>
-				<div class="item-edit" style="width:30px;">
-			 		<a href="/lifts/<%=h lift.id %>/edit"><div class="pencil"></div></a>
-			 	</div>
-			 	<div class="item-date">
-				 	<%=h lift.created_at.strftime("%m/%d/%Y") %>	
-			 	</div>
-			 	<div class="item-muscle">
-				 	<%=h lift.exercise.muscle.name %>
-			 	</div>
-			 	<div class="item-weight">
-				 	<%=h lift.weight %> lbs	
-			 	</div>
-				<% end %>
-				<% end %>
-				</div>			
+						
 			</div>
         </div>
 
@@ -286,4 +175,46 @@
 
 <% end %>
 <% end %>
-    
+
+<div style="clear:both;"></div>
+
+<div style="padding:0px 0 0 138px;margin-top:20px;">
+<div style="-moz-border-radius:8px;
+-moz-border-radius:8px;
+border:1px solid #909090;
+padding:0 0 20px;
+width:850px;margin:auto;">
+
+<div class="headly" style="margin-top:5px;">
+	<h1>All Lifts Added Today</h1>
+</div>
+<p id="notice" style="display:hidden"><%= flash[:notice]%></p>
+<div class="lifts-list">
+
+	<div class="head-item-exercise">
+		Exercise	
+	</div>
+	<div class="head-item-delete">
+		Delete	
+	</div>
+	<div class="head-item-edit">
+		Edit	
+	</div>
+	<div class="head-item-date">
+		Date	
+	</div>
+	<div class="head-item-muscle">
+		Muscle	
+	</div>
+	<div class="head-item-weight">
+		Weight	
+	</div>
+	
+	<div id="testly">
+		<%= render :partial => "lift", :collection => @lifts %>
+	</div>
+	
+	</div>
+	<div style="clear:both;"></div>
+</div>
+</div>

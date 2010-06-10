@@ -420,7 +420,7 @@ html, body {
 	border-top-style: solid;
 	border-top-color: #222;
 }
-#enter-stuff{
+#enter_stuff{
 	clear:both;
 	width:100%;
 	text-align:center;
@@ -430,6 +430,17 @@ html, body {
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
 	text-shadow:#999 1px 1px;
+	font-size:14px;
+	font-family:arial;
+}
+#notice{
+	width:600px;
+	text-align:center;
+	margin:10px auto;
+	color:#ffffcc;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-shadow:#000 1px 1px;
 	font-size:14px;
 	font-family:arial;
 }
