@@ -673,3 +673,17 @@ html, body {
 .chart{
 	float:left;
 }
+.todaylifts{
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	border:1px solid #909090;
+	padding:0 0 20px;
+	width:850px;
+	margin:auto;
+}
